@@ -75,6 +75,9 @@ con el mismo orgullo que los positivos:
   de recocido simulado afinado en instancias aleatorias — exactamente la banda
   reportada para las máquinas de Ising de osciladores en la literatura
   (Wang & Roychowdhury). **DERIVADO/MEDIDO.**
+- Este solucionador es el núcleo de [**Hum**](https://github.com/vml520/hum),
+  una herramienta que aplica la dinámica de asentamiento de fase a calendarios
+  recurrentes — midiendo la tensión estructural en compromisos periódicos.
 
 -----
 
@@ -149,6 +152,5 @@ Requisitos: Python 3 + numpy. Nada más.
   de replicación. Las objeciones técnicas son contribuciones de primera clase.
 - Publicación completa del marco: planeada para el 17 de noviembre de 2026
   (Toxiuh Molpilia), bajo licencia MIT.
-- Ensayos y contexto: Teotl Dispatch (Substack).
 
 *Tloque Nahuaque — lo que está cerca y junto a todo.*
