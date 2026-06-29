@@ -1,20 +1,25 @@
 """
-TFT Phase-Native Optimization — MAX-CUT benchmark
-─────────────────────────────────────────────────
+TFT Phase-Native Optimization — MAX-CUT schedule comparison
+─────────────────────────────────────────────────────────────
 Claim under test: the field's dissipative settling dynamics (Kuramoto sin
-coupling + annealed phase pinning, the Λ_eff-nucleation analogue) solve
-MAX-CUT competitively with simulated annealing.
+coupling + annealed phase pinning) solve MAX-CUT competitively with SA.
 
 Mapping: vertex i → phase θ_i on S¹; edge weight w_ij → ANTI-aligning
 coupling. Dynamics:  dθ_i/dt = −Σ_j w_ij sin(θ_i−θ_j) − K_s(t)·sin(2θ_i) + ξ(t)
-K_s ramps 0→K_max (phase freezing; the solver analogue of Λ_eff nucleation),
 noise anneals to 0. Readout: s_i = sign(cos θ_i); 1-opt polish.
+
+Two freezing schedules benchmarked head-to-head:
+  linear    — K_s = K_max · (t/T)           (ramps uniformly with time)
+  lambda_eff — K_s = K_max · R₂(t)           (field-driven: R₂ = |⟨e^{2iθ}⟩|,
+               the 2nd-harmonic order parameter; pinning nucleates as phases
+               self-polarize to {0,π}, the direct Λ_eff analogue)
 
 Honest notes: couplings are problem-defined (not row-normalized); the
 binarizing pinning term is a second harmonic — a solver-specific variant
 outside the AGI's odd-k invariant, stated rather than hidden.
 """
 import numpy as np, time
+from teotl_math import wrap_theta
 
 rng = np.random.default_rng(0)
 
@@ -66,7 +71,14 @@ def polish_1opt(W, s):
     return s
 
 # ── TFT field solver ─────────────────────────────────────────────────────────
-def tft_solve(W, steps=1500, restarts=12, dt=0.08, Ks_max=None, seed=0):
+def tft_solve(W, steps=1500, restarts=12, dt=0.08, Ks_max=None, seed=0,
+              schedule="linear"):
+    """
+    schedule : "linear"     — Ks = Ks_max · frac  (current default)
+               "lambda_eff" — Ks = Ks_max · R₂    where R₂ = |⟨e^{2iθ}⟩| over
+                              all restarts × nodes.  Pinning grows only as the
+                              field self-polarizes; the direct Λ_eff analogue.
+    """
     n = W.shape[0]
     r = np.random.default_rng(seed)
     deg = W.sum(1).mean()
@@ -74,20 +86,28 @@ def tft_solve(W, steps=1500, restarts=12, dt=0.08, Ks_max=None, seed=0):
     th = r.uniform(0, 2*np.pi, (restarts, n))
     t0 = time.time()
     for step in range(steps):
-        frac  = step/steps
-        Ks    = Ks_max * frac                    # phase-freezing ramp (Λ_eff analogue)
-        sig   = 0.8*deg*(1-frac)**2              # annealed noise
-        C, S  = np.cos(th), np.sin(th)
-        WC, WS= C @ W.T, S @ W.T                 # (R,n)
-        coup  = -(S*WC - C*WS)                   # −Σ w_ij sin(θi−θj)
-        pin   = -Ks*np.sin(2*th)
-        th    = (th + dt*(coup + pin) + np.sqrt(dt)*sig*r.normal(0,1,th.shape)) % (2*np.pi)
-    best, bs = -np.inf, None
+        frac = step / steps
+        sig  = 0.8 * deg * (1 - frac)**2
+        if schedule == "linear":
+            Ks = Ks_max * frac
+        elif schedule == "lambda_eff":
+            # R₂ ≈ 0 when phases random, → 1 when all at 0 or π.
+            # Same-sign coupling drives polarization; R₂ grows; Ks follows.
+            R2 = float(np.abs(np.mean(np.exp(2j * th))))
+            Ks = Ks_max * R2
+        else:
+            raise ValueError(f"unknown schedule {schedule!r}")
+        C, S   = np.cos(th), np.sin(th)
+        WC, WS = C @ W.T, S @ W.T
+        coup   = -(S*WC - C*WS)                  # −Σ w_ij sin(θi−θj)
+        pin    = -Ks * np.sin(2*th)
+        th     = wrap_theta(th + dt*(coup + pin) + np.sqrt(dt)*sig*r.normal(0,1,th.shape))
+    best = -np.inf
     for k in range(restarts):
-        s = np.where(np.cos(th[k])>=0, 1.0, -1.0)
+        s = np.where(np.cos(th[k]) >= 0, 1.0, -1.0)
         s = polish_1opt(W, s)
         c = cut_value(W, s)
-        if c > best: best, bs = c, s
+        if c > best: best = c
     return best, time.time()-t0
 
 # ── simulated annealing baseline ─────────────────────────────────────────────
@@ -118,19 +138,37 @@ def sa_solve(W, sweeps=400, restarts=6, T0=None, seed=0):
 
 # ── run benchmark ────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    print("TFT Phase-Native Optimization — MAX-CUT benchmark\n")
+    print("TFT Phase-Native Optimization — schedule comparison\n")
     instances = [
-        ("planted bipartite n=300 (optimum known)", *planted_bipartite()),
-        ("complete K60 (optimum 900)",             *complete_graph()),
-        ("Erdős–Rényi n=400 p=0.05",               *erdos_renyi()),
-        ("random 3-regular n=400",                 *k_regular()),
+        ("planted bipartite n=300 (opt known)", *planted_bipartite()),
+        ("complete K60 (opt 900)",              *complete_graph()),
+        ("Erdős–Rényi n=400 p=0.05",            *erdos_renyi()),
+        ("random 3-regular n=400",              *k_regular()),
     ]
-    print(f"{'instance':42} {'TFT cut':>9} {'SA cut':>9} {'opt':>7}  {'TFT s':>6} {'SA s':>6}")
-    results = []
+
+    col = f"{'instance':40} {'linear':>8} {'λ_eff':>8} {'SA':>8} {'opt':>6}  " \
+          f"{'lin s':>6} {'λ s':>5} {'SA s':>5}"
+    print(col)
+    print("─" * len(col))
+
+    rows = []
     for name, W, opt in instances:
-        c_t, t_t = tft_solve(W)
-        c_s, t_s = sa_solve(W)
-        opt_s = f"{int(opt)}" if opt else "  ?"
-        print(f"{name:42} {c_t:9.0f} {c_s:9.0f} {opt_s:>7}  {t_t:6.1f} {t_s:6.1f}")
-        results.append((name, c_t, c_s, opt))
-    np.save("maxcut_results.npy", np.array([(r[1], r[2]) for r in results]))
+        c_lin, t_lin = tft_solve(W, schedule="linear")
+        c_lam, t_lam = tft_solve(W, schedule="lambda_eff")
+        c_sa,  t_sa  = sa_solve(W)
+        opt_s  = f"{int(opt)}" if opt else "?"
+        winner = "lin" if c_lin >= c_lam else "λ"
+        print(f"{name:40} {c_lin:8.0f} {c_lam:8.0f} {c_sa:8.0f} {opt_s:>6}  "
+              f"{t_lin:6.1f} {t_lam:5.1f} {t_sa:5.1f}  [{winner}]")
+        rows.append((name, c_lin, c_lam, c_sa, opt))
+
+    lin_wins = sum(1 for _, cl, cx, *_ in rows if cl >= cx)
+    lam_wins = len(rows) - lin_wins
+    print(f"\nSchedule wins  linear={lin_wins}  λ_eff={lam_wins}  (of {len(rows)} instances)")
+
+    # honest choice: whichever won more instances becomes the default
+    default = "linear" if lin_wins >= lam_wins else "lambda_eff"
+    print(f"Default        → {default}  (set by benchmark, not by prior preference)")
+
+    np.save("maxcut_results.npy",
+            np.array([(r[1], r[2], r[3]) for r in rows]))

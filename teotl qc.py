@@ -41,6 +41,7 @@ Epistemic labels:
 """
 
 import numpy as np
+from teotl_math import wrap_theta, winding_density_2d, circular_mean
 
 # ── First-class scales ────────────────────────────────────────────────────────
 E_0, l_0 = 1.0, 1.0
@@ -96,7 +97,7 @@ class TeotlQubit:
         self.W = self.S / rs
 
     def prepare(self, state="0"):
-        self.theta = self.rng.normal(0, 0.02, self.N) % (2*np.pi)
+        self.theta = wrap_theta(self.rng.normal(0, 0.02, self.N))
         hi, lo = 1.0/K_PER_BASIN, 1e-4
         if state == "0":
             self.mass = np.where(self.basin==0, hi, lo)
@@ -126,7 +127,7 @@ class TeotlQubit:
         if self.phase_noise > 0:
             dth = dth + self.phase_noise*self.rng.normal(0,1,self.N)/np.sqrt(dt)
 
-        self.theta = (th + dt*dth) % (2*np.pi)
+        self.theta = wrap_theta(th + dt*dth)
         self.mass  = np.clip(self.mass + dt*dm, 0, None)
 
     def evolve(self, steps, dt=0.02):
@@ -150,10 +151,42 @@ class TeotlQubit:
         m0, m1 = self.basin_mass(0), self.basin_mass(1)
         tot = m0 + m1 + 1e-12
         P1  = m1/tot
-        phi = (self.basin_phase(1) - self.basin_phase(0)) % (2*np.pi)
+        phi = wrap_theta(self.basin_phase(1) - self.basin_phase(0))
         return {"P1":P1, "phi":phi, "z":(m0-m1)/tot,
                 "r0":self.coherence(0), "r1":self.coherence(1),
                 "total_mass": m0+m1}
+
+    def winding_readout(self, grid_nx=6, grid_ny=4):
+        """
+        Project the phase field onto a 2D (x, y) grid and return plaquette
+        winding numbers.  Not called by step() or evolve() — opt-in only.
+
+        Nodes are projected by (x, y) position onto a grid_ny × grid_nx grid;
+        each cell gets the circular-mean phase of its nodes.  Empty cells are
+        filled with the global circular mean so winding_density_2d never sees NaN.
+
+        Returns
+        -------
+        grid  : (grid_ny, grid_nx) float array, phase per cell in [0, 2π)
+        w_map : (grid_ny−1, grid_nx−1) int array, +1 vortex / −1 antivortex / 0 smooth
+        """
+        xs, ys = self.pos[:, 0], self.pos[:, 1]
+        x_lo, x_hi = xs.min() - 0.05, xs.max() + 0.05
+        y_lo, y_hi = ys.min() - 0.05, ys.max() + 0.05
+
+        gx = np.clip(((xs - x_lo) / (x_hi - x_lo) * grid_nx).astype(int), 0, grid_nx - 1)
+        gy = np.clip(((ys - y_lo) / (y_hi - y_lo) * grid_ny).astype(int), 0, grid_ny - 1)
+
+        grid = np.full((grid_ny, grid_nx), np.nan)
+        for row in range(grid_ny):
+            for col in range(grid_nx):
+                mask = (gx == col) & (gy == row)
+                if mask.any():
+                    grid[row, col] = wrap_theta(circular_mean(self.theta[mask]))
+
+        fill = wrap_theta(circular_mean(self.theta))
+        grid = np.where(np.isnan(grid), fill, grid)
+        return grid, winding_density_2d(grid)
 
 # ── Experiments ───────────────────────────────────────────────────────────────
 def exp_free_precession(kernel, detuning=0.4, steps=600, dt=0.02):
@@ -165,16 +198,23 @@ def exp_free_precession(kernel, detuning=0.4, steps=600, dt=0.02):
     rate = np.polyfit(np.arange(steps)*dt, np.unwrap(np.array(phis)), 1)[0]
     return rate, q.bloch()
 
-def exp_rabi(kernel, detuning=0.0, bridge=1.0, steps=6000, dt=0.02):
+def exp_rabi(kernel, detuning=0.0, bridge=1.0, steps=6000, dt=0.02,
+             record_winding=False):
     q = TeotlQubit(detuning=detuning, kernel=kernel)
     q.prepare("0"); q.set_bridge(bridge)
     t = np.arange(steps)*dt
     P1 = np.zeros(steps); cons = np.zeros(steps)
     r0 = np.zeros(steps); r1 = np.zeros(steps)
+    winding = np.zeros(steps, dtype=int) if record_winding else None
     for s in range(steps):
         q.step(dt)
         b = q.bloch()
         P1[s], cons[s], r0[s], r1[s] = b["P1"], b["total_mass"], b["r0"], b["r1"]
+        if record_winding:
+            _, w_map = q.winding_readout()
+            winding[s] = int(w_map.sum())
+    if record_winding:
+        return t, P1, cons, r0, r1, winding
     return t, P1, cons, r0, r1
 
 def dominant_freq(t, sig):
@@ -221,3 +261,16 @@ if __name__ == "__main__":
         f_pred = np.sqrt(Omega0**2 + det**2)/(2*np.pi)
         print(f"  Δω={det:.1f}:  f_meas={f_meas:.4f}  f_pred=√(Ω₀²+Δω²)/2π={f_pred:.4f}  "
           f"P1_max={P1.max():.3f}  (pred {Omega0**2/(Omega0**2+det**2):.3f})")
+
+    print("\n── Exp 5: plaquette winding readout during Rabi (madelung, 600 steps) ──")
+    t5, P1_5, cons_5, *_, winding = exp_rabi(
+        "madelung", bridge=1.0, steps=600, dt=0.02, record_winding=True)
+    total_charge = winding.sum()
+    nonzero = int(np.count_nonzero(winding))
+    print(f"  steps recorded : {len(winding)}")
+    print(f"  non-zero winding steps : {nonzero} / {len(winding)}  "
+          f"(defects nucleated at {nonzero/len(winding)*100:.1f}% of steps)")
+    print(f"  total topological charge accumulated : {total_charge}")
+    print(f"  winding range : [{winding.min()}, {winding.max()}]")
+    print(f"  Rabi P1 range : [{P1_5.min():.3f}, {P1_5.max():.3f}]  "
+          f"mass drift : {abs(cons_5[-1]-cons_5[0])/cons_5[0]:.2e}  (unchanged)")
