@@ -16,6 +16,14 @@ Honesty requirements:
     tensor product) → must reach 2√2, proving protocol capability
   • CHSH angles grid-optimized per system
   • V2 no-signaling check: A's marginal vs B's setting
+
+Regime note (TFT-Classical framework, 2026-07-05):
+  The singlet initialisation here (equal amplitudes, λ-parameterised phase)
+  is in the SYMMETRIC vacuum (ρ≈const, no broken-symmetry U(1) charge).
+  A Q-ball initialisation (rotating phase, ω≠0, ρ=v) would be more
+  physically motivated but is not expected to move S — the S=2.0000 result
+  appears structural to the 8-real field state, not an initialisation artifact.
+  Whether TFT can exceed S=2 remains OPEN.
 ───────────────────────────────────────────────────────────────────────────────
 """
 import numpy as np

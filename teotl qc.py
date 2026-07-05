@@ -1,77 +1,76 @@
 """
-Teotl QC v0.2 — Milestone 1: single qubit, Rabi test, dual-kernel
+Teotl QC v0.3 — Madelung kernel, conservative complex field
 ───────────────────────────────────────────────────────────────────────────────
-M = R³ × S¹
+Framework: TFT-Classical conservative regime (2026-07-05).
+Regime: ψ = ρ e^{iθ}, second-order conservative field.  NOT the dissipative
+Kuramoto/rectified regime — that regime failed to produce stable localized
+particles and is retired here.
 
-A qubit is DEFINED as two node basins in R³, each internally phase-coherent.
-Nothing quantum is injected; quantum-looking quantities are READ OUT:
+A qubit is two node basins in R³, each internally phase-coherent:
 
-    ψ_k  = sqrt(m_k) · exp(i·θ̄_k)     k ∈ {0,1}  (basin mass, circular-mean phase)
+    ψ_k  = sqrt(m_k) · exp(i·θ̄_k)     k ∈ {0,1}
     P(1) = m₁ / (m₀ + m₁)
     φ    = θ̄₁ − θ̄₀
+    Q    = Σ_i m_i · ω_i               (U(1) Noether charge proxy)
 
-Two carrier-transport kernels, compared head-to-head:
+One kernel — Madelung (DERIVED, conservative):
+    θ̇_i = ω_i + g Σ_j S[i,j]·√(m_j/m_i)·cos(θ_j−θ_i)
+    ṁ_i = −2g Σ_j S[i,j]·√(m_i·m_j)·sin(θ_j−θ_i)
+    S symmetric → pairwise-antisymmetric flow → total mass conserved.
+    This is exactly discrete Schrödinger (ψ_i = √m_i e^{iθ_i}, H = ω − gS).
 
-  KERNEL A — "rectified" (v20.3-native, DERIVED from existing TFT code):
-      θ̇_i = ω_i + g Σ_j W[i,j]·sin(θ_j−θ_i)            (Kuramoto)
-      ṁ_i = g Σ_j W[i,j]·max(sin(θ_j−θ_i),0) − β m_i    (source + decay)
-      Open-system: mass is created/destroyed, not moved.
-
-  KERNEL B — "madelung" (PROPOSED conservative limit):
-      θ̇_i = ω_i + g Σ_j S[i,j]·√(m_j/m_i)·cos(θ_j−θ_i)
-      ṁ_i = −2g Σ_j S[i,j]·√(m_i·m_j)·sin(θ_j−θ_i)
-      S symmetric → pairwise-antisymmetric flow → total mass conserved.
-      This is exactly discrete Schrödinger (ψ_i = √m_i e^{iθ_i}, H = ω − gS)
-      in Madelung/Bohm hydrodynamic variables — the same mathematical
-      territory as the pilot-wave framework TFT cites as closest prior.
-
-  HONEST NOTE: Kernel B's phase coupling is cos(·), weighted by amplitude —
-  NOT Kuramoto's sin(·). The sin/cos distinction is the precise mathematical
-  boundary between synchronizing classical dynamics (A) and unitary quantum
-  dynamics (B). Locating that boundary is itself a milestone-1 result.
+Three preparation methods:
+    prepare(state)       — asymmetric mass, random phases (standard qubit init)
+    prepare_qball(state, omega) — coherent phase, uniform ω (U(1)-charged state)
+    prepare_vortex(basin)       — arctan2 phase texture; seeds a topological defect
 
 Epistemic labels:
-  DERIVED   — Kernel A behavior from v20.3 conventions; free-precession
-              Z-rotation from per-node ω detuning (works under both kernels).
-  PROPOSED  — Kernel B as TFT's conservative carrier-transport sector;
-              bridge amplitude ↔ X-drive; β ↔ T1; phase noise ↔ T2.
-  OPEN      — whether Kernel B is derivable from the TFT action rather than
-              postulated; Born statistics; CHSH (milestone 3).
+    DERIVED  — Madelung kernel from conservative TFT field equations.
+    DERIVED  — Winding readout: meaningful in broken-symmetry (ρ=v) regime.
+    OPEN     — Whether Kernel B is derivable from the TFT action; Born statistics;
+               CHSH S > 2.
+    RETIRED  — Rectified / Kuramoto kernel: dissipative regime, failed for physics.
 ───────────────────────────────────────────────────────────────────────────────
 """
 
 import numpy as np
-from teotl_math import wrap_theta, winding_density_2d, circular_mean
+from teotl_math import wrap_theta, wrap_to_pi, winding_density_2d, circular_mean
 
 # ── First-class scales ────────────────────────────────────────────────────────
 E_0, l_0 = 1.0, 1.0
-XI       = 3.0 * l_0
-SIGMA    = l_0
-DIST_EPS = 1e-6
-MASS_EPS = 1e-9
+XI        = 3.0 * l_0
+SIGMA     = l_0
+DIST_EPS  = 1e-6
+MASS_EPS  = 1e-9
 
 K_PER_BASIN  = 16
 BASIN_SEP    = 2.0 * l_0
 BASIN_RADIUS = 0.4 * l_0
 
+
 class TeotlQubit:
     def __init__(self, detuning=0.0, kernel="madelung",
                  g=0.05, beta=0.0, phase_noise=0.0, seed=42):
-        self.rng    = np.random.default_rng(seed)
-        self.kernel = kernel
-        self.g      = g
-        self.beta   = beta
+        if kernel != "madelung":
+            raise ValueError(
+                f"kernel={kernel!r} is retired. Only 'madelung' (conservative "
+                "complex field) is supported. See §0 of the TFT-Classical framework."
+            )
+        self.rng         = np.random.default_rng(seed)
+        self.kernel      = kernel
+        self.g           = g
+        self.beta        = beta
         self.phase_noise = phase_noise
-        self.N      = 2 * K_PER_BASIN
-        self.basin  = np.array([0]*K_PER_BASIN + [1]*K_PER_BASIN)
+        self.N           = 2 * K_PER_BASIN
+        self.basin       = np.array([0]*K_PER_BASIN + [1]*K_PER_BASIN)
 
         pos = np.zeros((self.N, 3))
         for k in range(self.N):
-            c = np.array([(-1 if self.basin[k]==0 else 1)*BASIN_SEP/2, 0, 0])
+            c = np.array([(-1 if self.basin[k] == 0 else 1)*BASIN_SEP/2, 0, 0])
             pos[k] = c + self.rng.normal(0, BASIN_RADIUS/2, 3)
         self.pos = pos
 
-        self.omega = np.where(self.basin==0, -detuning/2, +detuning/2).astype(float)
+        self.omega = np.where(self.basin == 0, -detuning/2, +detuning/2).astype(float)
         self.theta = self.rng.uniform(0, 2*np.pi, self.N)
         self.mass  = np.ones(self.N) / self.N
 
@@ -92,40 +91,69 @@ class TeotlQubit:
         if   amp <= 0.0: self.S = self._S_intra
         elif amp >= 1.0: self.S = self._S_full
         else:            self.S = self._build_S(amp)
-        # Kernel A uses row-normalized coupling (v20.3 convention)
         rs = self.S.sum(axis=1, keepdims=True) + 1e-12
-        self.W = self.S / rs
+        self.W = self.S / rs  # row-normalised (retained for legacy callers)
+
+    # ── preparation methods ───────────────────────────────────────────────────
 
     def prepare(self, state="0"):
+        """Standard qubit init: asymmetric mass, random near-zero phases."""
         self.theta = wrap_theta(self.rng.normal(0, 0.02, self.N))
         hi, lo = 1.0/K_PER_BASIN, 1e-4
-        if state == "0":
-            self.mass = np.where(self.basin==0, hi, lo)
-        else:
-            self.mass = np.where(self.basin==1, hi, lo)
+        self.mass = np.where(self.basin == (0 if state == "0" else 1), hi, lo)
         self.mass /= self.mass.sum()
 
-    def step(self, dt=0.02):
-        th   = self.theta
-        diff = np.sin(th[None,:] - th[:,None])     # [i,j] = sin(θj−θi)
+    def prepare_qball(self, state="0", omega=0.5):
+        """
+        Q-ball initial condition: coherent locked phase, uniform rotation ω.
 
-        if self.kernel == "rectified":
-            coup  = self.g * np.sum(self.W * diff, axis=1)
-            dth   = self.omega + coup
-            inflow = self.g * np.sum(self.W * np.maximum(diff,0), axis=1)
-            dm    = inflow - self.beta * self.mass
-        elif self.kernel == "madelung":
-            cdiff = np.cos(th[None,:] - th[:,None])
-            sqm   = np.sqrt(np.maximum(self.mass, MASS_EPS))
-            amp_ratio = sqm[None,:] / sqm[:,None]            # √(m_j/m_i)
-            dth = self.omega + self.g * np.sum(self.S * amp_ratio * cdiff, axis=1)
-            flow = -2*self.g * self.S * (sqm[:,None]*sqm[None,:]) * diff
-            dm   = flow.sum(axis=1) - self.beta * self.mass
-        else:
-            raise ValueError(self.kernel)
+        All nodes rotate at the same ω — the U(1) charge Q = ω·M is well-defined
+        and conserved (M is conserved by the Madelung kernel).  Active basin phase
+        locked to 0; inactive basin to π.  This is the TFT-Classical broken-symmetry
+        ground state for the qubit sector.
+        """
+        hi, lo = 1.0/K_PER_BASIN, 1e-4
+        active = 0 if state == "0" else 1
+        self.mass = np.where(self.basin == active, hi, lo)
+        self.mass /= self.mass.sum()
+        self.theta = np.where(self.basin == active, 0.0, np.pi).astype(float)
+        self.omega = np.full(self.N, omega, dtype=float)
+
+    def prepare_vortex(self, basin=0, noise=0.01):
+        """
+        Vortex initial condition: phase winds 2π around the basin centre.
+
+        Uses arctan2(y_rel, x_rel) centred on the specified basin.  In the
+        broken-symmetry regime (ρ=v) this is a topologically stable defect.
+        winding_readout() should return ±1 immediately after this call.
+        """
+        hi, lo = 1.0/K_PER_BASIN, 1e-4
+        self.mass = np.where(self.basin == basin, hi, lo)
+        self.mass /= self.mass.sum()
+
+        cx = (-1 if basin == 0 else 1) * BASIN_SEP / 2
+        cy = 0.0
+        xs, ys = self.pos[:, 0], self.pos[:, 1]
+        vortex = np.arctan2(ys - cy, xs - cx)
+        flat   = 0.0
+
+        self.theta = np.where(self.basin == basin, vortex, flat)
+        self.theta = wrap_theta(self.theta + self.rng.normal(0, noise, self.N))
+
+    # ── dynamics ──────────────────────────────────────────────────────────────
+
+    def step(self, dt=0.02):
+        th    = self.theta
+        cdiff = np.cos(th[None,:] - th[:,None])
+        diff  = np.sin(th[None,:] - th[:,None])
+        sqm   = np.sqrt(np.maximum(self.mass, MASS_EPS))
+        amp_ratio = sqm[None,:] / sqm[:,None]
+        dth   = self.omega + self.g * np.sum(self.S * amp_ratio * cdiff, axis=1)
+        flow  = -2*self.g * self.S * (sqm[:,None]*sqm[None,:]) * diff
+        dm    = flow.sum(axis=1) - self.beta * self.mass
 
         if self.phase_noise > 0:
-            dth = dth + self.phase_noise*self.rng.normal(0,1,self.N)/np.sqrt(dt)
+            dth = dth + self.phase_noise*self.rng.normal(0, 1, self.N)/np.sqrt(dt)
 
         self.theta = wrap_theta(th + dt*dth)
         self.mass  = np.clip(self.mass + dt*dm, 0, None)
@@ -134,36 +162,38 @@ class TeotlQubit:
         for _ in range(steps):
             self.step(dt)
 
-    # ── readout ────────────────────────────────────────────────────────────────
+    # ── readout ───────────────────────────────────────────────────────────────
+
     def basin_phase(self, b):
-        th = self.theta[self.basin==b]
-        m  = self.mass[self.basin==b]
-        return float(np.angle(np.sum(np.sqrt(np.maximum(m,0))*np.exp(1j*th))))
+        th = self.theta[self.basin == b]
+        m  = self.mass[self.basin == b]
+        return float(np.angle(np.sum(np.sqrt(np.maximum(m, 0))*np.exp(1j*th))))
 
     def basin_mass(self, b):
-        return float(self.mass[self.basin==b].sum())
+        return float(self.mass[self.basin == b].sum())
 
     def coherence(self, b):
-        th = self.theta[self.basin==b]
+        th = self.theta[self.basin == b]
         return float(np.abs(np.mean(np.exp(1j*th))))
+
+    def charge(self):
+        """U(1) Noether charge proxy: Q = Σ m_i · ω_i. Conserved when ω uniform."""
+        return float(np.dot(self.mass, self.omega))
 
     def bloch(self):
         m0, m1 = self.basin_mass(0), self.basin_mass(1)
         tot = m0 + m1 + 1e-12
         P1  = m1/tot
         phi = wrap_theta(self.basin_phase(1) - self.basin_phase(0))
-        return {"P1":P1, "phi":phi, "z":(m0-m1)/tot,
-                "r0":self.coherence(0), "r1":self.coherence(1),
+        return {"P1": P1, "phi": phi, "z": (m0-m1)/tot,
+                "r0": self.coherence(0), "r1": self.coherence(1),
                 "total_mass": m0+m1}
 
     def winding_readout(self, grid_nx=6, grid_ny=4):
         """
         Project the phase field onto a 2D (x, y) grid and return plaquette
-        winding numbers.  Not called by step() or evolve() — opt-in only.
-
-        Nodes are projected by (x, y) position onto a grid_ny × grid_nx grid;
-        each cell gets the circular-mean phase of its nodes.  Empty cells are
-        filled with the global circular mean so winding_density_2d never sees NaN.
+        winding numbers.  Meaningful in the broken-symmetry regime (ρ=v);
+        use prepare_vortex() to seed a testable topological defect.
 
         Returns
         -------
@@ -188,23 +218,51 @@ class TeotlQubit:
         grid = np.where(np.isnan(grid), fill, grid)
         return grid, winding_density_2d(grid)
 
+
 # ── Experiments ───────────────────────────────────────────────────────────────
-def exp_free_precession(kernel, detuning=0.4, steps=600, dt=0.02):
-    q = TeotlQubit(detuning=detuning, kernel=kernel)
-    q.prepare("0"); q.set_bridge(0.0)
+
+def exp_qball_stability(omega=0.5, bridge=0.0, steps=1000, dt=0.02):
+    """
+    Q-ball charge conservation test.  Charge Q = ω·M should stay constant
+    (M is conserved by the Madelung kernel; ω is a fixed parameter).
+    With bridge=0 the basins are isolated; with bridge>0 mass can flow but Q still holds.
+    """
+    q = TeotlQubit(seed=42)
+    q.prepare_qball(state="0", omega=omega)
+    q.set_bridge(bridge)
+    Q0 = q.charge()
+    M0 = q.basin_mass(0) + q.basin_mass(1)
+    t  = np.arange(steps) * dt
+    Q  = np.zeros(steps)
+    P1 = np.zeros(steps)
+    for s in range(steps):
+        q.step(dt)
+        Q[s]  = q.charge()
+        P1[s] = q.bloch()["P1"]
+    return t, Q, P1, Q0, M0
+
+
+def exp_free_precession(detuning=0.4, steps=600, dt=0.02):
+    q = TeotlQubit(detuning=detuning)
+    q.prepare("0")
+    q.set_bridge(0.0)
     phis = []
     for _ in range(steps):
-        q.step(dt); phis.append(q.bloch()["phi"])
+        q.step(dt)
+        phis.append(q.bloch()["phi"])
     rate = np.polyfit(np.arange(steps)*dt, np.unwrap(np.array(phis)), 1)[0]
     return rate, q.bloch()
 
-def exp_rabi(kernel, detuning=0.0, bridge=1.0, steps=6000, dt=0.02,
-             record_winding=False):
-    q = TeotlQubit(detuning=detuning, kernel=kernel)
-    q.prepare("0"); q.set_bridge(bridge)
-    t = np.arange(steps)*dt
-    P1 = np.zeros(steps); cons = np.zeros(steps)
-    r0 = np.zeros(steps); r1 = np.zeros(steps)
+
+def exp_rabi(detuning=0.0, bridge=1.0, steps=6000, dt=0.02, record_winding=False):
+    q = TeotlQubit(detuning=detuning)
+    q.prepare("0")
+    q.set_bridge(bridge)
+    t  = np.arange(steps) * dt
+    P1   = np.zeros(steps)
+    cons = np.zeros(steps)
+    r0   = np.zeros(steps)
+    r1   = np.zeros(steps)
     winding = np.zeros(steps, dtype=int) if record_winding else None
     for s in range(steps):
         q.step(dt)
@@ -217,60 +275,74 @@ def exp_rabi(kernel, detuning=0.0, bridge=1.0, steps=6000, dt=0.02,
         return t, P1, cons, r0, r1, winding
     return t, P1, cons, r0, r1
 
+
 def dominant_freq(t, sig):
-    sig = sig - sig.mean()
+    sig   = sig - sig.mean()
     freqs = np.fft.rfftfreq(len(sig), d=t[1]-t[0])
     spec  = np.abs(np.fft.rfft(sig))
     return freqs[1:][np.argmax(spec[1:])]
 
+
 if __name__ == "__main__":
-    print("Teotl QC v0.2 — milestone 1, dual kernel\n")
+    print("Teotl QC v0.3 — Madelung / conservative complex field\n")
 
-    print("── Exp 1: free precession, Δω=0.4, bridge OFF ──")
-    for k in ["rectified", "madelung"]:
-        rate, b = exp_free_precession(k)
-        print(f"  {k:>9}:  dφ/dt={rate:.4f} (target 0.4)  P1={b['P1']:.4f}  "
-              f"r0={b['r0']:.3f} r1={b['r1']:.3f}")
+    # ── Exp 1: Q-ball charge conservation ────────────────────────────────────
+    print("── Exp 1: Q-ball charge conservation (bridge=0 and bridge=1.0) ──")
+    for br in [0.0, 1.0]:
+        t, Q, P1, Q0, M0 = exp_qball_stability(omega=0.5, bridge=br, steps=2000)
+        dQ = abs(Q[-1] - Q0) / abs(Q0)
+        print(f"  bridge={br:.1f}:  Q0={Q0:.5f}  Q_final={Q[-1]:.5f}  "
+              f"dQ/Q0={dQ:.2e}  P1_range=[{P1.min():.3f},{P1.max():.3f}]")
 
+    # ── Exp 2: Rabi oscillations (resonant) ──────────────────────────────────
     print("\n── Exp 2: Rabi, resonant (Δω=0), bridge=1.0 ──")
-    for k in ["rectified", "madelung"]:
-        t, P1, cons, r0, r1 = exp_rabi(k)
-        f = dominant_freq(t, P1)
-        print(f"  {k:>9}:  P1 ∈ [{P1.min():.3f},{P1.max():.3f}]  "
-              f"contrast={P1.max()-P1.min():.3f}  f={f:.4f}  "
-              f"mass drift={abs(cons[-1]-cons[0])/cons[0]:.2e}  "
-              f"r0_end={r0[-1]:.3f} r1_end={r1[-1]:.3f}")
+    t, P1, cons, r0, r1 = exp_rabi()
+    f = dominant_freq(t, P1)
+    print(f"  madelung:  P1 ∈ [{P1.min():.3f},{P1.max():.3f}]  "
+          f"contrast={P1.max()-P1.min():.3f}  f={f:.4f}  "
+          f"mass drift={abs(cons[-1]-cons[0])/cons[0]:.2e}  "
+          f"r0_end={r0[-1]:.3f} r1_end={r1[-1]:.3f}")
 
-    print("\n── Exp 3: Rabi frequency vs bridge amplitude (madelung) ──")
+    # ── Exp 3: Rabi frequency vs bridge amplitude ─────────────────────────────
+    print("\n── Exp 3: Rabi frequency vs bridge amplitude ──")
     amps, fs = [0.25, 0.5, 0.75, 1.0], []
     for a in amps:
-        t, P1, *_ = exp_rabi("madelung", bridge=a, steps=12000)
-        f = dominant_freq(t, P1); fs.append(f)
+        t, P1, *_ = exp_rabi(bridge=a, steps=12000)
+        f = dominant_freq(t, P1)
+        fs.append(f)
         print(f"  bridge={a:.2f}:  f_Rabi={f:.4f}  contrast={P1.max()-P1.min():.3f}")
     slope = np.polyfit(amps, fs, 1)
     corr  = np.corrcoef(amps, fs)[0,1]
     print(f"  linearity: f = {slope[0]:.4f}·amp + {slope[1]:.4f}   r = {corr:.5f}")
 
-    print("\n── Exp 4: detuned Rabi — generalized frequency check (madelung) ──")
-    t, P1, *_ = exp_rabi("madelung", detuning=0.0, bridge=1.0, steps=6000)
-    f_res = dominant_freq(t, P1)
+    # ── Exp 4: detuned Rabi ───────────────────────────────────────────────────
+    print("\n── Exp 4: detuned Rabi — generalised frequency check ──")
+    t, P1, *_ = exp_rabi(detuning=0.0, bridge=1.0, steps=6000)
+    f_res  = dominant_freq(t, P1)
     Omega0 = 2*np.pi*f_res
     for det in [0.1, 0.2, 0.4]:
-        t, P1, *_ = exp_rabi("madelung", detuning=det, bridge=1.0, steps=6000)
+        t, P1, *_ = exp_rabi(detuning=det, bridge=1.0, steps=6000)
         f_meas = dominant_freq(t, P1)
         f_pred = np.sqrt(Omega0**2 + det**2)/(2*np.pi)
-        print(f"  Δω={det:.1f}:  f_meas={f_meas:.4f}  f_pred=√(Ω₀²+Δω²)/2π={f_pred:.4f}  "
-          f"P1_max={P1.max():.3f}  (pred {Omega0**2/(Omega0**2+det**2):.3f})")
+        print(f"  Δω={det:.1f}:  f_meas={f_meas:.4f}  "
+              f"f_pred=√(Ω₀²+Δω²)/2π={f_pred:.4f}  "
+              f"P1_max={P1.max():.3f}  (pred {Omega0**2/(Omega0**2+det**2):.3f})")
 
-    print("\n── Exp 5: plaquette winding readout during Rabi (madelung, 600 steps) ──")
-    t5, P1_5, cons_5, *_, winding = exp_rabi(
-        "madelung", bridge=1.0, steps=600, dt=0.02, record_winding=True)
-    total_charge = winding.sum()
-    nonzero = int(np.count_nonzero(winding))
-    print(f"  steps recorded : {len(winding)}")
-    print(f"  non-zero winding steps : {nonzero} / {len(winding)}  "
-          f"(defects nucleated at {nonzero/len(winding)*100:.1f}% of steps)")
-    print(f"  total topological charge accumulated : {total_charge}")
-    print(f"  winding range : [{winding.min()}, {winding.max()}]")
-    print(f"  Rabi P1 range : [{P1_5.min():.3f}, {P1_5.max():.3f}]  "
-          f"mass drift : {abs(cons_5[-1]-cons_5[0])/cons_5[0]:.2e}  (unchanged)")
+    # ── Exp 5: vortex winding readout ─────────────────────────────────────────
+    print("\n── Exp 5: vortex winding readout ──")
+    q = TeotlQubit(seed=42)
+    q.prepare_vortex(basin=0)
+    q.set_bridge(0.0)
+
+    _, w0 = q.winding_readout()
+    print(f"  t=0  winding map sum = {w0.sum():+d}  (non-zero={np.count_nonzero(w0)})")
+
+    for n_steps in [50, 200, 500]:
+        q.evolve(n_steps)
+        _, w = q.winding_readout()
+        print(f"  t={n_steps*0.02:.1f} ({n_steps} steps)  "
+              f"winding map sum = {w.sum():+d}  (non-zero={np.count_nonzero(w)})")
+
+    print()
+    print("  Note: vortex persistence requires the broken-symmetry vacuum (ρ=v).")
+    print("  Current qubit is near ρ~0 for inactive basin — defects can dissolve.")

@@ -1,22 +1,31 @@
 """
-TFT Phase-Native Optimization — MAX-CUT schedule comparison
-─────────────────────────────────────────────────────────────
-Claim under test: the field's dissipative settling dynamics (Kuramoto sin
-coupling + annealed phase pinning) solve MAX-CUT competitively with SA.
+TFT-Inspired Phase Solver — MAX-CUT schedule comparison
+─────────────────────────────────────────────────────────
+A combinatorial optimiser that borrows TFT's S¹ phase topology as a
+computational device.  NOT a TFT physics simulation.
 
-Mapping: vertex i → phase θ_i on S¹; edge weight w_ij → ANTI-aligning
+Dynamics are DISSIPATIVE (Kuramoto sin-coupling + annealed pinning) —
+the regime that the TFT-Classical framework (2026-07-05) identifies as
+outside the productive conservative/complex-field sector.  Dissipative
+settling is deliberate here: the solver needs phases to converge to fixed
+points, not oscillate conservatively.  The physics label is "heuristic,"
+not "derivation."
+
+Mapping: vertex i → phase θ_i on S¹; edge weight w_ij → anti-aligning
 coupling. Dynamics:  dθ_i/dt = −Σ_j w_ij sin(θ_i−θ_j) − K_s(t)·sin(2θ_i) + ξ(t)
-noise anneals to 0. Readout: s_i = sign(cos θ_i); 1-opt polish.
+Readout: s_i = sign(cos θ_i); 1-opt polish.
 
 Two freezing schedules benchmarked head-to-head:
-  linear    — K_s = K_max · (t/T)           (ramps uniformly with time)
-  lambda_eff — K_s = K_max · R₂(t)           (field-driven: R₂ = |⟨e^{2iθ}⟩|,
-               the 2nd-harmonic order parameter; pinning nucleates as phases
-               self-polarize to {0,π}, the direct Λ_eff analogue)
+  linear     — K_s = K_max · (t/T)        (ramps uniformly with time)
+  lambda_eff — K_s = K_max · R₂(t)        (field-driven: R₂ = |⟨e^{2iθ}⟩|,
+               the 2nd-harmonic order parameter; pinning grows as phases
+               self-polarise to {0,π})
 
 Honest notes: couplings are problem-defined (not row-normalized); the
 binarizing pinning term is a second harmonic — a solver-specific variant
 outside the AGI's odd-k invariant, stated rather than hidden.
+Benchmark result (2026-06-29): linear wins 3/4 instances; lambda_eff wins
+1/4 (Erdős–Rényi); linear is the default.
 """
 import numpy as np, time
 from teotl_math import wrap_theta
