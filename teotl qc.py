@@ -50,7 +50,8 @@ BASIN_RADIUS = 0.4 * l_0
 
 class TeotlQubit:
     def __init__(self, detuning=0.0, kernel="madelung",
-                 g=0.05, beta=0.0, phase_noise=0.0, seed=42):
+                 g=0.05, beta=0.0, phase_noise=0.0, seed=42,
+                 Lambda=0.0, v_sq=None):
         if kernel != "madelung":
             raise ValueError(
                 f"kernel={kernel!r} is retired. Only 'madelung' (conservative "
@@ -61,8 +62,14 @@ class TeotlQubit:
         self.g           = g
         self.beta        = beta
         self.phase_noise = phase_noise
+        self.Lambda      = Lambda
         self.N           = 2 * K_PER_BASIN
         self.basin       = np.array([0]*K_PER_BASIN + [1]*K_PER_BASIN)
+
+        # v_sq = ρ² at the broken-symmetry vacuum (Mexican hat minimum).
+        # Default: 1/N so that uniform mass m_i=v_sq has Σm_i=1 and the
+        # potential term -2Λ(m_i-v_sq) sums to zero → total mass conserved.
+        self.v_sq = v_sq if v_sq is not None else 1.0 / (2 * K_PER_BASIN)
 
         pos = np.zeros((self.N, 3))
         for k in range(self.N):
@@ -119,25 +126,29 @@ class TeotlQubit:
         self.theta = np.where(self.basin == active, 0.0, np.pi).astype(float)
         self.omega = np.full(self.N, omega, dtype=float)
 
-    def prepare_vortex(self, basin=0, noise=0.01):
+    def prepare_vortex(self, basin=0, uniform_mass=False, noise=0.01):
         """
         Vortex initial condition: phase winds 2π around the basin centre.
 
-        Uses arctan2(y_rel, x_rel) centred on the specified basin.  In the
-        broken-symmetry regime (ρ=v) this is a topologically stable defect.
-        winding_readout() should return ±1 immediately after this call.
+        uniform_mass=False  — concentrate mass in the vortex basin (standard qubit).
+        uniform_mass=True   — set all nodes to m_i=v_sq (broken-symmetry vacuum).
+                              Use this with Lambda>0 for topologically stable defects:
+                              the potential cost at the vortex core (ρ→0) prevents
+                              unwinding, so winding_readout() should stay ±1 indefinitely.
         """
-        hi, lo = 1.0/K_PER_BASIN, 1e-4
-        self.mass = np.where(self.basin == basin, hi, lo)
-        self.mass /= self.mass.sum()
+        if uniform_mass:
+            self.mass = np.full(self.N, self.v_sq)
+        else:
+            hi, lo = 1.0/K_PER_BASIN, 1e-4
+            self.mass = np.where(self.basin == basin, hi, lo)
+            self.mass /= self.mass.sum()
 
         cx = (-1 if basin == 0 else 1) * BASIN_SEP / 2
         cy = 0.0
         xs, ys = self.pos[:, 0], self.pos[:, 1]
         vortex = np.arctan2(ys - cy, xs - cx)
-        flat   = 0.0
 
-        self.theta = np.where(self.basin == basin, vortex, flat)
+        self.theta = np.where(self.basin == basin, vortex, 0.0)
         self.theta = wrap_theta(self.theta + self.rng.normal(0, noise, self.N))
 
     # ── dynamics ──────────────────────────────────────────────────────────────
@@ -151,6 +162,10 @@ class TeotlQubit:
         dth   = self.omega + self.g * np.sum(self.S * amp_ratio * cdiff, axis=1)
         flow  = -2*self.g * self.S * (sqm[:,None]*sqm[None,:]) * diff
         dm    = flow.sum(axis=1) - self.beta * self.mass
+        if self.Lambda > 0:
+            # Mexican hat V(m) = Λ(m-v²)²; dV/dm = 2Λ(m-v²)
+            # Drives ρ → v everywhere. Sums to zero when Σm = N·v_sq → mass conserved.
+            dm = dm - 2 * self.Lambda * (self.mass - self.v_sq)
 
         if self.phase_noise > 0:
             dth = dth + self.phase_noise*self.rng.normal(0, 1, self.N)/np.sqrt(dt)
@@ -328,21 +343,28 @@ if __name__ == "__main__":
               f"f_pred=√(Ω₀²+Δω²)/2π={f_pred:.4f}  "
               f"P1_max={P1.max():.3f}  (pred {Omega0**2/(Omega0**2+det**2):.3f})")
 
-    # ── Exp 5: vortex winding readout ─────────────────────────────────────────
-    print("\n── Exp 5: vortex winding readout ──")
-    q = TeotlQubit(seed=42)
-    q.prepare_vortex(basin=0)
-    q.set_bridge(0.0)
+    # ── Exp 5: Mexican hat potential — vortex persistence vs Λ ───────────────
+    print("\n── Exp 5: vortex persistence vs Mexican hat strength Λ ──")
+    print("  uniform mass (ρ=v everywhere), basin-0 vortex, bridge=0, dt=0.02")
+    print(f"  {'Λ':>6}  {'t=0':>5}  {'t=1':>5}  {'t=4':>5}  {'t=10':>5}  "
+          f"{'t=20':>5}  mass_drift")
 
-    _, w0 = q.winding_readout()
-    print(f"  t=0  winding map sum = {w0.sum():+d}  (non-zero={np.count_nonzero(w0)})")
+    checkpoints = [0, 50, 200, 500, 1000]  # steps → t = 0, 1, 4, 10, 20
 
-    for n_steps in [50, 200, 500]:
-        q.evolve(n_steps)
-        _, w = q.winding_readout()
-        print(f"  t={n_steps*0.02:.1f} ({n_steps} steps)  "
-              f"winding map sum = {w.sum():+d}  (non-zero={np.count_nonzero(w)})")
+    for lam in [0.0, 0.1, 0.5, 1.0, 2.0]:
+        q = TeotlQubit(seed=42, Lambda=lam)
+        q.prepare_vortex(basin=0, uniform_mass=True)
+        q.set_bridge(0.0)
+        m0 = q.mass.sum()
 
-    print()
-    print("  Note: vortex persistence requires the broken-symmetry vacuum (ρ=v).")
-    print("  Current qubit is near ρ~0 for inactive basin — defects can dissolve.")
+        readings = []
+        prev = 0
+        for ck in checkpoints:
+            q.evolve(ck - prev)
+            _, w = q.winding_readout()
+            readings.append(w.sum())
+            prev = ck
+
+        drift = abs(q.mass.sum() - m0) / m0
+        vals  = "  ".join(f"{r:+d}" for r in readings)
+        print(f"  {lam:>6.1f}  {vals}  {drift:.1e}")
