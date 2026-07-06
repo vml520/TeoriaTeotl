@@ -204,7 +204,7 @@ class TeotlQubit:
                 "r0": self.coherence(0), "r1": self.coherence(1),
                 "total_mass": m0+m1}
 
-    def winding_readout(self, grid_nx=6, grid_ny=4):
+    def winding_readout(self, grid_nx=12, grid_ny=8):
         """
         Project the phase field onto a 2D (x, y) grid and return plaquette
         winding numbers.  Meaningful in the broken-symmetry regime (ρ=v);
@@ -344,12 +344,12 @@ if __name__ == "__main__":
               f"P1_max={P1.max():.3f}  (pred {Omega0**2/(Omega0**2+det**2):.3f})")
 
     # ── Exp 5: Mexican hat potential — vortex persistence vs Λ ───────────────
-    print("\n── Exp 5: vortex persistence vs Mexican hat strength Λ ──")
+    print("\n── Exp 5: vortex persistence vs Mexican hat strength Λ (grid 12×8) ──")
     print("  uniform mass (ρ=v everywhere), basin-0 vortex, bridge=0, dt=0.02")
     print(f"  {'Λ':>6}  {'t=0':>5}  {'t=1':>5}  {'t=4':>5}  {'t=10':>5}  "
-          f"{'t=20':>5}  mass_drift")
+          f"{'t=20':>5}  {'t=40':>5}  mass_drift")
 
-    checkpoints = [0, 50, 200, 500, 1000]  # steps → t = 0, 1, 4, 10, 20
+    checkpoints = [0, 50, 200, 500, 1000, 2000]  # steps → t = 0,1,4,10,20,40
 
     for lam in [0.0, 0.1, 0.5, 1.0, 2.0]:
         q = TeotlQubit(seed=42, Lambda=lam)
@@ -368,3 +368,26 @@ if __name__ == "__main__":
         drift = abs(q.mass.sum() - m0) / m0
         vals  = "  ".join(f"{r:+d}" for r in readings)
         print(f"  {lam:>6.1f}  {vals}  {drift:.1e}")
+
+    # ── Exp 5b: fine-grained winding timeseries for Λ=0 and Λ=1 ─────────────
+    print("\n── Exp 5b: winding timeseries t=0..40 every Δt=0.5 (Λ=0 vs Λ=1) ──")
+    print("  t      Λ=0   Λ=1")
+    dt_ts  = 0.02
+    stride = 25    # 25 steps × 0.02 = 0.5 time units per row
+    rows   = 80    # 80 rows × 0.5 = t=40
+
+    ts = {lam: None for lam in [0.0, 1.0]}
+    for lam in [0.0, 1.0]:
+        q = TeotlQubit(seed=42, Lambda=lam)
+        q.prepare_vortex(basin=0, uniform_mass=True)
+        q.set_bridge(0.0)
+        series = []
+        for _ in range(rows):
+            q.evolve(stride)
+            _, w = q.winding_readout()
+            series.append(int(w.sum()))
+        ts[lam] = series
+
+    for i, (w0, w1) in enumerate(zip(ts[0.0], ts[1.0])):
+        t_val = (i + 1) * stride * dt_ts
+        print(f"  {t_val:5.1f}  {w0:+d}    {w1:+d}")
