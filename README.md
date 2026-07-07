@@ -18,6 +18,14 @@ These programs exercise those few pieces across five orders of magnitude in scal
 the framework *is* (one circle-valued phase field, and why so much standard physics turns out to be
 its geometry and topology).
 
+**Convocatoria / collaboration.** This project's open call for scientific collaboration — its
+philosophical roots, epistemic discipline, open problems, and why its intellectual home is Mexico —
+is in [`CONVOCATORIA.md`](CONVOCATORIA.md) (in Spanish). The quantum-sector experiments it describes
+(`teotl qc.py`, `teotl chsh.py`, `maxcut tft.py`, `verify derivations.py`, `winding_solver.py`) live
+in this repository alongside the demonstrations below — including the CHSH/Bell **negative result**
+(the local field saturates S = 2.0000 and does not cross it), reported with the same discipline as
+the positives.
+
 ## Run it
 
 ```bash
@@ -83,4 +91,4 @@ If you use this code, please cite the archived release:
 
 ## License
 
-⟨choose one — e.g. MIT for code, CC-BY for text⟩
+MIT — see [`LICENSE`](LICENSE).
