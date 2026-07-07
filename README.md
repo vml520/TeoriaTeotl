@@ -1,0 +1,82 @@
+# Teotl Field Theory — Computational Demonstrations
+
+Companion code for *⟨paper title⟩* (V. Luna, ⟨year⟩). Each program is a small, self-contained check
+that anyone can run in a few seconds.
+
+> **What these are.** Demonstrations and consistency checks — **not proofs.** They show that the
+> framework's mechanisms produce the stated behavior, and that it reproduces known physics where it
+> should. Each result below is labeled by what it establishes. Nothing here claims uniqueness or
+> proves the theory; that is what experiment is for. The framework is **in progress**; this is what
+> it does so far.
+
+The whole thing rests on four scales (**E₀, ℓ₀, τ₀, α₀**) and three equations
+(**mc² = hf**, *time = the turning of phase*, *force = the slope of the phase*) — see the paper.
+These programs exercise those few pieces across five orders of magnitude in scale:
+**particle → planet → galaxy → cosmos.**
+
+## Run it
+
+```bash
+pip install numpy
+python3 verify_conservative_1d.py      # or any file below — each prints its own result
+```
+
+Requirements: Python 3.8+ and NumPy. No other dependencies. Every file is standalone.
+
+## The demonstrations, by scale
+
+Labels: **[derived]** follows from the framework · **[consistency]** reproduces a known result,
+not a unique prediction · **[input]** a value the framework does not yet fix.
+
+### A. The substrate and its particles
+| file | what it shows | status |
+|---|---|---|
+| `verify_conservative_1d.py`, `verify_force_law_sign.py` | a particle's rest mass = 8√Λ·E₀ (to 1e-9); it obeys F = Ma | **derived** |
+| `verify_breather_1d.py` | a particle as a standing wave — mass entirely in the motion | **derived** (exact in 1D) |
+| `verify_oscillon_3d.py`, `verify_qball_3d.py` | a lone phase can't hold a 3-D particle; a conserved charge (Q-ball) can | **derived** (charge-vs-alt. not fully isolated) |
+
+### B. The two forces, from one distinction
+| file | what it shows | status |
+|---|---|---|
+| `verify_goldstone_1r2.py`, `verify_force_sign.py` | electromagnetism: a 1/r² Coulomb force, like charges repel | **derived** |
+| `verify_poisson_metric.py`, `verify_gravity_coupling.py` | gravity from energy: universal 1/r attraction; matter and antimatter both fall (cf. CERN ALPHA-g 2023) | **derived**, matches experiment |
+| `verify_G_as_rate.py` | Newton's G read as (rate of time)² / density | reframing, not a value |
+
+### C. The classical world
+| file | what it shows | status |
+|---|---|---|
+| `tft_solar_system.py`, `stage3_orbits.py`, `stage5_mercury.py` | a solar system from one calibration: 8 periods to <0.1%, Kepler's third law, Mercury 42.9″/century | **consistency** (closed orbits by-construction; Mercury is the standard GR value, not unique) |
+
+### D. The cosmic scale — galaxies without dark matter
+| file | what it shows | status |
+|---|---|---|
+| `verify_a0_g1.py` … `g5.py` | the galactic acceleration scale α₀ = cH₀/2π — set by the universe's expansion, not fitted | scale **derived**; exact coefficient = the "why now" coincidence problem |
+| `milkyway_rotation.py` | Milky Way rotation curve to ~3%, baryons only; tracks the 175-galaxy acceleration relation | **fits** (transition shape model-dependent, as in MOND) |
+| `verify_a0_g4.py` | the mass–rotation (Tully–Fisher) exponent = exactly 4 (observed 3.85 ± 0.09) | **derived**, parameter-free |
+
+### E. Matter, fields, and handedness — one topological object
+| file | what it shows | status |
+|---|---|---|
+| `verify_chiral_g1.py`, `verify_chiral_g2.py` | baryon number, magnetism, and chirality are three readings of one topological quantity (winding + linking); their anomaly link is automatic | **linkage derived**; the *size* of the matter–antimatter imbalance is an initial condition |
+
+## A fuller digest
+
+`DERIVED_SUMMARY.md` — a scale-by-scale summary of what is derived, what is reproduced by
+construction, and what remains an open input (with each open number named: G, the cosmological
+constant, the coincidence problem, the baryon asymmetry).
+
+## The one honest pattern
+
+Across every result: the framework derives **mechanisms and scale-relations** without free
+parameters, and carries **one calibration constant per absolute scale**. The remaining absolute
+numbers (G, |Λ|, α₀'s exact coefficient, the baryon asymmetry) each reduce to a problem that is
+open in *every* framework — not a gap unique to this one.
+
+## Cite
+
+If you use this code, please cite the archived release:
+`https://doi.org/10.5281/zenodo.⟨ID⟩`
+
+## License
+
+⟨choose one — e.g. MIT for code, CC-BY for text⟩
