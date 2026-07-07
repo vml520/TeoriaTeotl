@@ -1,25 +1,25 @@
-# G0 — Preregistro: bariogénesis, magnetogénesis, quiralidad
+# G0 — Pre-registration: baryogenesis, magnetogenesis, chirality
 
-*Escrito antes de la derivación. Misma disciplina que el programa a₀: sin ajustes, etiquetar todo, enrutar a una comprobación ejecutable donde sea posible. Este territorio es más especulativo que la gravedad — señalarlo.*
+*Written before the derivation. Same discipline as the a₀ program: no fitting, label everything, route to a runnable check where possible. This territory is more speculative than gravity — flag that.*
 
-## Afirmación (Vic): los tres son derivables desde la TFT.
-En la TFT éstas son una única estructura vinculada, no tres problemas:
-- **número bariónico = número de enrollamiento W** (las partículas son defectos de enrollamiento — ya establecido),
-- **campo magnético = el flujo que porta una línea de enrollamiento** (∮∇θ·dl = 2πW; gradiente de fase = potencial EM),
-- **quiralidad = la helicidad (enlace/torsión) del campo de enrollamiento** — el signo del enlace.
+## Claim (Vic): all three are derivable from TFT.
+In TFT these are one linked structure, not three problems:
+- **baryon number = winding number W** (particles are winding defects — already established),
+- **magnetic field = the flux a winding line carries** (∮∇θ·dl = 2πW; phase gradient = EM potential),
+- **chirality = the helicity (linking/twist) of the winding field** — the sign of the linking.
 
-El conector es la **anomalía quiral**: Δ(número bariónico) ↔ Δ(helicidad magnética). En la TFT esto debería reducirse a la afirmación de que son la *misma* cantidad topológica.
+The connector is the **chiral anomaly**: Δ(baryon number) ↔ Δ(magnetic helicity). In TFT this should reduce to the statement that these are the *same* topological quantity.
 
-## Puertas de éxito (pre-comprometidas)
-- **G1 (raíz):** ¿la acción de la TFT contiene / admite una estructura quiral en absoluto? (Punto de ruptura.)
-- **G2:** derivar el vínculo — número bariónico, helicidad magnética y quiralidad como un solo invariante (la anomalía).
-- **G3:** bariogénesis — un mecanismo para el enrollamiento *neto*.
-- **G4:** magnetogénesis — el campo coherente (helicoidal) que el enrollamiento neto porta.
+## Success gates (pre-committed)
+- **G1 (root):** does the TFT action contain / admit a chiral structure at all? (Make-or-break.)
+- **G2:** derive the linkage — baryon number, magnetic helicity, chirality as one invariant (the anomaly).
+- **G3:** baryogenesis — a mechanism for *net* winding.
+- **G4:** magnetogenesis — the coherent (helical) field that net winding carries.
 
-## Falsadores (pre-comprometidos)
-1. Si la TFT **no tiene estructura quiral** → el trío no se sigue del campo mínimo (negativo limpio).
-2. Si una asimetría *neta* requiere una constante **ajustada** → fenomenología, no derivación.
-3. Si los **números** observados (η ≈ 6×10⁻¹⁰, fuerza del campo semilla) necesitan entradas profundas desconocidas (condiciones iniciales, un ángulo θ del vacío violador de CP) → decirlo; etiquetarlos como entradas, no predicciones.
+## Falsifiers (pre-committed)
+1. If TFT has **no chiral structure** → the trio does not follow from the minimal field (clean negative).
+2. If a *net* asymmetry requires a **fitted** constant → phenomenology, not derivation.
+3. If the observed **numbers** (η ≈ 6×10⁻¹⁰, seed-field strength) need deep-unknown inputs (initial conditions, a CP-violating vacuum angle) → say so; label them inputs, not predictions.
 
-## Regla de honestidad
-Distinguir con precisión: **estructura/mecanismo** (existe un invariante topológico, los tres están vinculados) vs la **asimetría neta** (su signo y magnitud). Lo primero puede ser derivable; lo segundo, como el coeficiente de a₀ y |Λ|, probablemente topará con una condición inicial o una entrada profunda desconocida. No dejar que «el mecanismo existe» se disfrace de «η está predicho».
+## Honesty rule
+Distinguish sharply: **structure/mechanism** (a topological invariant exists, the three are linked) vs the **net asymmetry** (its sign and magnitude). The first may be derivable; the second, like a₀'s coefficient and |Λ|, will most likely bottom out at an initial condition or a deep-unknown input. Do not let "the mechanism exists" masquerade as "η is predicted."

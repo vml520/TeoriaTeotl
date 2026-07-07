@@ -1,29 +1,29 @@
-# G1 — La raíz quiral: ¿tiene la TFT una estructura quiral?
+# G1 — The chiral root: does TFT have a chiral structure?
 
-*Comprobación ejecutable: `verify_chiral_g1.py`. Resultado: el invariante quiral EXISTE (= helicidad de líneas de enrollamiento, las «direcciones de enrollamiento» de Vic), pero la acción mínima es CP-simétrica, así que la quiralidad neta no es forzada.*
+*Runnable check: `verify_chiral_g1.py`. Outcome: the chiral invariant EXISTS (= winding-line helicity, Vic's "winding directions"), but the minimal action is CP-symmetric so net chirality is not forced.*
 
-## A. La acción mínima es CP-simétrica
-Densidad de energía e = ½(∇θ)² + Λ(1−cos θ). Bajo C: θ → −θ. Tanto (∇θ)² como cos θ son invariantes → **e es CP-par** (verificado exactamente: max|e − e_flip| = 0). Así que la TFT sine-Gordon mínima produce **enrollamientos + y − iguales — materia = antimateria, cero mano neta.** La quiralidad NO es automática.
+## A. The minimal action is CP-symmetric
+Energy density e = ½(∇θ)² + Λ(1−cos θ). Under C: θ → −θ. Both (∇θ)² and cos θ are invariant → **e is CP-even** (verified exactly: max|e − e_flip| = 0). So the minimal sine-Gordon TFT produces **equal + and − windings — matter = antimatter, zero net handedness.** Chirality is NOT automatic.
 
-## B. El invariante quiral existe — helicidad de líneas de enrollamiento
-El número de enlace (helicidad) de dos líneas de enrollamiento, integral de Gauss Lk = (1/4π)∮∮(r₁−r₂)·(dl₁×dl₂)/|r₁−r₂|³:
-| configuración | Lk |
+## B. The chiral invariant exists — winding-line helicity
+The linking number (helicity) of two winding lines, Gauss integral Lk = (1/4π)∮∮(r₁−r₂)·(dl₁×dl₂)/|r₁−r₂|³:
+| configuration | Lk |
 |---|---|
-| enlazado, mano derecha | −1 |
-| desenlazado | 0 |
-| espejo (mano izquierda) | +1 |
+| linked, right-handed | −1 |
+| unlinked | 0 |
+| mirror (left-handed) | +1 |
 
-Un invariante topológico que **distingue mano** (CP invierte su signo), no nulo **sólo cuando los enrollamientos se enlazan/torsionan**. **Ésta es la «quiralidad a partir de las direcciones de enrollamiento»** — quiralidad = helicidad del campo de enrollamiento, la correlación de las *direcciones* de enrollamiento de líneas de defecto enlazadas. (Memoria de Vic confirmada.)
+A topological invariant that **distinguishes handedness** (CP flips its sign), nonzero **only when windings link/twist**. **This is "chirality from winding directions"** — chirality = the helicity of the winding field, the correlation of the winding *directions* of linked defect lines. (Vic's memory confirmed.)
 
-## Por qué esto desbloquea el trío — un invariante, tres caras
-La helicidad de líneas de enrollamiento es simultáneamente:
-- **carga** de enrollamiento alrededor de la línea = **número bariónico** (bariogénesis),
-- **enlace de flujo** = **helicidad magnética** (magnetogénesis),
-- **signo del enlace** = **quiralidad**.
+## Why this unlocks the trio — one invariant, three faces
+The winding-line helicity is simultaneously:
+- winding **charge** around the line = **baryon number** (baryogenesis),
+- **linking of flux** = **magnetic helicity** (magnetogenesis),
+- **sign of the linking** = **chirality**.
 
-Así que la anomalía quiral (número bariónico ↔ helicidad magnética) no es un postulado extra — en la TFT es la afirmación de que son la *misma* cantidad topológica. Eso es G2.
+So the chiral anomaly (baryon number ↔ magnetic helicity) is not an extra postulate — in TFT it is the statement that these are the *same* topological quantity. That is G2.
 
-## Veredicto
-- **Estructura quiral PRESENTE** — el trío tiene un hogar topológico genuino; el programa no está muerto en la raíz.
-- **NO forzada** — la acción mínima es CP-par, así que una quiralidad *neta* (el exceso real de materia / la mano preferida) es una **condición inicial** (helicidad primordial neta) o requiere una **entrada violadora de CP** (un vacío de enrollamiento / ángulo θ, un término añadido).
-- **Consecuencia, señalada de antemano:** el *vínculo* (G2) es derivable; la *asimetría neta* (signo y magnitud de η) topará con una CI / desconocido profundo, como el coeficiente de a₀ y |Λ|. Mecanismo sí; número absoluto, casi seguro que no.
+## Verdict
+- **Chiral structure PRESENT** — the trio has a genuine topological home; the program is not dead at the root.
+- **NOT forced** — minimal action is CP-even, so a *net* chirality (the actual matter excess / preferred handedness) is an **initial condition** (net primordial helicity) or requires a **CP-violating input** (a winding vacuum/θ-angle, an added term).
+- **Consequence, pre-flagged:** the *linkage* (G2) is derivable; the *net asymmetry* (sign & magnitude of η) will bottom out at an IC / deep-unknown, like a₀'s coefficient and |Λ|. Mechanism yes; absolute number, almost certainly not.

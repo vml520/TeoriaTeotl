@@ -1,86 +1,86 @@
-# Teoría del Campo Teotl — Demostraciones computacionales
+# Teotl Field Theory — Computational Demonstrations
 
-Código complementario de *⟨título del artículo⟩* (V. Luna, ⟨año⟩). Cada programa es una comprobación pequeña
-y autocontenida que cualquiera puede ejecutar en pocos segundos.
+Companion code for *⟨paper title⟩* (V. Luna, ⟨year⟩). Each program is a small, self-contained check
+that anyone can run in a few seconds.
 
-> **Qué son.** Demostraciones y comprobaciones de consistencia — **no pruebas.** Muestran que los
-> mecanismos del marco producen el comportamiento indicado, y que reproducen la física conocida donde
-> corresponde. Cada resultado abajo lleva una etiqueta que dice qué establece. Nada aquí reclama
-> unicidad ni prueba la teoría; para eso está el experimento. El marco está **en desarrollo**; esto es
-> lo que hace hasta ahora.
+> **What these are.** Demonstrations and consistency checks — **not proofs.** They show that the
+> framework's mechanisms produce the stated behavior, and that it reproduces known physics where it
+> should. Each result below is labeled by what it establishes. Nothing here claims uniqueness or
+> proves the theory; that is what experiment is for. The framework is **in progress**; this is what
+> it does so far.
 
-Todo se apoya en cuatro escalas (**E₀, ℓ₀, τ₀, α₀**) y tres ecuaciones
-(**mc² = hf**, *el tiempo = el giro de la fase*, *la fuerza = la pendiente de la fase*) — véase el artículo.
-Estos programas ejercitan esas pocas piezas a lo largo de cinco órdenes de magnitud en escala:
-**partícula → planeta → galaxia → cosmos.**
+The whole thing rests on four scales (**E₀, ℓ₀, τ₀, α₀**) and three equations
+(**mc² = hf**, *time = the turning of phase*, *force = the slope of the phase*) — see the paper.
+These programs exercise those few pieces across five orders of magnitude in scale:
+**particle → planet → galaxy → cosmos.**
 
-**¿Recién llegado?** Lee primero [`WHAT_TFT_IS.md`](WHAT_TFT_IS.md) — una lectura matemática breve de lo
-que *es* el marco (un campo de fase con valores en un círculo, y por qué buena parte de la física
-estándar resulta ser su geometría y topología).
+**New here?** Read [`WHAT_TFT_IS.md`](WHAT_TFT_IS.md) first — a short mathematical reading of what
+the framework *is* (one circle-valued phase field, and why so much standard physics turns out to be
+its geometry and topology).
 
-## Ejecución
+## Run it
 
 ```bash
 pip install numpy
-python3 verify_conservative_1d.py      # o cualquier archivo abajo — cada uno imprime su resultado
+python3 verify_conservative_1d.py      # or any file below — each prints its own result
 ```
 
-Requisitos: Python 3.8+ y NumPy. Sin otras dependencias. Cada archivo es autocontenido.
+Requirements: Python 3.8+ and NumPy. No other dependencies. Every file is standalone.
 
-## Las demostraciones, por escala
+## The demonstrations, by scale
 
-Etiquetas: **[derivado]** se sigue del marco · **[consistencia]** reproduce un resultado conocido,
-no una predicción única · **[entrada]** un valor que el marco aún no fija.
+Labels: **[derived]** follows from the framework · **[consistency]** reproduces a known result,
+not a unique prediction · **[input]** a value the framework does not yet fix.
 
-### A. El sustrato y sus partículas
-| archivo | qué muestra | estado |
+### A. The substrate and its particles
+| file | what it shows | status |
 |---|---|---|
-| `verify_conservative_1d.py`, `verify_force_law_sign.py` | la masa en reposo de una partícula = 8√Λ·E₀ (con precisión de 1e-9); obedece F = Ma | **[derivado]** |
-| `verify_breather_1d.py` | una partícula como onda estacionaria — la masa está enteramente en el movimiento | **[derivado]** (exacto en 1D) |
-| `verify_oscillon_3d.py`, `verify_qball_3d.py` | una fase aislada no puede sostener una partícula 3D; una carga conservada (Q-ball) sí | **[derivado]** (aislamiento carga-vs-alternativa no completo) |
+| `verify_conservative_1d.py`, `verify_force_law_sign.py` | a particle's rest mass = 8√Λ·E₀ (to 1e-9); it obeys F = Ma | **derived** |
+| `verify_breather_1d.py` | a particle as a standing wave — mass entirely in the motion | **derived** (exact in 1D) |
+| `verify_oscillon_3d.py`, `verify_qball_3d.py` | a lone phase can't hold a 3-D particle; a conserved charge (Q-ball) can | **derived** (charge-vs-alt. not fully isolated) |
 
-### B. Las dos fuerzas, a partir de una distinción
-| archivo | qué muestra | estado |
+### B. The two forces, from one distinction
+| file | what it shows | status |
 |---|---|---|
-| `verify_goldstone_1r2.py`, `verify_force_sign.py` | electromagnetismo: una fuerza de Coulomb 1/r², cargas iguales se repelen | **[derivado]** |
-| `verify_poisson_metric.py`, `verify_gravity_coupling.py` | gravedad a partir de la energía: atracción universal 1/r; la materia y la antimateria caen igual (cf. CERN ALPHA-g 2023) | **[derivado]**, coincide con el experimento |
-| `verify_G_as_rate.py` | la G de Newton leída como (ritmo del tiempo)² / densidad | reencuadre, no un valor |
+| `verify_goldstone_1r2.py`, `verify_force_sign.py` | electromagnetism: a 1/r² Coulomb force, like charges repel | **derived** |
+| `verify_poisson_metric.py`, `verify_gravity_coupling.py` | gravity from energy: universal 1/r attraction; matter and antimatter both fall (cf. CERN ALPHA-g 2023) | **derived**, matches experiment |
+| `verify_G_as_rate.py` | Newton's G read as (rate of time)² / density | reframing, not a value |
 
-### C. El mundo clásico
-| archivo | qué muestra | estado |
+### C. The classical world
+| file | what it shows | status |
 |---|---|---|
-| `tft_solar_system.py`, `stage3_orbits.py`, `stage5_mercury.py` | un sistema solar a partir de una única calibración: 8 períodos a <0,1 %, la tercera ley de Kepler, Mercurio 42,9″/siglo | **[consistencia]** (órbitas cerradas por construcción; Mercurio es el valor GR estándar, no único) |
+| `tft_solar_system.py`, `stage3_orbits.py`, `stage5_mercury.py` | a solar system from one calibration: 8 periods to <0.1%, Kepler's third law, Mercury 42.9″/century | **consistency** (closed orbits by-construction; Mercury is the standard GR value, not unique) |
 
-### D. La escala cósmica — galaxias sin materia oscura
-| archivo | qué muestra | estado |
+### D. The cosmic scale — galaxies without dark matter
+| file | what it shows | status |
 |---|---|---|
-| `verify_a0_g1.py` … `g5.py` | la escala galáctica de aceleración α₀ = cH₀/2π — fijada por la expansión del universo, no ajustada | escala **[derivada]**; coeficiente exacto = el problema de la coincidencia («¿por qué ahora?») |
-| `milkyway_rotation.py` | curva de rotación de la Vía Láctea al ~3 %, sólo bariones; sigue la relación de aceleración de 175 galaxias | **[ajusta]** (forma de transición dependiente del modelo, como en MOND) |
-| `verify_a0_g4.py` | el exponente masa-rotación (Tully–Fisher) = exactamente 4 (observado 3,85 ± 0,09) | **[derivado]**, sin parámetros libres |
+| `verify_a0_g1.py` … `g5.py` | the galactic acceleration scale α₀ = cH₀/2π — set by the universe's expansion, not fitted | scale **derived**; exact coefficient = the "why now" coincidence problem |
+| `milkyway_rotation.py` | Milky Way rotation curve to ~3%, baryons only; tracks the 175-galaxy acceleration relation | **fits** (transition shape model-dependent, as in MOND) |
+| `verify_a0_g4.py` | the mass–rotation (Tully–Fisher) exponent = exactly 4 (observed 3.85 ± 0.09) | **derived**, parameter-free |
 
-### E. Materia, campos y quiralidad — un solo objeto topológico
-| archivo | qué muestra | estado |
+### E. Matter, fields, and handedness — one topological object
+| file | what it shows | status |
 |---|---|---|
-| `verify_chiral_g1.py`, `verify_chiral_g2.py` | número bariónico, magnetismo y quiralidad son tres lecturas de una única cantidad topológica (enrollamiento + enlace); su vínculo anómalo es automático | **[vínculo derivado]**; el *tamaño* del desbalance materia-antimateria es una condición inicial |
+| `verify_chiral_g1.py`, `verify_chiral_g2.py` | baryon number, magnetism, and chirality are three readings of one topological quantity (winding + linking); their anomaly link is automatic | **linkage derived**; the *size* of the matter–antimatter imbalance is an initial condition |
 
-## Un compendio más amplio
+## A fuller digest
 
-`DERIVED_SUMMARY.md` — un resumen escala por escala de lo que está derivado, lo que se reproduce por
-construcción y lo que queda como entrada abierta (con cada número abierto nombrado: G, la constante
-cosmológica, el problema de la coincidencia, la asimetría bariónica).
+`DERIVED_SUMMARY.md` — a scale-by-scale summary of what is derived, what is reproduced by
+construction, and what remains an open input (with each open number named: G, the cosmological
+constant, the coincidence problem, the baryon asymmetry).
 
-## El único patrón honesto
+## The one honest pattern
 
-En todos los resultados: el marco deriva **mecanismos y relaciones de escala** sin parámetros libres,
-y carga **una constante de calibración por cada escala absoluta**. Los números absolutos restantes
-(G, |Λ|, el coeficiente exacto de α₀, la asimetría bariónica) se reducen cada uno a un problema
-abierto en *cualquier* marco — no una laguna exclusiva de éste.
+Across every result: the framework derives **mechanisms and scale-relations** without free
+parameters, and carries **one calibration constant per absolute scale**. The remaining absolute
+numbers (G, |Λ|, α₀'s exact coefficient, the baryon asymmetry) each reduce to a problem that is
+open in *every* framework — not a gap unique to this one.
 
-## Cómo citar
+## Cite
 
-Si usas este código, por favor cita la versión archivada:
+If you use this code, please cite the archived release:
 `https://doi.org/10.5281/zenodo.⟨ID⟩`
 
-## Licencia
+## License
 
-⟨elegir una — p. ej. MIT para el código, CC-BY para el texto⟩
+⟨choose one — e.g. MIT for code, CC-BY for text⟩
