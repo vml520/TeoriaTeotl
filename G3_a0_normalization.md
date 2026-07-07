@@ -1,41 +1,41 @@
-# G3 — Controlling the vacuum-energy normalization
+# G3 — Controlando la normalización de la energía de vacío
 
-*Goal: does the coefficient in a₀ = (coeff)·cH₀ come out at 1/2π when the O(1) factors are done properly? Runnable check: `verify_a0_g3.py`. Outcome: the 2π is clean; the residual is a cosmological O(1), not a first-principles constant.*
+*Objetivo: ¿sale el coeficiente en a₀ = (coef)·cH₀ igual a 1/2π cuando los factores O(1) se hacen adecuadamente? Comprobación ejecutable: `verify_a0_g3.py`. Resultado: el 2π es limpio; el residuo es un O(1) cosmológico, no una constante de primeros principios.*
 
-## The proper calculation
-The sine-Gordon potential-energy density is axion-like:
+## El cálculo apropiado
+La densidad de energía potencial sine-Gordon es tipo axion:
 > u_V(θ) = (E₀Λ/ℓ₀³)(1 − cos θ) ≡ μ⁴(1 − cos θ).
 
-Two distinct quantities come from it:
-- **Mass gap** (curvature at θ=0): ω₀ = c√Λ/ℓ₀. **Fixed**, independent of where the field sits. This is what enters a₀ = c·(Compton frequency) = c·ω₀/2π. **The 2π is h/ℏ = one full S¹ cycle — clean, and not the source of any discrepancy.**
-- **Dark-energy density** = the potential *height* at the field's current position θ_i: ρ_DE = μ⁴(1 − cos θ_i). This depends on **θ_i** — a cosmological quantity (how far the ultralight field has rolled).
+Dos cantidades distintas provienen de ella:
+- **Gap de masa** (curvatura en θ=0): ω₀ = c√Λ/ℓ₀. **Fijo**, independiente de dónde se ubique el campo. Es lo que entra en a₀ = c·(frecuencia Compton) = c·ω₀/2π. **El 2π es h/ℏ = un ciclo S¹ completo — limpio, y no la fuente de ninguna discrepancia.**
+- **Densidad de energía oscura** = la *altura* del potencial en la posición actual del campo θ_i: ρ_DE = μ⁴(1 − cos θ_i). Depende de **θ_i** — una cantidad cosmológica (cuán lejos ha rodado el campo ultraligero).
 
-Friedmann H₀² = 8πGρ_DE/(3c²) with G = ℓ₀c⁴/E₀. **Λ cancels.** The result:
+Friedmann H₀² = 8πGρ_DE/(3c²) con G = ℓ₀c⁴/E₀. **Λ se cancela.** El resultado:
 
 > **a₀ = (cH₀/2π) · √( 3 / (8π(1 − cos θ_i)) ).**
 
-The bracket is exactly **ω₀/H₀** — how close the field mass is to the Hubble mass.
+El paréntesis es exactamente **ω₀/H₀** — cuán cerca está la masa del campo de la masa de Hubble.
 
-## What this says (measured, `verify_a0_g3.py`)
+## Lo que dice (medido, `verify_a0_g3.py`)
 | θ_i | ω₀/H₀ | a₀ | a₀/emp |
 |---|---|---|---|
-| π/2 (generic O(1)) | 0.345 | cH₀/18 | 0.31 |
-| **0.44 rad (~25°)** | **1.12** | **cH₀/5.6 ≈ 1.2×10⁻¹⁰** | **1.01** |
-| π | 0.244 | cH₀/26 | 0.22 |
+| π/2 (O(1) genérico) | 0,345 | cH₀/18 | 0,31 |
+| **0,44 rad (~25°)** | **1,12** | **cH₀/5,6 ≈ 1,2×10⁻¹⁰** | **1,01** |
+| π | 0,244 | cH₀/26 | 0,22 |
 
-The data (a₀ = 1.20×10⁻¹⁰) corresponds to **θ_i ≈ 0.44 rad**, i.e. **ω₀ ≈ H₀ — the field mass ≈ the Hubble mass.** That is precisely the standard quintessence "thawing" condition: a scalar becomes dynamical when its mass drops to the current Hubble rate. So the data-preferred value is *physically the expected one*, not an arbitrary fit.
+Los datos (a₀ = 1,20×10⁻¹⁰) corresponden a **θ_i ≈ 0,44 rad**, es decir **ω₀ ≈ H₀ — la masa del campo ≈ la masa de Hubble.** Ésa es precisamente la condición estándar de quintaesencia «thawing»: un escalar se vuelve dinámico cuando su masa cae a la tasa de Hubble actual. Por tanto el valor preferido por los datos es *físicamente el esperado*, no un ajuste arbitrario.
 
-## Honest verdict
-- **The 2π is DERIVED** — geometric (Compton frequency, h/ℏ, S¹). It was never the problem.
-- **a₀ ∝ cH₀ is DERIVED** — mechanism (field = dark energy), Λ cancels, tied to the CC scale.
-- **The exact coefficient is NOT uniquely fixed.** It is ω₀/H₀ = √(3/(8π(1−cosθ_i))), an **O(1) set by the field's cosmic position θ_i**. Quintessence *naturally* puts ω₀ ~ H₀ (mass ~ Hubble mass, becoming dynamical now), which gives a₀ ~ cH₀/2π and matches data. But a *generic* θ_i ~ O(1) gives ~3× low. So the coefficient is **natural and consistent with data, not first-principles-forced.**
+## Veredicto honesto
+- **El 2π está DERIVADO** — geométrico (frecuencia Compton, h/ℏ, S¹). Nunca fue el problema.
+- **a₀ ∝ cH₀ está DERIVADO** — mecanismo (campo = energía oscura), Λ se cancela, atado a la escala CC.
+- **El coeficiente exacto NO está unívocamente fijado.** Es ω₀/H₀ = √(3/(8π(1−cosθ_i))), un **O(1) fijado por la posición cósmica del campo θ_i**. La quintaesencia *naturalmente* pone ω₀ ~ H₀ (masa ~ masa de Hubble, volviéndose dinámica ahora), lo cual da a₀ ~ cH₀/2π y coincide con los datos. Pero un θ_i *genérico* ~ O(1) da ~3× bajo. Así que el coeficiente es **natural y consistente con los datos, no forzado desde primeros principios.**
 
-**This does not fully clear G3.** Attacking the normalization did not turn the coefficient into a pure constant; it revealed that the residual factor is **a real cosmological quantity** (the dark-energy field's position / equation of state), which the data pins to the natural "m ≈ H₀" value. That is *not* a free knob we tuned — it's ω₀/H₀, physically ~1 for quintessence — but neither is it derived from nothing.
+**Esto no libera del todo G3.** Atacar la normalización no convirtió el coeficiente en una constante pura; reveló que el factor residual es **una cantidad cosmológica real** (la posición / ecuación de estado del campo de energía oscura), que los datos fijan al valor natural «m ≈ H₀». Ésa *no* es una perilla libre que ajustamos — es ω₀/H₀, físicamente ~1 para quintaesencia — pero tampoco está derivada desde la nada.
 
-## Where the a₀ program stands (G1–G3)
-- **a₀ ∝ cH₀** — DERIVED. Not ad hoc (contra MOND). Comes through Λ, via the field being dark energy. ✓ (Vic's core claim.)
-- **The 2π** — DERIVED (S¹/Compton), *given* m = Hubble mass.
-- **m = Hubble mass** — the natural quintessence condition (m ~ H₀); the exact coefficient carries an O(1) tied to the field's position, which data fixes to the thawing value. **Natural, consistent, not uniquely predicted.**
-- **|Λ| ~ 10⁻¹²²** — the cosmological-constant problem, untouched.
+## Dónde está el programa a₀ (G1–G3)
+- **a₀ ∝ cH₀** — DERIVADO. No ad hoc (contra MOND). Viene por Λ, vía el campo siendo energía oscura. ✓ (La afirmación central de Vic.)
+- **El 2π** — DERIVADO (S¹/Compton), *dado que* m = masa de Hubble.
+- **m = masa de Hubble** — la condición natural de quintaesencia (m ~ H₀); el coeficiente exacto porta un O(1) atado a la posición del campo, que los datos fijan al valor thawing. **Natural, consistente, no unívocamente predicho.**
+- **|Λ| ~ 10⁻¹²²** — el problema de la constante cosmológica, sin tocar.
 
-**One-liner:** a₀ ~ cH₀ with the 2π from S¹ is real and predicted; matching the data to 10% requires the ultralight field to have mass ≈ the current Hubble rate — the standard "dark energy becoming dynamical now" condition — which is natural but is a cosmological input, not a derived constant. **Deriving a₀ exactly = deriving why dark energy is dynamical now = the coincidence problem.** That is the honest floor.
+**Frase única:** a₀ ~ cH₀ con el 2π desde S¹ es real y predicho; hacer que coincida con los datos al 10 % requiere que el campo ultraligero tenga masa ≈ la tasa de Hubble actual — la condición estándar «la energía oscura volviéndose dinámica ahora» — que es natural pero es una entrada cosmológica, no una constante derivada. **Derivar a₀ exactamente = derivar por qué la energía oscura es dinámica ahora = el problema de la coincidencia.** Ése es el suelo honesto.

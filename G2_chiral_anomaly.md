@@ -1,31 +1,31 @@
-# G2 — The anomaly linkage: one invariant, three faces
+# G2 — El vínculo de la anomalía: un invariante, tres caras
 
-*Runnable: `verify_chiral_g2.py`. Result: baryon number, magnetic helicity, and chirality are the same winding topology, so the chiral anomaly is automatic in TFT.*
+*Ejecutable: `verify_chiral_g2.py`. Resultado: número bariónico, helicidad magnética y quiralidad son la misma topología de enrollamiento, así que la anomalía quiral es automática en la TFT.*
 
-## The identifications (each standard, non-fitted)
-- **A = ∇θ** — the phase gradient is the EM potential (the Goldstone/Stückelberg picture that gave the Coulomb sector).
-- **B = ∇×A = ∇×∇θ = 0** except on winding lines, where it is a **flux tube**: flux Φ_i = 2π W_i (W = winding = the baryon number of that line). Winding lines *are* magnetic flux tubes (the superfluid-vortex = flux-tube fact).
-- **magnetic helicity H = ∫A·B = Σ_ij Φ_i Φ_j Lk_ij = (2π)² Σ_ij W_i W_j Lk_ij** — the linking of the flux tubes = the G1 chiral invariant.
+## Las identificaciones (cada una estándar, no ajustada)
+- **A = ∇θ** — el gradiente de fase es el potencial EM (el cuadro Goldstone/Stückelberg que dio el sector Coulomb).
+- **B = ∇×A = ∇×∇θ = 0** salvo en líneas de enrollamiento, donde es un **tubo de flujo**: flujo Φ_i = 2π W_i (W = enrollamiento = el número bariónico de esa línea). Las líneas de enrollamiento *son* tubos de flujo magnético (el hecho vórtice-superfluido = tubo-de-flujo).
+- **helicidad magnética H = ∫A·B = Σ_ij Φ_i Φ_j Lk_ij = (2π)² Σ_ij W_i W_j Lk_ij** — el enlace de los tubos de flujo = el invariante quiral G1.
 
-## One invariant, three faces (measured)
-| configuration | Lk | B = ΣW | H = mag. helicity | chirality = sign H |
+## Un invariante, tres caras (medido)
+| configuración | Lk | B = ΣW | H = hel. mag. | quiralidad = signo H |
 |---|---|---|---|---|
-| unlinked | 0 | 2 | 0 | 0 |
-| Hopf link (right) | −1 | 2 | −8π² | −1 |
-| mirror (left) | +1 | 2 | +8π² | +1 |
+| desenlazado | 0 | 2 | 0 | 0 |
+| enlace de Hopf (der.) | −1 | 2 | −8π² | −1 |
+| espejo (izq.) | +1 | 2 | +8π² | +1 |
 
-- **Face 1 — baryon number:** ΣW (winding charge).
-- **Face 2 — magnetic helicity:** (2π)²ΣWᵢWⱼLkᵢⱼ (flux linking).
-- **Face 3 — chirality:** sign of the helicity.
-All three are the *same* winding topology.
+- **Cara 1 — número bariónico:** ΣW (carga de enrollamiento).
+- **Cara 2 — helicidad magnética:** (2π)²ΣWᵢWⱼLkᵢⱼ (enlace de flujo).
+- **Cara 3 — quiralidad:** signo de la helicidad.
+Las tres son la *misma* topología de enrollamiento.
 
-## The anomaly is automatic
-The chiral anomaly dB/dt = −κ dH/dt (⇔ B + κH conserved) says: generate magnetic helicity ⇔ generate a baryon asymmetry of definite handedness. In TFT this is **not a postulate** — baryon number *is* winding charge and magnetic helicity *is* the linking of that same winding, so any process that changes the winding topology changes both together. This is the Vachaspati baryogenesis–magnetogenesis link, here forced by topology.
+## La anomalía es automática
+La anomalía quiral dB/dt = −κ dH/dt (⇔ B + κH conservado) dice: generar helicidad magnética ⇔ generar una asimetría bariónica de mano definida. En la TFT esto **no es un postulado** — el número bariónico *es* carga de enrollamiento y la helicidad magnética *es* el enlace de ese mismo enrollamiento, así que cualquier proceso que cambie la topología de enrollamiento cambia ambos juntos. Éste es el vínculo Vachaspati bariogénesis–magnetogénesis, aquí forzado por la topología.
 
-## Status
-- **DERIVED:** the linkage (three claims = one invariant); the anomaly relation; the anomaly **coefficient is topological** (2π-per-winding), up to the fermion count N_f (an input, as in the Standard Model).
-- **INPUT / deep-unknown:** the *net* helicity generated — hence the *magnitude* of η ≈ 6×10⁻¹⁰ — is an initial condition (primordial net helicity). Mechanism yes; absolute number no, exactly as G0 pre-flagged.
+## Estado
+- **DERIVADO:** el vínculo (tres afirmaciones = un invariante); la relación de anomalía; el **coeficiente de anomalía es topológico** (2π por enrollamiento), salvo el conteo de fermiones N_f (una entrada, como en el Modelo Estándar).
+- **ENTRADA / desconocido profundo:** la helicidad *neta* generada — de ahí la *magnitud* de η ≈ 6×10⁻¹⁰ — es una condición inicial (helicidad neta primordial). Mecanismo sí; número absoluto no, exactamente como G0 pre-señaló.
 
-## What G3/G4 must do
-- **G3 (baryogenesis):** a mechanism that generates *net* winding/helicity (the CP-violating or spontaneous step). Its sign may be derivable; its magnitude will be an IC.
-- **G4 (magnetogenesis):** show the coherent, helical large-scale field that the net winding carries, and its scaling.
+## Qué deben hacer G3/G4
+- **G3 (bariogénesis):** un mecanismo que genere enrollamiento/helicidad *netos* (el paso violador de CP o espontáneo). Su signo puede ser derivable; su magnitud será una CI.
+- **G4 (magnetogénesis):** mostrar el campo helicoidal coherente a gran escala que porta el enrollamiento neto, y su escalado.

@@ -1,61 +1,61 @@
-# Appendix: Computational Demonstrations
+# Apéndice: demostraciones computacionales
 
-*Companion code for ⟨paper title⟩ (V. Luna, ⟨year⟩). Each program is standalone (Python 3 + NumPy), prints its own result, and runs in seconds.*
+*Código complementario de ⟨título del artículo⟩ (V. Luna, ⟨año⟩). Cada programa es autocontenido (Python 3 + NumPy), imprime su propio resultado, y corre en segundos.*
 
-> **What these are.** Demonstrations and consistency checks — **not proofs.** Labels: **[derived]** follows from the framework · **[consistency]** reproduces known physics, not a unique prediction · **[input]** a value the framework does not fix · **[open]** attempted, not solved. Nothing here claims uniqueness or proves the theory; that is what experiment is for. The framework is **in progress** — this is what it does so far. Together the programs span **five orders of magnitude — particle → planet → galaxy → cosmos — from one field and one set of equations.**
+> **Qué son.** Demostraciones y comprobaciones de consistencia — **no pruebas.** Etiquetas: **[derivado]** se sigue del marco · **[consistencia]** reproduce física conocida, no una predicción única · **[entrada]** un valor que el marco no fija · **[abierto]** intentado, no resuelto. Nada aquí reclama unicidad ni prueba la teoría; para eso está el experimento. El marco está **en desarrollo** — esto es lo que hace hasta ahora. En conjunto los programas cubren **cinco órdenes de magnitud — partícula → planeta → galaxia → cosmos — desde un campo y un conjunto de ecuaciones.**
 
-**Repository:** `https://github.com/vml520/TeoriaTeotl` · **Archived (cite this):** `https://doi.org/10.5281/zenodo.⟨ID⟩`
-
----
-
-## A. The substrate and its particles
-| file | what it shows | status |
-|---|---|---|
-| `verify_conservative_1d.py`, `verify_force_law_sign.py` | a particle's rest mass = 8√Λ·E₀ (to 1 part in 10⁹) and it obeys F = Ma — mass and force from the field, not inserted | **[derived]** |
-| `verify_breather_1d.py` | a particle as a standing wave: localized, time-periodic, mass entirely in the motion | **[derived]** |
-| `verify_oscillon_3d.py`, `verify_qball_3d.py` | a lone phase can't hold a 3-D particle (it radiates); a conserved charge (Q-ball) can | **[derived]** |
-
-## B. The two forces, from one distinction
-| file | what it shows | status |
-|---|---|---|
-| `verify_goldstone_1r2.py`, `verify_force_sign.py` | electromagnetism: a 1/r² Coulomb force, like charges repel (from the field's charge current) | **[derived]** |
-| `verify_poisson_metric.py` | gravity: energy density sources a 1/r potential (Poisson), so every mass attracts | **[derived]** |
-| `verify_gravity_coupling.py` | matter and antimatter carry opposite charge but identical energy → both fall the same way | **[derived — matches CERN ALPHA-g 2023]** |
-| `verify_G_as_rate.py` | Newton's G read as (rate of time)² / density | [reframing, not a value] |
-
-## C. The classical world
-| file | what it shows | status |
-|---|---|---|
-| `tft_solar_system.py`, `stage3_orbits.py`, `stage5_mercury.py` | a solar system from one calibration: 8 planetary periods to <0.1%, Kepler's third law, Mercury's 42.9″/century | **[consistency]** — closed orbits are by-construction; Mercury is the standard relativistic value, not unique |
-
-## D. Galaxies without dark matter
-| file | what it shows | status |
-|---|---|---|
-| `verify_a0_g1.py`…`g3.py` | the galactic acceleration scale α₀ = cH₀/2π ≈ 1.1×10⁻¹⁰ m/s², set by the cosmic expansion — not fitted | scale **[derived]**; exact coefficient = the coincidence problem |
-| `verify_a0_g4.py`, `milkyway_rotation.py` | modified inertia → deep-MOND limit; Milky Way curve to ~3% (baryons only); **Tully–Fisher exponent exactly 4** (obs 3.85±0.09) | mechanism + slope-4 **[derived]**; interpolation shape [open] |
-| `verify_a0_g5.py` | TFT's law tracks the 175-galaxy SPARC acceleration relation within its scatter | **[consistency with SPARC]** |
-
-## E. Dark energy — and the paper's central prediction
-| file | what it shows | status |
-|---|---|---|
-| `verify_dark_sectors.py` | dark matter and dark energy are one field: the galactic scale = the dark-energy scale (three independent numbers within ~1.8×) | **[derived]** |
-| `verify_dynamical_de.py` | dark energy is dynamical (thawing quintessence): w rises from −1 to **w₀ = −0.88** today — matches DESI 2024's signature and w₀ | signature + w₀ **[derived]**; wₐ testable |
-| `verify_a0_de_consistency.py` | **⭐ the field fixed by galaxy rotation *predicts* the dark-energy w₀ (= −0.83, matches DESI), and forecasts wₐ ≈ −0.2 to −0.3** — a cross-observable link no other framework makes | **[prediction]** — w₀ confirmed; wₐ a ~1.7σ tension, falsifiable by DESI DR2 / Euclid |
-
-## F. Matter, fields, and handedness — one topological object
-| file | what it shows | status |
-|---|---|---|
-| `verify_chiral_g1.py`, `verify_chiral_g2.py` | baryon number, magnetic helicity, and chirality are three readings of one topological quantity (winding + linking) — so their anomaly link is automatic, and primordial fields must be helical | linkage **[derived]**; the *size* of the matter–antimatter asymmetry is an [input] |
-
-## G. Quantum sector — particle properties from field dynamics
-| file | what it shows | status |
-|---|---|---|
-| `verify_charge_quantization.py` | 'charge' is the winding number of the field — an exact integer by topology; mass is field energy; antiparticle = opposite winding, identical mass. Properties are configurations, not intrinsic labels | principle **[derived]**; the particle *spectrum* is [open] |
-| `verify_koide_generations.py`, `verify_koide_sqrt2.py` | three generations as three phases 120° apart = the **Koide relation**, which predicts the tau mass from the electron and muon to **0.006%**; its coefficient reduces to a 45° self-duality of the mass vector | **[consistency, not derived]** — Koide is empirical; TFT *expresses* it |
-| `verify_selfdual_attempt.py` | attempt to derive that self-duality: the condition is pinned exactly, and the obvious principle (equipartition) is ruled out | **[open]** — not derived; a well-posed target |
+**Repositorio:** `https://github.com/vml520/TeoriaTeotl` · **Archivado (citar esto):** `https://doi.org/10.5281/zenodo.⟨ID⟩`
 
 ---
 
-**Reproducing these.** Each file is self-contained (Python 3.8+, NumPy only) and prints its result on `python3 <file>.py`. A referee can check any single claim in seconds.
+## A. El sustrato y sus partículas
+| archivo | qué muestra | estado |
+|---|---|---|
+| `verify_conservative_1d.py`, `verify_force_law_sign.py` | la masa en reposo de una partícula = 8√Λ·E₀ (con precisión de 1 parte en 10⁹) y obedece F = Ma — masa y fuerza a partir del campo, no insertadas | **[derivado]** |
+| `verify_breather_1d.py` | una partícula como onda estacionaria: localizada, periódica en el tiempo, masa enteramente en el movimiento | **[derivado]** |
+| `verify_oscillon_3d.py`, `verify_qball_3d.py` | una fase aislada no puede sostener una partícula 3D (radia); una carga conservada (Q-ball) sí puede | **[derivado]** |
 
-**What is *not* claimed.** Uniqueness; the absolute constants (Newton's G, the cosmological constant, the exact a₀ coefficient, the baryon asymmetry, the lepton masses); or that any of this proves the theory. The recurring, honest pattern: **the framework derives mechanisms and scale-relations without free parameters, and carries one calibration constant (or one open number) per absolute scale — and every such open number is a problem that is open in *every* framework, not a gap unique to this one.**
+## B. Las dos fuerzas, a partir de una distinción
+| archivo | qué muestra | estado |
+|---|---|---|
+| `verify_goldstone_1r2.py`, `verify_force_sign.py` | electromagnetismo: una fuerza de Coulomb 1/r², cargas iguales se repelen (a partir de la corriente de carga del campo) | **[derivado]** |
+| `verify_poisson_metric.py` | gravedad: la densidad de energía alimenta un potencial 1/r (Poisson), así que toda masa atrae | **[derivado]** |
+| `verify_gravity_coupling.py` | materia y antimateria portan carga opuesta pero energía idéntica → ambas caen igual | **[derivado — coincide con CERN ALPHA-g 2023]** |
+| `verify_G_as_rate.py` | la G de Newton leída como (ritmo del tiempo)² / densidad | [reencuadre, no un valor] |
+
+## C. El mundo clásico
+| archivo | qué muestra | estado |
+|---|---|---|
+| `tft_solar_system.py`, `stage3_orbits.py`, `stage5_mercury.py` | un sistema solar a partir de una única calibración: 8 períodos planetarios a <0,1 %, la tercera ley de Kepler, los 42,9″/siglo de Mercurio | **[consistencia]** — las órbitas cerradas son por construcción; Mercurio es el valor relativista estándar, no único |
+
+## D. Galaxias sin materia oscura
+| archivo | qué muestra | estado |
+|---|---|---|
+| `verify_a0_g1.py`…`g3.py` | la escala galáctica de aceleración α₀ = cH₀/2π ≈ 1,1×10⁻¹⁰ m/s², fijada por la expansión cósmica — no ajustada | escala **[derivada]**; coeficiente exacto = el problema de la coincidencia |
+| `verify_a0_g4.py`, `milkyway_rotation.py` | inercia modificada → límite MOND profundo; curva de la Vía Láctea al ~3 % (sólo bariones); **exponente Tully–Fisher exactamente 4** (obs 3,85±0,09) | mecanismo + pendiente-4 **[derivado]**; forma de interpolación [abierta] |
+| `verify_a0_g5.py` | la ley TFT sigue la relación de aceleración de 175 galaxias SPARC dentro de su dispersión | **[consistencia con SPARC]** |
+
+## E. Energía oscura — y la predicción central del artículo
+| archivo | qué muestra | estado |
+|---|---|---|
+| `verify_dark_sectors.py` | materia oscura y energía oscura son un solo campo: la escala galáctica = la escala de energía oscura (tres números independientes dentro de ~1,8×) | **[derivado]** |
+| `verify_dynamical_de.py` | la energía oscura es dinámica (quintaesencia thawing): w sube de −1 a **w₀ = −0,88** hoy — coincide con la firma de DESI 2024 y con w₀ | firma + w₀ **[derivados]**; wₐ verificable |
+| `verify_a0_de_consistency.py` | **⭐ el campo fijado por la rotación galáctica *predice* el w₀ de la energía oscura (= −0,83, coincide con DESI), y pronostica wₐ ≈ −0,2 a −0,3** — un vínculo entre observables cruzados que ningún otro marco establece | **[predicción]** — w₀ confirmada; wₐ es una tensión de ~1,7σ, falsable por DESI DR2 / Euclid |
+
+## F. Materia, campos y quiralidad — un solo objeto topológico
+| archivo | qué muestra | estado |
+|---|---|---|
+| `verify_chiral_g1.py`, `verify_chiral_g2.py` | número bariónico, helicidad magnética y quiralidad son tres lecturas de una única cantidad topológica (enrollamiento + enlace) — de modo que su vínculo anómalo es automático, y los campos primordiales deben ser helicoidales | vínculo **[derivado]**; el *tamaño* de la asimetría materia–antimateria es una [entrada] |
+
+## G. Sector cuántico — propiedades de partícula desde la dinámica de campo
+| archivo | qué muestra | estado |
+|---|---|---|
+| `verify_charge_quantization.py` | la «carga» es el número de enrollamiento del campo — un entero exacto por topología; la masa es energía de campo; antipartícula = enrollamiento opuesto, masa idéntica. Las propiedades son configuraciones, no etiquetas intrínsecas | principio **[derivado]**; el *espectro* de partículas es [abierto] |
+| `verify_koide_generations.py`, `verify_koide_sqrt2.py` | tres generaciones como tres fases a 120° una de otra = la **relación de Koide**, que predice la masa del tau desde el electrón y el muon con precisión de **0,006 %**; su coeficiente se reduce a una autodualidad de 45° del vector de masa | **[consistencia, no derivado]** — Koide es empírico; la TFT lo *expresa* |
+| `verify_selfdual_attempt.py` | intento de derivar esa autodualidad: la condición queda clavada exactamente, y el principio obvio (equipartición) queda descartado | **[abierto]** — no derivado; un objetivo bien planteado |
+
+---
+
+**Reproducción.** Cada archivo es autocontenido (Python 3.8+, sólo NumPy) e imprime su resultado con `python3 <archivo>.py`. Un árbitro puede verificar cualquier afirmación individual en segundos.
+
+**Lo que *no* se reclama.** Unicidad; las constantes absolutas (la G de Newton, la constante cosmológica, el coeficiente exacto de a₀, la asimetría bariónica, las masas leptónicas); ni que nada de esto pruebe la teoría. El patrón recurrente y honesto: **el marco deriva mecanismos y relaciones de escala sin parámetros libres, y carga una constante de calibración (o un número abierto) por cada escala absoluta — y cada uno de esos números abiertos es un problema que está abierto en *todos* los marcos, no una laguna exclusiva de éste.**

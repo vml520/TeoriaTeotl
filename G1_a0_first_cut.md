@@ -1,42 +1,42 @@
-# G1 — First cut: a₀ = cH₀/2π from the field mass (Λ)
+# G1 — Primer corte: a₀ = cH₀/2π desde la masa del campo (Λ)
 
-*Structural derivation. Runnable check: `verify_a0_g1.py`. Status labels inline.*
+*Derivación estructural. Comprobación ejecutable: `verify_a0_g1.py`. Etiquetas de estado en línea.*
 
-## The anchor: TFT has two fundamental rates
-Time = phase cycling. Gravity's two acceleration scales are the same idea at opposite ends of scale:
-- **UV:** G = ω_P²/ρ_P, ω_P = 1/t_P the Planck cycling rate. *(Result from `verify_G_as_rate.py`.)*
-- **IR:** a₀ = cH₀/2π, i.e. a₀/c = H₀/2π, a *cosmological* cycling rate.
-The 2π is the S¹ period in both. Deriving a₀ is the IR mirror of the G result.
+## El ancla: la TFT tiene dos tasas fundamentales
+Tiempo = ciclado de fase. Las dos escalas de aceleración de la gravedad son la misma idea en los extremos opuestos de la escala:
+- **UV:** G = ω_P²/ρ_P, ω_P = 1/t_P la tasa de ciclado de Planck. *(Resultado de `verify_G_as_rate.py`.)*
+- **IR:** a₀ = cH₀/2π, es decir a₀/c = H₀/2π, una tasa de ciclado *cosmológica*.
+El 2π es el período S¹ en ambas. Derivar a₀ es el espejo IR del resultado G.
 
-## The chain (each link labeled)
+## La cadena (cada eslabón etiquetado)
 
-**(1) Field mass gap — DERIVED.** The sine-Gordon coupling Λ gives the field a mass gap m = √Λ/ℓ₀ (the same √Λ that sets the kink mass 8√Λ and the Yukawa screening length ℓ₀/√Λ). *(Established earlier this session.)*
+**(1) Gap de masa del campo — DERIVADO.** El acoplamiento sine-Gordon Λ le da al campo un gap de masa m = √Λ/ℓ₀ (el mismo √Λ que fija la masa del kink 8√Λ y la longitud de apantallamiento Yukawa ℓ₀/√Λ). *(Establecido en sesión anterior.)*
 
-**(2) Cosmological identification — ASSUMED (this is the crux, → G2; and it is Vic's "α from Λ").**
-The field is **ultralight**: its reduced Compton wavelength equals the Hubble radius,
-> ƛ = ℏ/(mc) = c/H₀  ⟺  **m = ℏH₀/c²** (the "Hubble mass") ⟺ **√Λ/ℓ₀ ↔ ℏH₀/c²**.
-This is the single physical input not yet derived. It ties Λ (the coupling) to cosmology (H₀). Numerically m = 1.5×10⁻³³ eV — exactly the cosmological-constant / ultralight scale.
+**(2) Identificación cosmológica — ASUMIDA (éste es el nudo, → G2; y es la «α desde Λ» de Vic).**
+El campo es **ultraligero**: su longitud de onda Compton reducida iguala el radio de Hubble,
+> ƛ = ℏ/(mc) = c/H₀  ⟺  **m = ℏH₀/c²** (la «masa de Hubble») ⟺ **√Λ/ℓ₀ ↔ ℏH₀/c²**.
+Ésta es la única entrada física aún no derivada. Ata Λ (el acoplamiento) a la cosmología (H₀). Numéricamente m = 1,5×10⁻³³ eV — exactamente la escala de la constante cosmológica / ultraligera.
 
-**(3) Compton frequency — algebra.** The field's Compton frequency is
+**(3) Frecuencia Compton — álgebra.** La frecuencia Compton del campo es
 > f = mc²/h = ℏH₀/h = **H₀/2π**.
-The 2π is literally **h/ℏ = one full S¹ cycle** (full vs reduced Compton wavelength). *This is where the 2π comes from — the S¹ geometry, not a fit.*
+El 2π es literalmente **h/ℏ = un ciclo S¹ completo** (longitud de onda Compton completa vs reducida). *De aquí viene el 2π — la geometría S¹, no un ajuste.*
 
-**(4) Crossover acceleration — the result.** An acceleration a has a characteristic frequency a/c. When a/c falls below the field's own Compton frequency H₀/2π, the acceleration is slower than the field can oscillate and the massless-like (Newtonian) response fails → modified regime. The crossover:
+**(4) Aceleración de cruce — el resultado.** Una aceleración a tiene una frecuencia característica a/c. Cuando a/c cae por debajo de la frecuencia Compton propia del campo H₀/2π, la aceleración es más lenta de lo que el campo puede oscilar y la respuesta tipo-sin-masa (newtoniana) falla → régimen modificado. El cruce:
 > **a₀ = c·f = cH₀/2π.**
 
-## Numerical confirmation (`verify_a0_g1.py`)
-- field mass = ℏH₀/c² = **1.49×10⁻³³ eV** (Hubble/Λ scale) ✓
-- reduced Compton wavelength / Hubble radius = **1.0000** ✓
-- a₀ = cH₀/2π = **1.08×10⁻¹⁰ m/s²**; empirical RAR g† = 1.20×10⁻¹⁰ ± 0.24(syst) → ratio **0.90** (within systematics) ✓
+## Confirmación numérica (`verify_a0_g1.py`)
+- masa del campo = ℏH₀/c² = **1,49×10⁻³³ eV** (escala Hubble/Λ) ✓
+- longitud de onda Compton reducida / radio de Hubble = **1,0000** ✓
+- a₀ = cH₀/2π = **1,08×10⁻¹⁰ m/s²**; RAR empírica g† = 1,20×10⁻¹⁰ ± 0,24(sist) → razón **0,90** (dentro de los sistemáticos) ✓
 
-## Bonus — this retro-explains Stage 2 and unifies the gravity picture
-The field's screening length = Compton wavelength = **Hubble radius**, which is 10⁵× a galaxy and 10¹³× the solar system. So the *same field* is **effectively massless on all sub-cosmological scales** → it gives the **1/r gravity we derived** (via the massless-Goldstone / Poisson route), and its tiny Hubble-scale mass only bites at the acceleration a₀.
-> **Stage 2 failed because it used Λ ~ O(1)** — screening at the microscopic ℓ₀. The *cosmological* Λ is ultralight — screening at the Hubble radius. Same equation, right Λ: massless gravity locally **plus** a MOND crossover at a₀. Vic's memory that "α fell out of Λ" is structurally vindicated: a₀ enters through the mass gap m = √Λ/ℓ₀.
+## Bono — esto re-explica la Etapa 2 y unifica el cuadro gravitatorio
+La longitud de apantallamiento del campo = longitud de onda Compton = **radio de Hubble**, que es 10⁵× una galaxia y 10¹³× el sistema solar. Así que el *mismo campo* es **efectivamente sin masa en todas las escalas subcosmológicas** → da la **gravedad 1/r que derivamos** (por la vía Goldstone-sin-masa / Poisson), y su diminuta masa a escala Hubble sólo muerde en la aceleración a₀.
+> **La Etapa 2 falló porque usó Λ ~ O(1)** — apantallamiento en el ℓ₀ microscópico. La Λ *cosmológica* es ultraligera — apantallamiento en el radio de Hubble. Misma ecuación, Λ correcta: gravedad sin masa localmente **más** un cruce MOND en a₀. La memoria de Vic de que «α cayó desde Λ» queda estructuralmente vindicada: a₀ entra por el gap de masa m = √Λ/ℓ₀.
 
-## G1 status
-- **DERIVED (structural):** the *form* a₀ = cH₀/2π, with the **2π = S¹** (full Compton cycle), and the link a₀ ↔ Λ via the mass gap.
-- **ASSUMED (→ G2, the gate):** the ultralight identification m = ℏH₀/c² (√Λ/ℓ₀ ↔ Hubble mass). Everything hinges on this one input.
-- **ASSUMED (→ G3):** that a₀ = c·(Compton frequency) is the physical crossover (needs the field-equation mechanism, not just the scale-match).
+## Estado G1
+- **DERIVADO (estructural):** la *forma* a₀ = cH₀/2π, con el **2π = S¹** (ciclo Compton completo), y el enlace a₀ ↔ Λ vía el gap de masa.
+- **ASUMIDO (→ G2, la puerta):** la identificación ultraligera m = ℏH₀/c² (√Λ/ℓ₀ ↔ masa de Hubble). Todo cuelga de esta única entrada.
+- **ASUMIDO (→ G3):** que a₀ = c·(frecuencia Compton) es el cruce físico (necesita el mecanismo de la ecuación de campo, no sólo la coincidencia de escala).
 
-## What G2 must do
-Justify **m = ℏH₀/c²** from TFT — i.e. show the phase field's mass is set to the Hubble scale by the framework itself (candidate: self-consistency, where the field's own vacuum energy sets both H₀ and its mass — the cosmological-constant sector). If G2 can only *impose* m = Hubble mass rather than derive it, then a₀ = cH₀/2π is a **consistency relation**, not a first-principles prediction — an honest and still-useful outcome, but labeled as such.
+## Qué debe hacer G2
+Justificar **m = ℏH₀/c²** desde la TFT — es decir, mostrar que la masa del campo de fase queda fijada a la escala de Hubble por el propio marco (candidato: autoconsistencia, donde la energía de vacío del campo fija tanto H₀ como su masa — el sector de la constante cosmológica). Si G2 sólo puede *imponer* m = masa de Hubble en vez de derivarla, entonces a₀ = cH₀/2π es una **relación de consistencia**, no una predicción de primeros principios — un resultado honesto y aún útil, pero etiquetado como tal.

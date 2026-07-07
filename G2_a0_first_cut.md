@@ -1,44 +1,44 @@
-# G2 — First cut: is the field mass the Hubble mass? (self-consistency)
+# G2 — Primer corte: ¿es la masa del campo la masa de Hubble? (autoconsistencia)
 
-*Goal: derive G1's one assumption — m = ℏH₀/c² — from the field being the dark energy. Runnable check: `verify_a0_g2.py`. Outcome: mechanism works, exact coefficient does NOT (a real ~3× tension, flagged not hidden).*
+*Objetivo: derivar la única suposición de G1 — m = ℏH₀/c² — a partir de que el campo sea la energía oscura. Comprobación ejecutable: `verify_a0_g2.py`. Resultado: el mecanismo funciona, el coeficiente exacto NO (una tensión real de ~3×, señalada y no ocultada).*
 
-## The mechanism
-If the phase field's vacuum energy **is** the dark energy, it drives the expansion. Close the loop:
-- field mass-gap frequency: ω₀ = c√Λ/ℓ₀
-- field vacuum energy density: ρ ~ E₀Λ/ℓ₀³ (the potential-energy scale of the field)
-- Friedmann (field = dark energy): H₀² = 8πGρ/(3c²)
-- TFT relation: G = ℓ₀c⁴/E₀
+## El mecanismo
+Si la energía de vacío del campo de fase **es** la energía oscura, ella impulsa la expansión. Cerrar el bucle:
+- frecuencia del gap de masa del campo: ω₀ = c√Λ/ℓ₀
+- densidad de energía de vacío del campo: ρ ~ E₀Λ/ℓ₀³ (la escala de energía potencial del campo)
+- Friedmann (campo = energía oscura): H₀² = 8πGρ/(3c²)
+- Relación TFT: G = ℓ₀c⁴/E₀
 
-Solve for ω₀/H₀. **Λ cancels** — the loop fixes the *ratio* of the mass gap to the Hubble rate independent of the (unknown, ~10⁻¹²²) absolute value of Λ:
+Resolver para ω₀/H₀. **Λ se cancela** — el bucle fija la *razón* del gap de masa a la tasa de Hubble independiente del valor absoluto (desconocido, ~10⁻¹²²) de Λ:
 
-> **ω₀/H₀ = √(3/8π) = 0.3455** (confirmed numerically, Λ-independent to 4 digits).
+> **ω₀/H₀ = √(3/8π) = 0,3455** (confirmado numéricamente, independiente de Λ a 4 dígitos).
 
-So the field being the dark energy **does** lock its mass to the Hubble scale — **m ≈ 0.35 × (Hubble mass)**. That is the substance: a₀ ~ cH₀ is a *consequence* of the field being dark energy, not a fitted parameter. And it enters through Λ (the mass gap m = √Λ/ℓ₀), exactly as Vic remembered.
+Así que el campo siendo la energía oscura **sí** ata su masa a la escala de Hubble — **m ≈ 0,35 × (masa de Hubble)**. Ésa es la sustancia: a₀ ~ cH₀ es una *consecuencia* del campo siendo energía oscura, no un parámetro ajustado. Y entra por Λ (el gap de masa m = √Λ/ℓ₀), exactamente como Vic recordaba.
 
-## What's DERIVED
-- **The relation m ~ ℏH₀/c**² (mass gap tied to the Hubble rate) — from self-consistency, **with Λ cancelling**, so *without* needing to solve the cosmological-constant problem.
-- **The CC connection:** requiring m = Hubble mass gives Λ = (ℓ₀/R_H)² = 1.5×10⁻¹²² — landing on the observed cosmological-constant scale.
-- So a₀ ~ cH₀ (order of magnitude + mechanism + the a₀↔Λ↔dark-energy link) is established.
+## Lo que está DERIVADO
+- **La relación m ~ ℏH₀/c**² (gap de masa atado a la tasa de Hubble) — desde autoconsistencia, **con Λ cancelándose**, así que *sin* necesidad de resolver el problema de la constante cosmológica.
+- **La conexión CC:** requerir m = masa de Hubble da Λ = (ℓ₀/R_H)² = 1,5×10⁻¹²² — aterrizando en la escala observada de constante cosmológica.
+- Por tanto a₀ ~ cH₀ (orden de magnitud + mecanismo + el enlace a₀↔Λ↔energía-oscura) está establecido.
 
-## What is NOT resolved — the honest tension
-The two derivation routes give **different coefficients**:
-| route | a₀ | ratio to empirical (g† = 1.20×10⁻¹⁰) |
+## Lo que NO se resuelve — la tensión honesta
+Las dos vías de derivación dan **coeficientes diferentes**:
+| vía | a₀ | razón a lo empírico (g† = 1,20×10⁻¹⁰) |
 |---|---|---|
-| G1 geometric (m = Hubble mass exactly → Compton freq = H₀/2π) | cH₀/2π = 1.08×10⁻¹⁰ | **0.90** ✓ |
-| G2 dynamical (self-consistency → m = 0.345 × Hubble mass) | cH₀/18.2 = 3.7×10⁻¹¹ | **0.31** ✗ |
+| G1 geométrica (m = masa de Hubble exacta → freq. Compton = H₀/2π) | cH₀/2π = 1,08×10⁻¹⁰ | **0,90** ✓ |
+| G2 dinámica (autoconsistencia → m = 0,345 × masa de Hubble) | cH₀/18,2 = 3,7×10⁻¹¹ | **0,31** ✗ |
 
-They disagree by **√(8π/3) = 2.89×**, and the dynamical route undershoots the data by ~3×.
+Discrepan por **√(8π/3) = 2,89×**, y la vía dinámica queda ~3× por debajo del dato.
 
-**This trips G0 falsifier #1**: the crossover comes out ∝ cH₀ but the *coefficient* is not cleanly 1/2π — the geometric argument (which matches data) and the dynamical self-consistency (which is ~3× low) disagree. One of them carries uncontrolled O(1) factors:
-- the vacuum-energy estimate ρ ~ E₀Λ/ℓ₀³ (field amplitude, exact potential normalization) is crude — plausibly wrong by O(few);
-- the Friedmann 8π/3 and the crossover identification a₀ = c·(Compton freq) each carry O(1) factors.
+**Esto activa el falsador G0 #1**: el cruce sale ∝ cH₀ pero el *coeficiente* no es limpiamente 1/2π — el argumento geométrico (que coincide con los datos) y la autoconsistencia dinámica (que queda ~3× baja) discrepan. Uno de los dos porta factores O(1) sin controlar:
+- la estimación de la energía de vacío ρ ~ E₀Λ/ℓ₀³ (amplitud del campo, normalización exacta del potencial) es cruda — plausiblemente equivocada por O(pocos);
+- el 8π/3 de Friedmann y la identificación del cruce a₀ = c·(frec. Compton) cada uno porta factores O(1).
 
-## G2 status
-- **DERIVED:** the mechanism — field-as-dark-energy self-consistently gives a₀ ~ cH₀ (Λ cancels; tied to Λ and the CC scale). a₀ is **not ad hoc**. This vindicates the core of Vic's claim.
-- **NOT DERIVED:** the exact coefficient / the clean 1/2π. Geometric route matches data (0.90×); dynamical route is 3× low (0.31×). **Unresolved ~3× tension.**
-- **NOT TOUCHED:** the absolute value of Λ (~10⁻¹²²) — the cosmological-constant problem, an input.
+## Estado G2
+- **DERIVADO:** el mecanismo — campo-como-energía-oscura da autoconsistentemente a₀ ~ cH₀ (Λ se cancela; atado a Λ y a la escala CC). a₀ **no es ad hoc**. Esto vindica el núcleo de la afirmación de Vic.
+- **NO DERIVADO:** el coeficiente exacto / el 1/2π limpio. La vía geométrica coincide con los datos (0,90×); la dinámica queda 3× baja (0,31×). **Tensión de ~3× sin resolver.**
+- **NO TOCADO:** el valor absoluto de Λ (~10⁻¹²²) — el problema de la constante cosmológica, una entrada.
 
-## What G3 must do
-Resolve the O(1) coefficients and the 2.89× discrepancy — control the vacuum-energy normalization (field amplitude, exact potential) and the crossover factor, and determine whether the true coefficient is 1/2π (geometric, matches data) or something the dynamics forces. Until then: **a₀ ∝ cH₀ is derived; the precise 1/2π is not.**
+## Qué debe hacer G3
+Resolver los coeficientes O(1) y la discrepancia de 2,89× — controlar la normalización de la energía de vacío (amplitud del campo, potencial exacto) y el factor del cruce, y determinar si el coeficiente verdadero es 1/2π (geométrico, coincide con datos) o algo que la dinámica fuerza. Hasta entonces: **a₀ ∝ cH₀ está derivado; el 1/2π preciso no.**
 
-*Honest one-liner: the framework predicts a₀ ~ cH₀ from the dark-energy field (not a free parameter, and it comes through Λ) — but the exact factor that makes it match the data to 10% is, right now, only in the geometric argument, not the dynamics; the two are 3× apart and reconciling them is the open step.*
+*Frase honesta: el marco predice a₀ ~ cH₀ desde el campo de energía oscura (no un parámetro libre, y viene a través de Λ) — pero el factor exacto que lo hace coincidir con los datos al 10 % está, por ahora, sólo en el argumento geométrico, no en la dinámica; los dos están 3× separados y reconciliarlos es el paso abierto.*
