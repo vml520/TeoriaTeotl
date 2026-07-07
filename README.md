@@ -84,6 +84,30 @@ parameters, and carries **one calibration constant per absolute scale**. The rem
 numbers (G, |Λ|, α₀'s exact coefficient, the baryon asymmetry) each reduce to a problem that is
 open in *every* framework — not a gap unique to this one.
 
+## From theory to solver to application
+
+The same phase-settling dynamics studied here as physics is also a practical **solver**. When the
+field relaxes, it minimizes frustration in a network of cyclic (phase) constraints — which is exactly
+a signed MAX-CUT / coupled-oscillator optimization. That solver lives in this repository
+(`winding_solver.py`, `maxcut tft.py`, `teotl_math.py`) and benchmarks in the band reported for
+oscillator Ising machines (see `CONVOCATORIA.md`).
+
+Its provenance and its uses form one chain:
+
+- **Theory** (this repo) — the winding/phase dynamics *is* the TFT field settling; that is what the
+  demonstrations above establish.
+- **Solver** — the domain-agnostic core (a `WindingSolver` over a `ConstraintGraph`), validated
+  against simulated annealing.
+- **Applications** — the solver powers **[Hum](https://github.com/vml520/Hum)**, a privacy-first
+  calendar-*coherence* tool (it scores structural tension in recurring commitments), and is
+  generalized to other constraint domains (genetics, logistics, protein backbone dihedrals) on Hum's
+  `engine/*` branches.
+
+**One honesty rule carries across all three:** the solver is *deterministic oscillator dynamics* —
+fully explainable, on-device — never marketed as "AI," and the field **language model (TeotlAGI) is
+kept entirely separate** from both the solver and any application. Theory, solver, and product each
+keep their own home; this section is the link between them, not a merge of them.
+
 ## Cite
 
 If you use this code, please cite the archived release:
