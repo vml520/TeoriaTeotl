@@ -14,6 +14,10 @@ The whole thing rests on four scales (**E₀, ℓ₀, τ₀, α₀**) and three 
 These programs exercise those few pieces across five orders of magnitude in scale:
 **particle → planet → galaxy → cosmos.**
 
+**New here?** Read [`WHAT_TFT_IS.md`](WHAT_TFT_IS.md) first — a short mathematical reading of what
+the framework *is* (one circle-valued phase field, and why so much standard physics turns out to be
+its geometry and topology).
+
 ## Run it
 
 ```bash
