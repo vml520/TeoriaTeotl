@@ -155,6 +155,7 @@ of the dial as the flagged candidate — is the program's open front.
 
 ```bash
 pip install numpy
+mkdir -p outputs                    # scripts write their JSON results here
 python3 mass_m1_cancellation.py     # the zero, the angle, the singular matrix
 python3 mass_m2_interference.py     # data theorems + the construction
 python3 mass_m3_epsilon.py          # the epsilon exclusions (honest FAIL)
