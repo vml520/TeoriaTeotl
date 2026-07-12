@@ -127,6 +127,58 @@ exactly **three** notches, always — a proposed origin for why there are three
 generations, assembled entirely from derived parts. [derived within M2′;
 weak-channel identification proposed]
 
+## Part IV — hunting the one angle (the ε program)
+
+Pre-registration: `E0_prereg_epsilon.md`, with an explicit anti-numerology
+protocol (closed candidate lists, "derive the relation symbolically *first*,
+compare its number *second*," every comparison reported hit-or-miss). The M3
+result left ε as the whole mystery; Part IV asks what sets it.
+
+**E1 (`epsilon_e1_topo.py`) — topological quantization EXCLUDED.** If the dial
+offset were fixed by winding topology, it would be a rational fraction of a
+full turn. Tested against the entire closed class (denominators ≤ 36, three
+readings of the offset, look-elsewhere risk computed up front at 0.94%):
+nothing came within **212σ**. The naive "the offset is a winding number"
+escape route is dead — and note the contrast that survives it: the one
+precision form that *does* fit (below) is rational in **radians**, not in
+turns, so whatever it is, it is not simple winding arithmetic. **[excluded]**
+
+**E2 (`epsilon_e2_breaking.py`) — the breaking has a unique owner, one free
+number.** Attempting to *derive* the offset yielded a theorem and a mechanism,
+but not the number:
+- **Rigidity theorem [derived].** A perturbation of the dial either respects
+  the 120° symmetry — rotating all three generations rigidly, spacing intact —
+  or breaks it, splitting the spacing at first order. Koide's 10⁻⁵ precision
+  then *bounds all symmetry-breaking content to ~10⁻³* (the same scale as the
+  M2′ misalignment — one consistent story). So the offset must have a
+  symmetry-respecting origin.
+- **The unique channel [derived].** The only structure that qualifies is the
+  interference of the two lowest allowed harmonics, V = κ₃cos3α + κ₆cos6α. It
+  has a **pitchfork threshold at r = κ₆/κ₃ = 1/4**: below it the dial sits at
+  the symmetric notches (the electron would be ~47× heavier); above it the
+  minima slide off with cos(3β) = 1/(4r). *Crossing this threshold is what
+  makes the electron light at all.* The observed offset needs **r = 0.318** —
+  a continuous value the second-order dynamics does not force. **[open: one
+  ratio]**
+- **An unforced gift [consistency].** Past the threshold the notch splits into
+  *two mirror-image families* with identical spectra — exactly the
+  particle/antiparticle dial pair of M4. The one mechanism that can produce the
+  offset also produces matter/antimatter for free.
+
+**E4 (`epsilon_e4_scale.py`) — the structure lives on-shell.** Koide (and hence
+ε) is exact at the **physical, pole masses**; deforming to short-distance
+running masses degrades it ~186× (one-loop QED, since leptons carry no colour).
+This is where a field theory of *dressed, on-shell objects* would put it, and
+where a theory of short-distance Yukawa parameters would have no reason to.
+**[consistency]** (E3 found no licensed relation to test; the program closes
+here.)
+
+Net after Part IV: ε is no longer a bare unexplained angle. It has a named
+dynamical owner (the two-harmonic interference channel), a physical threshold
+(r > 1/4, whose crossing *is* the electron's lightness), it lives on-shell, and
+it reduces to a single continuous ratio r ≈ 0.318 — whose value, like A ≈ √2
+before it, waits on the actual soliton interior.
+
 ## The ledger
 
 | statement | label |
@@ -139,17 +191,30 @@ weak-channel identification proposed]
 | antiparticle spectrum identical | **consistency**, inherited |
 | exactly three generations from minimal Z₃ locking | **proposed** |
 | the odd channel = the weak interaction's chiral coupling | **proposed** |
-| the values of A (≈√2) and δ (equivalently ε = 2.2677°) | **open** — the entire remaining mystery |
+| ε's origin is symmetry-respecting; breaking content bounded to ~10⁻³ (rigidity theorem) | **derived** |
+| ε lives in one channel: κ₃cos3α + κ₆cos6α past its pitchfork (r > 1/4) | **derived** (within the model) |
+| Koide/ε is an on-shell (pole-mass) structure | **consistency** (one-loop) |
+| topological quantization of the offset (rational fraction of a turn) | **excluded** (212σ) |
+| the values of A (≈√2) and the ratio r ≈ 0.318 (equivalently ε = 2.2677°) | **open** — the entire remaining mystery |
 | symmetry, local-energetic, collective, and excitation-tower origins | **excluded** (Parts I–II) |
 
 ## The one number
 
 Everything unexplained about the lepton spectrum now lives in a single small
 angle: **ε = 2.2677° ± 0.0001°** — how far the generation dial sits from
-perfect silence. It is measured, it is not protected by any mechanism found
-here, and one mechanism-less precision form (2/9 rad) awaits a better tau mass
-to be confirmed or killed. Finding what sets ε — with topological quantization
-of the dial as the flagged candidate — is the program's open front.
+perfect silence. After the ε program (Part IV) that angle is much better
+characterized than "one free number": its origin must respect the 120°
+symmetry (rigidity theorem), it belongs to one specific two-harmonic
+interference channel whose **pitchfork threshold is the very thing that makes
+the electron light**, and it is exact at the physical pole masses. What
+remains genuinely open is a single continuous ratio, **r ≈ 0.318** — and, like
+the amplitude A ≈ √2 before it, its value is not fixed by any symmetry,
+energetic, collective, or topological argument we could construct. It waits on
+the full soliton interior: the same open frontier the rest of the framework
+reaches for its absolute numbers (G, Λ, a₀'s coefficient). One mechanism-less
+precision form survives as a falsifiable anchor: δ − 120° = 2/9 rad, a
+**pole-mass** statement consistent at 0.9σ, which a ~10× better tau mass will
+confirm or kill.
 
 ## Reproduce
 
@@ -165,7 +230,11 @@ python3 spectrum_sp23_qball_tower.py  # 3D tower exists; leptons excluded (~min)
 python3 koide_selfdual_g3.py        # symmetry class closed
 python3 koide_selfdual_g4.py        # local-energetics class closed
 python3 koide_selfdual_g5.py        # collective class closed; rotor towers dead
+python3 epsilon_e1_topo.py          # topological quantization excluded (212σ)
+python3 epsilon_e2_breaking.py      # the rigidity theorem + the one channel
+python3 epsilon_e4_scale.py         # Koide/ε is an on-shell (pole-mass) fact
 ```
 
-Inputs: PDG lepton masses only. Each script prints its own pre-registered gate
-and verdict. JSON results land in `outputs/`.
+Inputs: PDG lepton masses only (E4 also uses α = 1/137.036 and one-loop QED,
+declared in the script). Each script prints its own pre-registered gate and
+verdict. JSON results land in `outputs/`.

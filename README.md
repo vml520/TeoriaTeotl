@@ -73,7 +73,7 @@ not a unique prediction · **[input]** a value the framework does not yet fix.
 
 ### F. The three generations and the mass hierarchy
 *Full narrative with all gates and verdicts: [`GENERATIONS_PROGRAM.md`](GENERATIONS_PROGRAM.md).
-Pre-registrations: `G0_prereg_spectrum.md`, `M0_prereg_mass_interference.md`.*
+Pre-registrations: `G0_prereg_spectrum.md`, `M0_prereg_mass_interference.md`, `E0_prereg_epsilon.md`.*
 
 | file | what it shows | status |
 |---|---|---|
@@ -83,6 +83,9 @@ Pre-registrations: `G0_prereg_spectrum.md`, `M0_prereg_mass_interference.md`.*
 | `mass_m2_interference.py` | the data forces *real, sign-changing* interference; the framework's Q-ball binds an internal "generation dial" whose energy is exactly the square of a real amplitude — the mechanism exists (A, δ inserted, not derived) | mechanism **demonstrated**; coefficients **open** |
 | `mass_m3_epsilon.py` | what sets ε: all polynomial internal energetics to degree 5 excluded (~27,000σ); ε classically unprotected; the 2/9-rad form survives at 0.9σ — falsifiable with a better tau mass | honest **FAIL**: ε remains free |
 | `mass_m4_chirality.py` | the cancellation point = a pure winding-reversal-**odd** state (the electron is 99.85% "helical"); couplings are winding *integers* (universal) while masses are *amplitudes* (hierarchical) — exact lepton universality + 3477× mass ratio, simultaneously, as observed | **derived** within the construction; weak-channel link **proposed** |
+| `epsilon_e1_topo.py` | is the offset ε a winding fraction of a turn? tested against the whole closed class — nothing within 212σ | topological quantization **excluded** |
+| `epsilon_e2_breaking.py` | ε must respect the 120° symmetry (rigidity theorem); it lives in one interference channel whose **pitchfork threshold is what makes the electron light** — leaving one continuous ratio r ≈ 0.318 | rigidity **derived**; one ratio **open** |
+| `epsilon_e4_scale.py` | Koide/ε is exact at the **physical (pole) masses**, degrading ~186× under short-distance running — where a theory of dressed on-shell objects would put it | **consistency** (one-loop) |
 
 ## A fuller digest
 

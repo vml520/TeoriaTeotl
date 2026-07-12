@@ -53,13 +53,14 @@ Planets as **geodesics** of the Sun's emergent metric. **One** frozen constant K
 - Therefore the **chiral anomaly ΔB ∝ ΔH_mag is automatic in TFT** (not a postulate) — the Vachaspati baryogenesis–magnetogenesis link, forced by topology. Coefficient topological (2π-per-winding), × N_f (INPUT).
 - **INPUT/OPEN:** the *net* helicity generated → magnitude of η ≈ 6×10⁻¹⁰ (an initial condition). G3 (net-winding mechanism) and G4 (coherent helical field) are open. *More speculative than the gravity work.*
 
-## 7b. The generations & mass-hierarchy program (11 July 2026)
+## 7b. The generations & mass-hierarchy program (11–12 July 2026)
 Full gated record: `GENERATIONS_PROGRAM.md`. Headlines:
 - **Koide characterization DERIVED, exactly:** all three lepton masses = one scale + 120° phases + ONE angle ε = 2.2677° from an exact cancellation point; the **electron is anomalously light** (m_e ∝ ε², the near-null direction of a nearly singular generation matrix); at exact cancellation m_τ/m_μ → (2+√3)² = 13.93 (closed form).
 - **EXCLUDED (pre-registered gates):** Koide's balance from ring symmetries/dualities, from local energetics, and from collective/zero-mode dynamics (G3–G5); generations as excitation towers, 1D exact and 3D numerical (SP1–SP3) — excitation ratios cap at ~2 and Q hugs 1/3.
 - **DERIVED (structural positive):** the framework's Q-ball possesses a three-state equal-charge tower (the right state-space) and binds a localized internal "generation dial" whose energy is exactly a real amplitude squared — the interference mechanism EXISTS (M2′); the data itself forces real, sign-changing interference.
 - **DERIVED within the construction (M4):** the cancellation point = a pure winding-reversal-ODD state (electron 99.85% "helical"); antiparticle family spectrum identical automatically; **couplings = winding integers (universal) vs masses = amplitudes (hierarchical)** — exact lepton universality + 3477× hierarchy simultaneously, as observed.
-- **OPEN (the honest floor):** the values A ≈ √2 and ε — one angle now carries the entire lepton-spectrum mystery; classically unprotected (M3 FAIL); one mechanism-less precision form (δ−120° = 2/9 rad, 0.9σ) is falsifiable with a ~10× better τ mass.
+- **The ε sub-program (E-arc):** topological quantization of the offset **EXCLUDED** (E1, 212σ — the offset is not a winding fraction of a turn); ε's origin must be **Z₃-symmetry-respecting** (E2 rigidity theorem; all symmetry-breaking bounded to ~10⁻³ by Koide's precision) and lives in **one interference channel** (κ₃cos3α+κ₆cos6α) whose pitchfork threshold (r > 1/4) is what makes the electron light — a threshold crossing that also spontaneously gives the particle/antiparticle mirror pair; Koide/ε is an **on-shell (pole-mass)** structure (E4, degrades ~186× under running).
+- **OPEN (the honest floor):** the values A ≈ √2 and the ratio r ≈ 0.318 — after the E-arc, one continuous ratio carries the whole lepton-spectrum mystery; not fixed by symmetry, energetics, collective dynamics, or topology; waits on the soliton interior (like G, |Λ|, a₀'s coefficient). Falsifiable anchor: δ−120° = 2/9 rad (pole-mass, 0.9σ), tested by a ~10× better τ mass.
 
 ## 8. REUSABLE TFT TOOLKIT (for building other apps)
 The transferable dictionary — identities that hold across every result above:
@@ -109,7 +110,7 @@ The transferable dictionary — identities that hold across every result above:
 Particle/EM/gravity: `verify_conservative_1d.py`, `verify_force_law_sign.py`, `verify_breather_1d.py`, `verify_oscillon_3d.py`, `verify_qball_3d.py`, `verify_goldstone_1r2.py`, `verify_force_sign.py`, `verify_poisson_metric.py`, `verify_gravity_coupling.py`, `verify_G_as_rate.py`, `stage3_orbits.py`, `stage5_mercury.py`, `tft_solar_system.py`.
 Rotation curves / a₀: `milkyway_rotation.py`, `verify_a0_g1.py … g5.py` (+ docs `G0_prereg_a0.md`, `G1–G3`).
 Baryo/magneto/chirality: `verify_chiral_g1.py`, `verify_chiral_g2.py` (+ docs `G0_prereg_bmc.md`, `G1_chiral_root.md`, `G2_chiral_anomaly.md`).
-Generations & mass hierarchy: `koide_selfdual_g1.py … g5.py`, `spectrum_sp1_breathers.py`, `spectrum_sp23_qball_tower.py`, `mass_m1_cancellation.py … m4_chirality.py` (+ docs `G0_prereg_spectrum.md`, `M0_prereg_mass_interference.md`, `GENERATIONS_PROGRAM.md`).
+Generations & mass hierarchy: `koide_selfdual_g1.py … g5.py`, `spectrum_sp1_breathers.py`, `spectrum_sp23_qball_tower.py`, `mass_m1_cancellation.py … m4_chirality.py`, `epsilon_e1_topo.py`, `epsilon_e2_breaking.py`, `epsilon_e4_scale.py` (+ docs `G0_prereg_spectrum.md`, `M0_prereg_mass_interference.md`, `E0_prereg_epsilon.md`, `GENERATIONS_PROGRAM.md`).
 
 ---
 
