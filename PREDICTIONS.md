@@ -30,10 +30,12 @@ Because a₀ and dark energy are one field, the scale that fits *galaxy rotation
 - **Charge is quantized in integer units** because it is a winding number — answers "why integer charge" (the Standard Model inserts it by hand). In the Skyrme/topological-soliton lineage. **[consistency]**
 - **Gravity is universally attractive; matter and antimatter both fall** (✓ ALPHA-g 2023) — but GR+CPT predicts it too. **[consistency]**
 - **Solar system: Kepler + Mercury's 42.9″/century** from one constant — Kepler is by-construction, Mercury is the generic relativistic result. **[consistency]**
+- **Exact lepton universality coexisting with a 3477× mass hierarchy.** Gauge couplings are winding *integers* (topologically quantized → identical for all three generations); masses are *amplitudes* (continuous → hierarchical). One structure yields both observed facts at once. See `GENERATIONS_PROGRAM.md` / `mass_m4_chirality.py`. **[consistency]**
 
-## Striking connection — not yet derived (state explicitly)
+## Striking connection — mechanism demonstrated, coefficients open (state explicitly)
 
-- **Three lepton generations = three phases of one particle = the Koide relation**, which predicts the tau mass from the electron and muon to **0.006%.** Koide is empirical (unexplained 40+ yr); TFT *expresses* it. Deriving it reduces to one clean self-duality condition — an open target. **[open — express, not derive]**
+- **Three lepton generations = three phases of one particle = the Koide relation**, which predicts the tau mass from the electron and muon to **0.006%.** Status after the gated generations program (full record: `GENERATIONS_PROGRAM.md`): the pattern is exactly **one scale + one angle ε = 2.27° from a cancellation point** — the electron is anomalously *light* (m_e ∝ ε²), an almost purely winding-odd ("helical") state, 99.85% invisible to the mass channel. The interference mechanism **exists in the framework** (the Q-ball binds an internal generation dial with an exact square-law energy), generations-as-excitations is **excluded** (1D exact + 3D numerical), and three whole mechanism classes for the balance are **closed**. What remains open is the value of ε itself — classically unprotected, honestly logged. **[mechanism demonstrated — ε open]**
+- **A falsifiable precision hook on ε (no mechanism attached, flagged as such):** the dial angle satisfies δ − 120° = **2/9 rad** to within 0.9σ of current data (the known Brannen form). A ~10× improvement in the tau mass — feasible at future e⁺e⁻ machines — confirms or kills it sharply. The nearby candidate 1/(8π) is already excluded at 25σ. **[watch item, falsifiable]**
 
 ## Null / long-term
 

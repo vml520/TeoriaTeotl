@@ -71,6 +71,19 @@ not a unique prediction · **[input]** a value the framework does not yet fix.
 |---|---|---|
 | `verify_chiral_g1.py`, `verify_chiral_g2.py` | baryon number, magnetism, and chirality are three readings of one topological quantity (winding + linking); their anomaly link is automatic | **linkage derived**; the *size* of the matter–antimatter imbalance is an initial condition |
 
+### F. The three generations and the mass hierarchy
+*Full narrative with all gates and verdicts: [`GENERATIONS_PROGRAM.md`](GENERATIONS_PROGRAM.md).
+Pre-registrations: `G0_prereg_spectrum.md`, `M0_prereg_mass_interference.md`.*
+
+| file | what it shows | status |
+|---|---|---|
+| `koide_selfdual_g1.py` … `g5.py` | the Koide relation (predicts the tau mass to 0.006%) reduced to ONE coefficient; symmetry, local-energetic, and collective origins each closed by a pre-registered gate | characterization **derived**; three mechanism classes **excluded** |
+| `spectrum_sp1_breathers.py`, `spectrum_sp23_qball_tower.py` | a three-state, equal-charge particle tower **exists** in the framework — but excitation towers are near-degenerate: generations are **not** vibrations of one object (1D exact + 3D numerical) | tower **derived**; lepton pattern **excluded** |
+| `mass_m1_cancellation.py` | all three lepton masses = one scale, 120° phases, and ONE angle ε = 2.27° from an exact zero — the **electron is anomalously light** (m_e ∝ ε²), at the near-singular point of the generation matrix | **derived** (exact restatement) |
+| `mass_m2_interference.py` | the data forces *real, sign-changing* interference; the framework's Q-ball binds an internal "generation dial" whose energy is exactly the square of a real amplitude — the mechanism exists (A, δ inserted, not derived) | mechanism **demonstrated**; coefficients **open** |
+| `mass_m3_epsilon.py` | what sets ε: all polynomial internal energetics to degree 5 excluded (~27,000σ); ε classically unprotected; the 2/9-rad form survives at 0.9σ — falsifiable with a better tau mass | honest **FAIL**: ε remains free |
+| `mass_m4_chirality.py` | the cancellation point = a pure winding-reversal-**odd** state (the electron is 99.85% "helical"); couplings are winding *integers* (universal) while masses are *amplitudes* (hierarchical) — exact lepton universality + 3477× mass ratio, simultaneously, as observed | **derived** within the construction; weak-channel link **proposed** |
+
 ## A fuller digest
 
 `DERIVED_SUMMARY.md` — a scale-by-scale summary of what is derived, what is reproduced by
