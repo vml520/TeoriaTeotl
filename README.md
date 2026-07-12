@@ -72,8 +72,10 @@ not a unique prediction · **[input]** a value the framework does not yet fix.
 | `verify_chiral_g1.py`, `verify_chiral_g2.py` | baryon number, magnetism, and chirality are three readings of one topological quantity (winding + linking); their anomaly link is automatic | **linkage derived**; the *size* of the matter–antimatter imbalance is an initial condition |
 
 ### F. The three generations and the mass hierarchy
-*Full narrative with all gates and verdicts: [`GENERATIONS_PROGRAM.md`](GENERATIONS_PROGRAM.md).
-Pre-registrations: `G0_prereg_spectrum.md`, `M0_prereg_mass_interference.md`, `E0_prereg_epsilon.md`.*
+*Full narrative with all gates and verdicts: [`GENERATIONS_PROGRAM.md`](GENERATIONS_PROGRAM.md)
+and its companion [`WHERE_R_LIVES.md`](WHERE_R_LIVES.md) (the soliton-interior study).
+Pre-registrations: `G0_prereg_spectrum.md`, `M0_prereg_mass_interference.md`,
+`E0_prereg_epsilon.md`, `SINT0_prereg_r.md`, `SPEC0_prereg_spectrum.md`, `SPEC0b_prereg_nl3.md`.*
 
 | file | what it shows | status |
 |---|---|---|
@@ -86,6 +88,9 @@ Pre-registrations: `G0_prereg_spectrum.md`, `M0_prereg_mass_interference.md`, `E
 | `epsilon_e1_topo.py` | is the offset ε a winding fraction of a turn? tested against the whole closed class — nothing within 212σ | topological quantization **excluded** |
 | `epsilon_e2_breaking.py` | ε must respect the 120° symmetry (rigidity theorem); it lives in one interference channel whose **pitchfork threshold is what makes the electron light** — leaving one continuous ratio r ≈ 0.318 | rigidity **derived**; one ratio **open** |
 | `epsilon_e4_scale.py` | Koide/ε is exact at the **physical (pole) masses**, degrading ~186× under short-distance running — where a theory of dressed on-shell objects would put it | **consistency** (one-loop) |
+| `sint_r_interior.py` | r is a gauge-invariant **flux** (mass sums are exactly δ-independent); the loose three-lump "molecule" picture is excluded; r's seat is a single *merged* soliton | flux **derived**; molecule **excluded** |
+| `spec_internal_spectrum.py` | the soliton's internal (Bogoliubov–de Gennes) spectrum: a bound **triangular ℓ=3 shape mode** = the generation dial, made concrete (solver validated on the Goldstone + translation zero modes) | dial mode **computed, validated** |
+| `spec_nl3_condensate.py` | a single-mode condensate has a **flat** dial (rotational Goldstone) → r is a **two-sector relative phase** (a flux) — the most protected place, explaining why it survived every earlier method | **derived** |
 
 ## A fuller digest
 

@@ -198,6 +198,32 @@ before it, waits on the actual soliton interior.
 | the values of A (≈√2) and the ratio r ≈ 0.318 (equivalently ε = 2.2677°) | **open** — the entire remaining mystery |
 | symmetry, local-energetic, collective, and excitation-tower origins | **excluded** (Parts I–II) |
 
+## Part V — where r lives (the soliton interior)
+
+A separate, gated study asks where r comes from inside the actual soliton, and
+localizes it to the sharpest possible statement — full narrative and code in
+the companion [`WHERE_R_LIVES.md`](WHERE_R_LIVES.md). Headlines:
+
+- **r is a flux, not a mass sum [derived].** The dial is a gauge-invariant loop
+  quantity; the mass sums are exactly independent of it. The loose "three
+  separated lumps" picture of the generations is **excluded**; r's seat is a
+  single *merged* soliton. (`sint_r_interior.py`)
+- **The dial is a real, computed mode [computed, validated].** The soliton's
+  internal Bogoliubov–de Gennes spectrum contains a bound **triangular (ℓ=3)
+  shape mode** — the generation dial made concrete (bound only in the
+  large-charge regime). Solver validated on the Goldstone and translation zero
+  modes. (`spec_internal_spectrum.py`)
+- **r is in the most protected place there is [derived].** A single-mode
+  condensate has a *flat* dial (rotating one triangular mode costs no energy —
+  a rotational Goldstone). So r is intrinsically a **two-sector relative phase**
+  (three-fold × six-fold) — a flux between angular sectors — which is exactly
+  why it survived symmetry, energetics, collective, topological, *and*
+  single-mode arguments. (`spec_nl3_condensate.py`)
+
+r remains open, but its address is now written to the last line: the relative
+phase of two coupled sectors of the nonlinear condensate, requiring a
+current-carrying / higher-charge configuration to even exist.
+
 ## The one number
 
 Everything unexplained about the lepton spectrum now lives in a single small
