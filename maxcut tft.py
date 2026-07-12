@@ -79,9 +79,22 @@ def polish_1opt(W, s):
             improved = True
     return s
 
+def round_and_polish(W, theta, n_angles=16):
+    """Random-hyperplane rounding sweep: try cut-plane angles φ∈[0,π), round
+    s_i=sign(cos(θ_i−φ)), 1-opt polish, keep the best. n_angles=1 == old
+    single-threshold rounding, so this never does worse."""
+    best_c, best_s = -np.inf, None
+    for phi in np.linspace(0.0, np.pi, n_angles, endpoint=False):
+        s = np.where(np.cos(theta - phi) >= 0, 1.0, -1.0)
+        s = polish_1opt(W, s)
+        c = cut_value(W, s)
+        if c > best_c:
+            best_c, best_s = c, s
+    return best_c, best_s
+
 # ── TFT field solver ─────────────────────────────────────────────────────────
 def tft_solve(W, steps=1500, restarts=12, dt=0.08, Ks_max=None, seed=0,
-              schedule="linear"):
+              schedule="linear", n_angles=16):
     """
     schedule : "linear"     — Ks = Ks_max · frac  (current default)
                "lambda_eff" — Ks = Ks_max · R₂    where R₂ = |⟨e^{2iθ}⟩| over
@@ -113,9 +126,7 @@ def tft_solve(W, steps=1500, restarts=12, dt=0.08, Ks_max=None, seed=0,
         th     = wrap_theta(th + dt*(coup + pin) + np.sqrt(dt)*sig*r.normal(0,1,th.shape))
     best = -np.inf
     for k in range(restarts):
-        s = np.where(np.cos(th[k]) >= 0, 1.0, -1.0)
-        s = polish_1opt(W, s)
-        c = cut_value(W, s)
+        c, _ = round_and_polish(W, th[k], n_angles=n_angles)
         if c > best: best = c
     return best, time.time()-t0
 

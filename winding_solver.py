@@ -80,6 +80,26 @@ def polish_1opt(W, s):
             improved = True
     return s
 
+
+def round_and_polish(W, theta, n_angles=16):
+    """
+    Random-hyperplane rounding sweep (Goemans–Williamson style).
+
+    A single fixed threshold s_i = sign(cos θ_i) throws away most of the phase
+    information. Instead sweep the cut-plane angle φ over [0, π) (φ and φ+π give
+    the same partition), round s_i = sign(cos(θ_i − φ)) at each, 1-opt polish,
+    and keep the best cut. n_angles=1 reproduces the old single-threshold
+    rounding exactly, so this can never do worse.
+    """
+    best_c, best_s = -np.inf, None
+    for phi in np.linspace(0.0, np.pi, n_angles, endpoint=False):
+        s = np.where(np.cos(theta - phi) >= 0, 1.0, -1.0)
+        s = polish_1opt(W, s)
+        c = cut_value(W, s)
+        if c > best_c:
+            best_c, best_s = c, s
+    return best_c, best_s
+
 # ── spectral layout ───────────────────────────────────────────────────────────
 
 def spectral_layout(W):
@@ -119,7 +139,7 @@ def winding_count(theta, pos, grid_n=16):
 # ── anti-ferromagnetic solver ─────────────────────────────────────────────────
 
 def winding_solve(W, steps=1500, restarts=12, dt=0.08,
-                  K_max=None, seed=0, grid_n=16):
+                  K_max=None, seed=0, grid_n=16, n_angles=16):
     """
     Anti-FM MAX-CUT solver. Coupling: +Σ W_ij sin(θ_i−θ_j) drives phases apart.
 
@@ -153,16 +173,14 @@ def winding_solve(W, steps=1500, restarts=12, dt=0.08,
 
     best_cut = -np.inf
     for k in range(restarts):
-        s = np.where(np.cos(th[k]) >= 0, 1.0, -1.0)
-        s = polish_1opt(W, s)
-        c = cut_value(W, s)
+        c, _ = round_and_polish(W, th[k], n_angles=n_angles)
         if c > best_cut:
             best_cut = c
     return best_cut, mid_v, time.time() - t0
 
 # ── Kuramoto baseline (FM, for comparison) ────────────────────────────────────
 
-def kuramoto_solve(W, steps=1500, restarts=12, dt=0.08, K_max=None, seed=0):
+def kuramoto_solve(W, steps=1500, restarts=12, dt=0.08, K_max=None, seed=0, n_angles=16):
     """Kuramoto (FM coupling, −Σ W_ij sin(θ_i−θ_j)). Same schedule as winding_solve."""
     n = W.shape[0]
     r = np.random.default_rng(seed)
@@ -182,9 +200,7 @@ def kuramoto_solve(W, steps=1500, restarts=12, dt=0.08, K_max=None, seed=0):
                           + np.sqrt(dt) * sig * r.normal(0, 1, th.shape))
     best = -np.inf
     for k in range(restarts):
-        s = np.where(np.cos(th[k]) >= 0, 1.0, -1.0)
-        s = polish_1opt(W, s)
-        c = cut_value(W, s)
+        c, _ = round_and_polish(W, th[k], n_angles=n_angles)
         if c > best: best = c
     return best, time.time() - t0
 
