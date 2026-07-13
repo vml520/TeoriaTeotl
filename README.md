@@ -108,6 +108,18 @@ One linking invariant carries spin, statistics, baryon number, and chirality.*
 **absolute scales** (masses, Λ_QCD) or the **non-abelian groups** (SU(2)_L, color
 SU(3)) — named floors, open in TFT as they are elsewhere.*
 
+### H. Black holes and dark energy
+*Full narrative: [`BLACK_HOLES.md`](BLACK_HOLES.md). Pre-registrations:
+`BH0_prereg_blackhole.md`, `BHB0_prereg_bounce.md`, `BHE0_prereg_entropy.md`,
+`ADE0_prereg_a0_darkenergy.md`.*
+
+| file | what it shows | status |
+|---|---|---|
+| `bh_study.py` | horizon at r_s from TFT's own inflow rate √(2GM/r) reaching c (the river model, not imposed); time (= phase cycling) **freezes** at the horizon; and — the distinctive part — **no singularity**: the bounded phase field caps the density → a regular Planck-density core | horizon **derived route**; singularity resolution **TFT-native** |
+| `bh_bounce.py` | the core **bounces** (a squeezed Q-ball breathes, no collapse) from the φ⁶ "degeneracy pressure" — the same boundedness that kills the singularity; time-dilated into a Planck-star delayed burst (~10²² kg PBH bounces now) | bounce **computed**; observable model-dependent |
+| `bh_entropy.py` | black-hole entropy ∝ **area** (not volume), computed as the entanglement entropy of the phase Goldstone across the horizon (Srednicki); the ¼ located as the induced-gravity coefficient (tied to G, a constrained floor) | area law **computed**; ¼ **structural / floor** |
+| `a0_de_study.py` | dark energy = the same phase field (pNGB thawing quintessence), so **w ≥ −1 always — no phantom crossing**; matched to w₀ predicts wₐ ≈ −0.24 with mass ~H₀ (a₀-consistent). Sharp falsifier vs DESI's phantom-preferring fit | **derived** (falsifiable) |
+
 ## A fuller digest
 
 `DERIVED_SUMMARY.md` — a scale-by-scale summary of what is derived, what is reproduced by

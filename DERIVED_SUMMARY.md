@@ -46,6 +46,14 @@ Planets as **geodesics** of the Sun's emergent metric. **One** frozen constant K
 - **Fits:** Milky Way 2.9% (baryons only, derived a₀); **consistent with the SPARC RAR** within its 0.13-dex scatter.
 - **Caveats/OPEN:** exact a₀ coefficient = ω₀/H₀, a natural quintessence O(1) → the **coincidence problem**; the interpolation *shape* is model-dependent (as in MOND); a rigorous action-level derivation and a per-galaxy χ² (needs raw SPARC data) are open.
 
+## 6b. Black holes + the dark-energy falsifier (13 July 2026)
+Full record: `BLACK_HOLES.md`. **Reading two derived facts — √(2GM/r) = the inflow rate of space, and time = phase cycling — gives a complete black hole.**
+- **Horizon [derived route]:** the inflow rate reaches c at r_s (river/Gullstrand-Painlevé, from TFT's OWN rate); **time freezes at the horizon** (rate ∝ √g₀₀ → 0 = literal frozen star). r_s and thermo scales = consistency w/ GR.
+- **NO SINGULARITY [TFT-native]:** the bounded phase field (|∇θ|≲1/ℓ₀, finite amplitude) caps the density at ~Planck density → a **regular Planck-density core** (r_core ~ 4.5e-23 m solar, regular-BH/Planck-star family) — distinctive vs GR's point singularity.
+- **The core BOUNCES [computed]:** a squeezed Q-ball breathes/oscillates (φ⁶ high-density repulsion = field degeneracy pressure) — same boundedness that resolves the singularity; time-dilated → Planck-star delayed burst (PBH ~6e22 kg bounces now, mass model-dependent).
+- **Entropy [computed area law + floor]:** S ∝ **area** (S~R^1.9, computed as the phase Goldstone's entanglement entropy, Srednicki — WHY BH entropy is holographic); the **¼** = the induced-gravity coefficient (S_ent=A/4G, ε cancels because one field gives S_ent AND G) — inherited/constrained, exact value a floor (cf. Immirzi). Magnitude ~1e77 solar, S∝M² reproduced.
+- **Dark energy CANNOT go phantom [derived, falsifiable]:** DE = the same phase field (pNGB thawing quintessence, ordinary scalar) → **w ≥ −1 always** (integration: w_min=−1.0000); matched to w₀=−0.88 → wₐ≈−0.24, mass ~H₀ (a₀-consistent, one field both). DESI's CPL prefers phantom crossing (w<−1 past) → **sharp falsifier**: DR2/Euclid confirm phantom → falsified; relax to thawing track → confirmed.
+
 ## 7. DERIVED — baryogenesis / magnetogenesis / chirality = one topological invariant (BMC G1–G2)
 - The minimal action is **CP-symmetric** → chirality not *forced* (matter = antimatter).
 - The chiral invariant **exists** = the **helicity (linking number) of winding lines** (Lk = ±1 handed / 0 unlinked; CP flips its sign). This is Vic's **"chirality from winding directions."**
@@ -121,6 +129,7 @@ Baryo/magneto/chirality: `verify_chiral_g1.py`, `verify_chiral_g2.py` (+ docs `G
 Generations & mass hierarchy: `koide_selfdual_g1.py … g5.py`, `spectrum_sp1_breathers.py`, `spectrum_sp23_qball_tower.py`, `mass_m1_cancellation.py … m4_chirality.py`, `epsilon_e1_topo.py`, `epsilon_e2_breaking.py`, `epsilon_e4_scale.py` (+ docs `G0_prereg_spectrum.md`, `M0_prereg_mass_interference.md`, `E0_prereg_epsilon.md`, `GENERATIONS_PROGRAM.md`).
 Where r lives (soliton interior): `sint_r_interior.py`, `spec_internal_spectrum.py`, `spec_nl3_condensate.py` (+ docs `SINT0_prereg_r.md`, `SPEC0_prereg_spectrum.md`, `SPEC0b_prereg_nl3.md`, `WHERE_R_LIVES.md`).
 Particle sector (spin, neutrinos, confinement): `spin_statistics.py`, `neutrino_parity.py`, `quark_confinement.py`, `spec_selfconsistent.py` (+ docs `SPIN0_prereg_statistics.md`, `NU0_prereg_neutrino.md`, `QCD0_prereg_confinement.md`, `THE_PARTICLE_SECTOR.md`).
+Black holes + dark-energy falsifier: `bh_study.py`, `bh_bounce.py`, `bh_entropy.py`, `a0_de_study.py` (+ docs `BH0_prereg_blackhole.md`, `BHB0_prereg_bounce.md`, `BHE0_prereg_entropy.md`, `ADE0_prereg_a0_darkenergy.md`, `BLACK_HOLES.md`).
 
 ---
 

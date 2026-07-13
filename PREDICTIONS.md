@@ -13,11 +13,11 @@ Parameter-free consequence of the deep-MOND limit. Observed: 3.85 ± 0.09 (SPARC
 **3. Dark matter and dark energy are the same field.**
 The galactic "dark-matter" scale equals the dark-energy scale (a₀ ↔ ρ_Λ). Corollary: **no dark-matter particle exists** — direct-detection and collider searches stay null. Distinctive from ΛCDM. **[prediction, falsifiable]**
 
-**4. Dark energy is dynamical (thawing quintessence), not a constant.**
-w = −1 in the past, rising today: **w₀ ≈ −0.83** (matches DESI 2024), **wₐ ≈ −0.2 to −0.3.** Opposite of a cosmological constant. **[prediction — signature + w₀ confirmed; wₐ is the near-term test]**
+**4. Dark energy is dynamical (thawing quintessence), not a constant — and it CANNOT go phantom.**
+The field is the S¹ phase with the sine-Gordon cosine potential = a pseudo-Nambu-Goldstone thawing quintessence, an ordinary scalar, so **w ≥ −1 at all times** (a full integration gives w_min = −1.0000 on the whole track). w = −1 in the past, rising today: **w₀ ≈ −0.88**, **wₐ ≈ −0.24**. Opposite of a cosmological constant, and opposite of a phantom. **[prediction — the no-phantom feature is the sharp falsifier]**
 
 **5. ⭐ Galaxies predict dark energy (the centerpiece).**
-Because a₀ and dark energy are one field, the scale that fits *galaxy rotation curves* **forces** the dark-energy equation of state: w₀ ≈ −0.83 (✓ DESI) and a specific wₐ ≈ −0.2 to −0.3. No other framework connects these (MOND has no dark energy; ΛCDM has neither a₀ nor evolution). **Falsifiable now:** DESI DR2 / Euclid tighten wₐ — firms near −0.75 → ruled out; relaxes to −0.2/−0.3 → confirmed. **[prediction; partial confirmation in hand]**
+Because a₀ and dark energy are one field (mass ~ H₀, giving both a₀ = cH₀/2π and just-thawing-now), the scale that fits *galaxy rotation curves* **forces** the dark-energy equation of state: w₀ ≈ −0.88 and a specific wₐ ≈ −0.24, with w ≥ −1. No other framework connects these (MOND has no dark energy; ΛCDM has neither a₀ nor evolution). **The falsifier is now categorical, not a matter of degree:** DESI's w₀wₐCDM fit prefers a *phantom crossing* (w < −1 in the past) that a thawing scalar cannot produce. If DESI DR2 / Euclid **confirm phantom crossing → TFT's dark energy is falsified**; if the fit **relaxes onto the thawing track (w ≥ −1) → confirmed.** A near-term yes/no. See `a0_de_study.py` / `BLACK_HOLES.md`. **[prediction; sharp falsifier]**
 
 ## Tier 2 — Predicted, needs development
 
