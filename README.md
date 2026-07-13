@@ -92,6 +92,22 @@ Pre-registrations: `G0_prereg_spectrum.md`, `M0_prereg_mass_interference.md`,
 | `spec_internal_spectrum.py` | the soliton's internal (Bogoliubov–de Gennes) spectrum: a bound **triangular ℓ=3 shape mode** = the generation dial, made concrete (solver validated on the Goldstone + translation zero modes) | dial mode **computed, validated** |
 | `spec_nl3_condensate.py` | a single-mode condensate has a **flat** dial (rotational Goldstone) → r is a **two-sector relative phase** (a flux) — the most protected place, explaining why it survived every earlier method | **derived** |
 
+### G. The particle sector — what particles are, spin, neutrinos, confinement
+*Full narrative: [`THE_PARTICLE_SECTOR.md`](THE_PARTICLE_SECTOR.md). Pre-registrations:
+`SPIN0_prereg_statistics.md`, `NU0_prereg_neutrino.md`, `QCD0_prereg_confinement.md`.
+One linking invariant carries spin, statistics, baryon number, and chirality.*
+
+| file | what it shows | status |
+|---|---|---|
+| `spin_statistics.py` | fermions from a bosonic field: a spherical Q-ball is a spin-0 **boson**; a twisted vortex loop with **odd self-linking** is a spin-½ **fermion** (Finkelstein–Rubinstein). Leptons are linked loops, not plain Q-balls | linking **computed**; spin/statistics **derived** |
+| `neutrino_parity.py` | the **neutrino** = the pure winding-odd (massless-chiral) limit of the *same* lepton dial (the electron is 99.85% of the way there); **parity violation forced** (100% V−A, no ν_R); large PMNS / small CKM from ν near-degeneracy vs charged-lepton hierarchy | **derived** (parity, ν); **proposed** (mixing) |
+| `quark_confinement.py` | **linear confinement**: a quark is a winding-line end; the sine-Gordon term squeezes it into a wall of tension **σ = 8√Λ = the kink mass** → V(L)=σL. Meson=boson, baryon=fermion. One scale √Λ sets **both** hadron mass and confinement tension | tension **computed**; mechanism **derived** |
+| `spec_selfconsistent.py` | the last mass number r (=A) bottoms out at the generation-mode **excitation amplitude** — an initial condition, not a derived number (the honest terminus of the mass program) | **derived** (a floor) |
+
+*Honest boundary: TFT's U(1) field derives the mechanisms above but not the
+**absolute scales** (masses, Λ_QCD) or the **non-abelian groups** (SU(2)_L, color
+SU(3)) — named floors, open in TFT as they are elsewhere.*
+
 ## A fuller digest
 
 `DERIVED_SUMMARY.md` — a scale-by-scale summary of what is derived, what is reproduced by

@@ -31,6 +31,10 @@ Because a₀ and dark energy are one field, the scale that fits *galaxy rotation
 - **Gravity is universally attractive; matter and antimatter both fall** (✓ ALPHA-g 2023) — but GR+CPT predicts it too. **[consistency]**
 - **Solar system: Kepler + Mercury's 42.9″/century** from one constant — Kepler is by-construction, Mercury is the generic relativistic result. **[consistency]**
 - **Exact lepton universality coexisting with a 3477× mass hierarchy.** Gauge couplings are winding *integers* (topologically quantized → identical for all three generations); masses are *amplitudes* (continuous → hierarchical). One structure yields both observed facts at once. See `GENERATIONS_PROGRAM.md` / `mass_m4_chirality.py`. **[consistency]**
+- **Mesons are bosons and baryons are fermions**, from one rule: a quark is a soliton of odd self-linking (a spin-½ fermion by Finkelstein–Rubinstein), so hadron statistics = (−1)^(#quarks). The same **linking invariant carries spin, statistics, baryon number, and chirality**. See `THE_PARTICLE_SECTOR.md` / `spin_statistics.py`. **[consistency]**
+- **Parity violation is forced, not inserted**: the parity operation is winding reversal, and the weak (chiral) coupling is to the winding-odd channel → 100% V−A, and **no right-handed neutrino**. The **neutrino** is the pure-odd (massless-chiral) limit of the *same* lepton dial. See `neutrino_parity.py`. **[consistency / derived]**
+- **The confinement scale equals the hadron mass scale**: linear confinement with string tension σ = 8√Λ = the derived kink mass — one scale √Λ sets both, as in real QCD (m_proton ~ Λ_QCD). See `quark_confinement.py`. **[consistency]**
+- **Large neutrino mixing (PMNS) but small quark mixing (CKM)** from one mechanism: neutrinos sit near the mass-cancellation point → near-degenerate → maximal mixing; charged fermions are hierarchical → tiny mixing. **[candidate]**
 
 ## Striking connection — mechanism demonstrated, coefficients open (state explicitly)
 
