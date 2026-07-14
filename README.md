@@ -120,6 +120,16 @@ SU(3)) — named floors, open in TFT as they are elsewhere.*
 | `bh_entropy.py` | black-hole entropy ∝ **area** (not volume), computed as the entanglement entropy of the phase Goldstone across the horizon (Srednicki); the ¼ located as the induced-gravity coefficient (tied to G, a constrained floor) | area law **computed**; ¼ **structural / floor** |
 | `a0_de_study.py` | dark energy = the same phase field (pNGB thawing quintessence), so **w ≥ −1 always — no phantom crossing**; matched to w₀ predicts wₐ ≈ −0.24 with mass ~H₀ (a₀-consistent). Sharp falsifier vs DESI's phantom-preferring fit | **derived** (falsifiable) |
 
+### I. Quantum correlations from compact time
+*Full narrative, with prominent caveats: [`QUANTUM_FROM_COMPACT_TIME.md`](QUANTUM_FROM_COMPACT_TIME.md).
+Pre-registration: `CHSH0_prereg_compact.md`. This **reproduces** QM — it does not
+beat it, and a Bell test cannot distinguish it; the value is conceptual.*
+
+| file | what it shows | status |
+|---|---|---|
+| `chsh_compact_time.py` | the local field saturates CHSH at **S = 2.0000** (classical); an *arbitrary* time-loop reweighting is unconstrained and overshoots to **2.90** (super-quantum) — so "compact time lifts S>2" is vacuous until the closure comes from the actual field | **computed** (baseline + warning) |
+| `chsh_closure.py` | TFT's S¹ is a **single-valued complex phase**, so the hidden variable **cancels** → E(a,b)=cos(a−b) (no tuning, no-signaling), and a coherent phase is **Tsirelson-capped at 2√2** automatically (2.828) — deriving the quantum value *and* ceiling. Quantum coherence = the phase closing on the compact time circle | **derived**; reproduces QM (open: a distinguishing test, the Born rule) |
+
 ## A fuller digest
 
 `DERIVED_SUMMARY.md` — a scale-by-scale summary of what is derived, what is reproduced by

@@ -35,6 +35,7 @@ Because a₀ and dark energy are one field (mass ~ H₀, giving both a₀ = cH�
 - **Parity violation is forced, not inserted**: the parity operation is winding reversal, and the weak (chiral) coupling is to the winding-odd channel → 100% V−A, and **no right-handed neutrino**. The **neutrino** is the pure-odd (massless-chiral) limit of the *same* lepton dial. See `neutrino_parity.py`. **[consistency / derived]**
 - **The confinement scale equals the hadron mass scale**: linear confinement with string tension σ = 8√Λ = the derived kink mass — one scale √Λ sets both, as in real QCD (m_proton ~ Λ_QCD). See `quark_confinement.py`. **[consistency]**
 - **Large neutrino mixing (PMNS) but small quark mixing (CKM)** from one mechanism: neutrinos sit near the mass-cancellation point → near-degenerate → maximal mixing; charged fermions are hierarchical → tiny mixing. **[candidate]**
+- **The quantum CHSH value 2√2 and its Tsirelson ceiling, from a single-valued phase on compact time.** The local field gives S=2 (classical); demanding the S¹ phase be single-valued makes the hidden variable cancel → E(a,b)=cos(a−b) (no tuning) and caps CHSH at 2√2 automatically. Quantum coherence = the phase closing on the S¹ time circle. **Reproduces QM — does not beat it and CHSH cannot distinguish it** (the value is conceptual: a deterministic account of the correlation). See `QUANTUM_FROM_COMPACT_TIME.md`. **[consistency / reinterpretation]**
 
 ## Striking connection — mechanism demonstrated, coefficients open (state explicitly)
 

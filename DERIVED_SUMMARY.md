@@ -78,6 +78,11 @@ Full record: `THE_PARTICLE_SECTOR.md`. **One linking invariant (the derived wind
 - **Confinement [computed]:** quark = winding-line end; no free end; sine-Gordon term → domain wall of tension σ = 8√Λ = the DERIVED kink mass → linear V(L)=σL. Meson=boson, baryon=fermion (linking parity). ONE scale √Λ sets both hadron mass AND confinement tension (as in real QCD).
 - **FLOORS (the honest boundary):** absolute scales (ν-mass, Λ_QCD) and NON-ABELIAN groups (SU(2)_L for the full weak force, color SU(3) for the full strong force, fractional charge) — the U(1) field gives integer winding and derives mechanisms/scale-relations, not absolutes or non-abelian structure. Same pattern as G, |Λ_cc|, a₀-coeff, η.
 
+## 7d. Quantum correlations from compact time (13 July 2026)
+Full record (with prominent caveats): `QUANTUM_FROM_COMPACT_TIME.md`. **The local field saturates CHSH at S=2.0000 (classical); compact time DERIVES the quantum value.**
+- **The derivation:** TFT's S¹ is a SINGLE-VALUED COMPLEX PHASE. Single-valuedness fixes the loop phase difference; the hidden variable CANCELS → E(a,b)=cos(a−b) (quantum form, NO tuning, no-signaling). A coherent phase = Hilbert space → **Tsirelson caps CHSH at 2√2 automatically** (numerically 2.828; the naive arbitrary-reweight overshoot of 2.90 is FORBIDDEN once the phase is genuine). Quantum coherence = the phase closing single-valuedly on the S¹ time circle → makes precise "quantum uncertainty = ordinary deterministic S¹ behaviour."
+- **HONEST BOUNDARY:** this REPRODUCES QM (2√2) — does NOT beat it, and a Bell test CANNOT distinguish compact-time TFT from standard QM. Value is conceptual (a deterministic account of the correlation + its ceiling). OPEN: a distinguishing observable (the real prize, untouched); the Born rule (single-outcome |ψ|²) — the closure gives correlations, not yet probabilities.
+
 ## 8. REUSABLE TFT TOOLKIT (for building other apps)
 The transferable dictionary — identities that hold across every result above:
 
@@ -130,6 +135,7 @@ Generations & mass hierarchy: `koide_selfdual_g1.py … g5.py`, `spectrum_sp1_br
 Where r lives (soliton interior): `sint_r_interior.py`, `spec_internal_spectrum.py`, `spec_nl3_condensate.py` (+ docs `SINT0_prereg_r.md`, `SPEC0_prereg_spectrum.md`, `SPEC0b_prereg_nl3.md`, `WHERE_R_LIVES.md`).
 Particle sector (spin, neutrinos, confinement): `spin_statistics.py`, `neutrino_parity.py`, `quark_confinement.py`, `spec_selfconsistent.py` (+ docs `SPIN0_prereg_statistics.md`, `NU0_prereg_neutrino.md`, `QCD0_prereg_confinement.md`, `THE_PARTICLE_SECTOR.md`).
 Black holes + dark-energy falsifier: `bh_study.py`, `bh_bounce.py`, `bh_entropy.py`, `a0_de_study.py` (+ docs `BH0_prereg_blackhole.md`, `BHB0_prereg_bounce.md`, `BHE0_prereg_entropy.md`, `ADE0_prereg_a0_darkenergy.md`, `BLACK_HOLES.md`).
+Quantum from compact time: `chsh_compact_time.py`, `chsh_closure.py` (+ docs `CHSH0_prereg_compact.md`, `QUANTUM_FROM_COMPACT_TIME.md`); builds on `teotl qc.py`, `teotl chsh.py`.
 
 ---
 
