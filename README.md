@@ -128,7 +128,8 @@ beat it, and a Bell test cannot distinguish it; the value is conceptual.*
 | file | what it shows | status |
 |---|---|---|
 | `chsh_compact_time.py` | the local field saturates CHSH at **S = 2.0000** (classical); an *arbitrary* time-loop reweighting is unconstrained and overshoots to **2.90** (super-quantum) — so "compact time lifts S>2" is vacuous until the closure comes from the actual field | **computed** (baseline + warning) |
-| `chsh_closure.py` | TFT's S¹ is a **single-valued complex phase**, so the hidden variable **cancels** → E(a,b)=cos(a−b) (no tuning, no-signaling), and a coherent phase is **Tsirelson-capped at 2√2** automatically (2.828) — deriving the quantum value *and* ceiling. Quantum coherence = the phase closing on the compact time circle | **derived**; reproduces QM (open: a distinguishing test, the Born rule) |
+| `chsh_closure.py` | TFT's S¹ is a **single-valued complex phase**, so the hidden variable **cancels** → E(a,b)=cos(a−b) (no tuning, no-signaling), and a coherent phase is **Tsirelson-capped at 2√2** automatically (2.828) — deriving the quantum value *and* ceiling. Quantum coherence = the phase closing on the compact time circle | **derived**; reproduces QM (open: a distinguishing test) |
+| `born1..5_*.py` | the **Born rule**: equal amplitudes → equal weights by an *exact* envariance symmetry (`born1`); **\|c_k\|² for all amplitudes** from that symmetry alone, exponent 2 = coherent-superposition normalization (`born3`); continuous **Malus P(+\|θ)=cos²(θ/2)** uniquely pinned by the closure (`born4`); one rule gives marginals + correlation + Tsirelson + Malus (`born5`). Pre-reg `BORN0_prereg.md` | **derived** (structural, assumption-conditional); reproduces QM |
 
 ## A fuller digest
 

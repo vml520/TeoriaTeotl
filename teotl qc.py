@@ -9,7 +9,7 @@ particles and is retired here.
 A qubit is two node basins in R³, each internally phase-coherent:
 
     ψ_k  = sqrt(m_k) · exp(i·θ̄_k)     k ∈ {0,1}
-    P(1) = m₁ / (m₀ + m₁)
+    P(1) = m₁ / (m₀ + m₁)    # the Born weight |c|²; assumed here, DERIVED in born1..5_*.py
     φ    = θ̄₁ − θ̄₀
     Q    = Σ_i m_i · ω_i               (U(1) Noether charge proxy)
 
