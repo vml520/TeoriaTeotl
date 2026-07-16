@@ -22,7 +22,9 @@ buy. Pre-registration: `CHSH0_prereg_compact.md`.
 > correlation has the value and the ceiling it does. The **Born rule** (single-
 > outcome |ψ|²), previously flagged here as open, is now **derived** from the same
 > closure (§6, `born1..5_*.py`) — assumption-conditional, and still degenerate with
-> QM — leaving **one** clearly-marked open problem: a distinguishing experiment. It
+> QM. The distinguishing-experiment question is now itself answered (§7): a search
+> of the natural channels finds the theory **empirically degenerate** with QM, with
+> one open falsifiable edge (tensor-completeness). It
 > is not a claim to have surpassed quantum mechanics.
 
 ## 1. Why S > 2 is not, by itself, a result (`chsh_compact_time.py`)
@@ -86,7 +88,7 @@ that what is usually called quantum uncertainty is ordinary S¹ behavior.
 | single-valued S¹ phase ⇒ hidden variable cancels ⇒ E = cos(a−b), no tuning | **derived** |
 | coherent phase ⇒ Tsirelson ⇒ CHSH capped at 2√2 automatically | **derived** (2.828 numerically) |
 | "quantum coherence = the phase closing on the S¹ time circle" | **interpretation** (coherent) |
-| a measurement that distinguishes compact-time TFT from standard QM | **open** — the real prize |
+| a measurement that distinguishes compact-time TFT from standard QM | **searched (§7)** — none feasible; empirically degenerate; one edge (tensor-completeness) open |
 | single-outcome probabilities (the Born rule = \|c_k\|²) | **derived** (§6, assumption-conditional) |
 
 ## 6. The Born rule, derived (`born1..5_*.py`)
@@ -130,16 +132,57 @@ derivations, assumed not derived — and it **reproduces QM exactly**, so it add
 distinguishing test. The one open prize remains the same: an observable where
 compact-time TFT and QM differ.
 
+## 7. No distinguishing observable — a quantified degeneracy (`dis1`, `dis2`)
+
+Both results above reproduce QM, so the standing open question was: is there ANY
+observable where compact-time TFT and standard QM *differ*? We searched the
+channels where compact time *can* differ, with the gates fixed in advance
+(`DIS0_prereg.md`). The honest answer: **there is one in principle, but the theory
+is empirically degenerate with QM for any feasible experiment.**
+
+- **Bell channel — exactly degenerate, structurally (`dis1`).** Discretizing /
+  compactifying the time circle to any size N leaves E(a,b)=cos(a−b) and S=2√2
+  *unchanged* (machine precision, N-independent), because the hidden time-phase
+  **cancels** (correlations see only setting differences). CHSH can *never*
+  distinguish them — upgrading the numerical 2√2 to a structural statement.
+- **Temporal / energy channel — a real difference, but 1/T (`dis1`).** Single-
+  valuedness on a period-T loop forces an energy comb Eₙ=2πn/T and revival that is
+  exact and strictly periodic at T. But the effect scales as 1/T. The only T
+  consistent with observed continuously-tunable spectra is **cosmological**
+  (T~1/H₀ → comb spacing ~10⁻³³ eV, revival ~ age of the universe = unobservable);
+  a *microscopic* T is excluded — it would quantize energy in mc²≈511 keV units,
+  forbidding eV atomic lines. Time-winding sectors are degenerate (phase 2πn).
+- **Multipartite contextuality / GHZ — degenerate (`dis2`).** The coherent-phase
+  closure, extended to three parties, reaches **Mermin M = 4 = QM**: the full GHZ
+  paradox and contextuality *irreducible to 2-body* (all pairwise correlations
+  vanish, yet M=4). So even the "does TFT *fall short* of QM?" test comes back
+  degenerate.
+
+Sharpest in-principle falsifier: forbidden transition frequencies between comb
+teeth → observed continuous spectra already bound T ≳ 1/H₀ (satisfied). **The QC
+arc's old caveat ("reproduces QM, no distinguishing test") is now a *result*, not a
+hand-wave** — the reinterpretation is not experimentally separable from QM by any
+feasible measurement. Its value is conceptual/foundational.
+
+**The one surviving falsifiable edge (honest, open).** The GHZ computation used the
+full 2ⁿ-dim tensor Hilbert space the closure *claims* to be; CHSH established only
+the 2-body sector. A field-theoretic proof that *n windings realize the full 2ⁿ
+tensor space* is undone — and if the single-field S¹ construction secretly
+saturates at 2-body it would give Mermin M~0 and **be falsified by real GHZ
+experiments**. So TFT must be full-tensor to survive, and there it is degenerate
+with QM. That tensor-completeness question is the genuine remaining frontier.
+
 ## The honest boundary
 
 This is a *reinterpretation with a derived correlation structure*, not a
 surpassing of quantum mechanics. Two things it is not:
 
-1. **It does not beat QM, and CHSH cannot distinguish it from QM.** Reproducing
-   2√2 is degenerate with standard quantum mechanics on this test. The genuine
-   prize — untouched — is an observable where compact-time TFT and ordinary QM
-   *differ*; only that could make the picture empirically preferable, and it may
-   not exist.
+1. **It does not beat QM, and no feasible experiment distinguishes it from QM.**
+   Reproducing 2√2 is degenerate on the CHSH test, and §7 now shows the same across
+   the Bell (exactly, any loop size), temporal (1/T-suppressed, unobservable at the
+   cosmological loop), and GHZ/contextuality (M=4=QM) channels. An observable where
+   compact-time TFT and ordinary QM *differ* was searched for and not found; the
+   only surviving edge is the tensor-completeness question of §7.
 2. **The Born rule is derived, but assumption-conditionally.** §6 reduces
    single-outcome |ψ|² to the S¹ swap symmetry plus additivity/non-contextuality;
    it does not derive that last assumption, and — like the correlation — it
@@ -163,5 +206,7 @@ python3 born2_measure.py       # U(1)-charge measure -> |c|^2, additivity from o
 python3 born3_finegrain.py     # |c|^2 for all amplitudes from envariance alone (exponent 2)
 python3 born4_malus.py         # continuous Born law P(+|theta)=cos^2(theta/2)
 python3 born5_closure_knit.py  # one rule -> marginals + E=cos(a-b) + Tsirelson + Malus
+python3 dis1_distinguish.py    # search for a distinguishing observable: none feasible (1/T)
+python3 dis2_ghz.py            # GHZ/Mermin: coherent closure reaches M=4=QM (degenerate)
 ```
 Each prints its pre-registered gate and verdict; JSON lands in `outputs/`.
