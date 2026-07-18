@@ -130,7 +130,20 @@ beat it, and a Bell test cannot distinguish it; the value is conceptual.*
 | `chsh_compact_time.py` | the local field saturates CHSH at **S = 2.0000** (classical); an *arbitrary* time-loop reweighting is unconstrained and overshoots to **2.90** (super-quantum) — so "compact time lifts S>2" is vacuous until the closure comes from the actual field | **computed** (baseline + warning) |
 | `chsh_closure.py` | TFT's S¹ is a **single-valued complex phase**, so the hidden variable **cancels** → E(a,b)=cos(a−b) (no tuning, no-signaling), and a coherent phase is **Tsirelson-capped at 2√2** automatically (2.828) — deriving the quantum value *and* ceiling. Quantum coherence = the phase closing on the compact time circle | **derived**; reproduces QM (open: a distinguishing test) |
 | `born1..5_*.py` | the **Born rule**: equal amplitudes → equal weights by an *exact* envariance symmetry (`born1`); **\|c_k\|² for all amplitudes** from that symmetry alone, exponent 2 = coherent-superposition normalization (`born3`); continuous **Malus P(+\|θ)=cos²(θ/2)** uniquely pinned by the closure (`born4`); one rule gives marginals + correlation + Tsirelson + Malus (`born5`). Pre-reg `BORN0_prereg.md` | **derived** (structural, assumption-conditional); reproduces QM |
-| `dis1_distinguish.py`, `dis2_ghz.py` | **is there a distinguishing observable?** Search of the natural channels (pre-reg `DIS0_prereg.md`): Bell is *exactly* degenerate at any loop size (hidden time-phase cancels); the temporal energy-comb differs but is 1/T-suppressed (unobservable at the cosmological loop, a microscopic loop excluded by continuous spectra); **GHZ/Mermin reaches M=4=QM**. No feasible distinguisher — empirically degenerate; one open edge (does the field give the full 2ⁿ tensor space, or saturate at 2-body → falsified by GHZ) | **searched**; degenerate w/ QM (honest negative) |
+| `dis1_distinguish.py`, `dis2_ghz.py` | **is there a distinguishing observable?** Search of the natural channels (pre-reg `DIS0_prereg.md`): Bell is *exactly* degenerate at any loop size (hidden time-phase cancels); the temporal energy-comb differs but is 1/T-suppressed (unobservable at the cosmological loop, a microscopic loop excluded by continuous spectra); **GHZ/Mermin reaches M=4=QM**. No feasible distinguisher — empirically degenerate; one open edge (does the field give the full 2ⁿ tensor space? → **resolved in §J, `tens_completeness.py`**) | **searched**; degenerate w/ QM (honest negative) |
+
+### J. Foundations and limits — what the field *is*, and where it breaks
+
+*Full narrative, with the program's sharpest honest negative:
+[`FOUNDATIONS_AND_LIMITS.md`](FOUNDATIONS_AND_LIMITS.md).*
+
+| file | what it shows | status |
+|---|---|---|
+| `pw_emergent_time.py` | **time emerges from the phase**: a timeless constraint (Ĥ_C+Ĥ_S)\|Ψ⟩=0 with the S¹ phase as a Page–Wootters clock reproduces Schrödinger evolution on conditioning (fidelity 1); emergent time cyclic, comb spectrum → the internal-phase S¹ and the time-S¹ are **one structure** | **PASS** (structural); reproduces QM |
+| `scale_darkenergy.py` | **one circle at H₀** = time + charge + a₀ + dark energy: a₀=cH₀/2π (87% of obs), thawing **w≥−1 always**, w₀≈−0.88→wₐ≈−0.2, **a₀↔w locked** (a confirmed phantom crossing falsifies it) | **PARTIAL**; absolute scale = input |
+| `meas3_selection.py`, `meas4_classical_arrow.py` | **measurement as loop-closure**: only definite branches close (single outcome, no branching), einselection reproduced, E>0 gives a clock arrow; *which* outcome + thermodynamic arrow = boundary floors | **PARTIAL** |
+| `tens_completeness.py` | **the sharp limit**: an economical (classical) S¹ field is **entanglement-bounded** — reproduces product/GHZ/area-law (why CHSH/Born/GHZ passed) but **not volume-law** → **falsified by quantum supremacy**; full 2ⁿ QM needs quantizing the field (= standard QFT). Cannot be economical-classical *and* full QM | **RESOLVED-NEGATIVE** |
+| `swmp_tension.py` | dark energy needs a **super-Planckian** f≳1.45 M_Pl (swampland tension); **monodromy** (wind one circle ~15×) is the one-S¹-native evasion → a winding floor; the R³ uncertainty scale a₀ is **decoupled/protected** (a₀ = the field's de Sitter fluctuation) | **PARTIAL** |
 
 ## A fuller digest
 
