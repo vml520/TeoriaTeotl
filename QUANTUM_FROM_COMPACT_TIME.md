@@ -172,6 +172,32 @@ saturates at 2-body it would give Mermin M~0 and **be falsified by real GHZ
 experiments**. So TFT must be full-tensor to survive, and there it is degenerate
 with QM. That tensor-completeness question is the genuine remaining frontier.
 
+## 8. The uncertainty principle, derived (`uncertainty_s1.py`)
+
+The two results above are the *correlation* and *probability* pillars of quantum
+mechanics, from the S¹. The third pillar — **uncertainty** — follows from the *same*
+single-valued phase, as a theorem rather than a postulate.
+
+On S¹ the single-valued phase is e^{iθ}; its conjugate is the winding number
+N = −i∂_θ, whose spectrum is the **integers** — this *is* charge quantization
+(`verify_charge_quantization.py`). The commutators are exact: [N, cosθ] = i sinθ,
+[N, sinθ] = −i cosθ (verified to 1e-13). The Robertson bound then gives the
+Carruthers–Nieto **number–phase uncertainty**
+
+  ΔN · Δ(sinθ) ≥ ½|⟨cosθ⟩|,
+
+which we verify holds for **every** state, is **saturated** by the von Mises
+(circular minimum-uncertainty) family, and reduces to **ΔN·Δθ = ½** (Heisenberg) in
+the phase-localized limit (numerically 0.500). The tradeoff is physical and forced: a
+definite charge/winding (ΔN=0) has a **uniform, undefined phase**; sharpening the
+phase spreads the charge.
+
+So the **same single-valued S¹ phase** underwrites all three pillars — charge
+quantization *and* the coherent correlations/Born rule *and* the uncertainty
+principle. One structure, three pillars — with **uncertainty derived, not assumed**
+(and, unlike §1–7, this one is a clean theorem with no degeneracy caveat: it *is*
+the quantum uncertainty relation for the field's own conjugate variables).
+
 ## The honest boundary
 
 This is a *reinterpretation with a derived correlation structure*, not a
@@ -208,5 +234,6 @@ python3 born4_malus.py         # continuous Born law P(+|theta)=cos^2(theta/2)
 python3 born5_closure_knit.py  # one rule -> marginals + E=cos(a-b) + Tsirelson + Malus
 python3 dis1_distinguish.py    # search for a distinguishing observable: none feasible (1/T)
 python3 dis2_ghz.py            # GHZ/Mermin: coherent closure reaches M=4=QM (degenerate)
+python3 uncertainty_s1.py     # the uncertainty principle DERIVED: dN*dtheta>=1/2 from the S^1
 ```
 Each prints its pre-registered gate and verdict; JSON lands in `outputs/`.
