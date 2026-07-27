@@ -40,7 +40,7 @@
 |---|---|---|
 | `verify_dark_sectors.py` | dark matter and dark energy are one field: the galactic scale = the dark-energy scale (three independent numbers within ~1.8×) | **[derived]** |
 | `verify_dynamical_de.py` | dark energy is dynamical (thawing quintessence): w rises from −1 to **w₀ = −0.88** today — matches DESI 2024's signature and w₀ | signature + w₀ **[derived]**; wₐ testable |
-| `verify_a0_de_consistency.py` | **⭐ the field fixed by galaxy rotation *predicts* the dark-energy w₀ (= −0.83, matches DESI), and forecasts wₐ ≈ −0.2 to −0.3** — a cross-observable link no other framework makes | **[prediction]** — w₀ confirmed; wₐ a ~1.7σ tension, falsifiable by DESI DR2 / Euclid |
+| `verify_a0_de_consistency.py` | **⭐ the field fixed by galaxy rotation *predicts* the dark-energy w₀ (= −0.83, matches DESI), and forecasts wₐ ≈ −0.2 to −0.3** — a cross-observable link no other framework makes | **[prediction]** — w₀ confirmed; **wₐ in tension as of DR2 (2025)**: DR2 prefers wₐ = −0.62, crossing w = −1 (non-phantom disfavoured); DR3 / Euclid decide |
 
 ## F. Matter, fields, and handedness — one topological object
 | file | what it shows | status |

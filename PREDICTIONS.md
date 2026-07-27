@@ -7,6 +7,8 @@
 **1. The galactic acceleration scale is not free: a₀ = cH₀/2π ≈ 1.1×10⁻¹⁰ m/s².**
 Parameter-free — set by the cosmic expansion rate. MOND must *fit* this; TFT *predicts* it. Matches observation within ~10%. **[prediction, matches data]**
 
+*Tested directly against SPARC, per galaxy* (`verify_a0_sparc_fit.py`; 2696 points from 147 galaxies): fitting the Radial Acceleration Relation ourselves gives g† = 1.16×10⁻¹⁰ m s⁻² (deep-MOND a₀ = 1.33×10⁻¹⁰), against which TFT's derived a₀ = cH₀/2π = 1.04–1.13×10⁻¹⁰ sits at **0.90–0.97 × g†** — consistent within the ~20% systematic band set by mass-to-light ratios and distances, with the relation's tightness reproduced (0.133 dex vs the literature's ~0.12) and the same scale recovered across galaxy mass wherever the data constrain it. Nothing here is fitted to SPARC; the 2π is the derived content, H₀ is an input.
+
 **2. The baryonic Tully–Fisher exponent is exactly 4** (V⁴ ∝ M).
 Parameter-free consequence of the deep-MOND limit. Observed: 3.85 ± 0.09 (SPARC). **[prediction, matches data]**
 
@@ -17,7 +19,9 @@ The galactic "dark-matter" scale equals the dark-energy scale (a₀ ↔ ρ_Λ). 
 The field is the S¹ phase with the sine-Gordon cosine potential = a pseudo-Nambu-Goldstone thawing quintessence, an ordinary scalar, so **w ≥ −1 at all times** (a full integration gives w_min = −1.0000 on the whole track). w = −1 in the past, rising today: **w₀ ≈ −0.88**, **wₐ ≈ −0.24**. Opposite of a cosmological constant, and opposite of a phantom. **[prediction — the no-phantom feature is the sharp falsifier]**
 
 **5. ⭐ Galaxies predict dark energy (the centerpiece).**
-Because a₀ and dark energy are one field (mass ~ H₀, giving both a₀ = cH₀/2π and just-thawing-now), the scale that fits *galaxy rotation curves* **forces** the dark-energy equation of state: w₀ ≈ −0.88 and a specific wₐ ≈ −0.24, with w ≥ −1. No other framework connects these (MOND has no dark energy; ΛCDM has neither a₀ nor evolution). **The falsifier is now categorical, not a matter of degree:** DESI's w₀wₐCDM fit prefers a *phantom crossing* (w < −1 in the past) that a thawing scalar cannot produce. If DESI DR2 / Euclid **confirm phantom crossing → TFT's dark energy is falsified**; if the fit **relaxes onto the thawing track (w ≥ −1) → confirmed.** A near-term yes/no. See `a0_de_study.py` / `BLACK_HOLES.md`. **[prediction; sharp falsifier]**
+Because a₀ and dark energy are one field (mass ~ H₀, giving both a₀ = cH₀/2π and just-thawing-now), the scale that fits *galaxy rotation curves* **forces** the dark-energy equation of state: w₀ ≈ −0.88 and a specific wₐ ≈ −0.24, with w ≥ −1. No other framework connects these (MOND has no dark energy; ΛCDM has neither a₀ nor evolution). **The falsifier is categorical, not a matter of degree:** DESI's w₀wₐCDM fit prefers a *phantom crossing* (w < −1 in the past) that a thawing scalar cannot produce.
+
+**Status as of DESI DR2 (2025) — the tension runs against this prediction.** Across two releases the preference for an *evolving* equation of state has firmed rather than faded: 2.6σ in DR1 (DESI+CMB) → **3.1σ in DR2**, and 2.8–4.2σ once supernovae are added. The DR2 best fit (DESI+CMB+Pantheon+) is w₀ = −0.838 ± 0.055, wₐ = −0.62 (+0.22/−0.19) — a trajectory that **crosses w = −1 in the past** — and DESI reports that non-phantom models are **disfavoured**. TFT and DESI *agree* on what separates both from a cosmological constant: dark energy evolves, and ΛCDM is disfavoured. They part on the magnitude of wₐ — on whether w ever dipped below −1. We state the prediction (**w ≥ −1**) and we state that the current measurements do not meet it. If the crossing hardens with DR3 / Euclid, **TFT's dark-energy sector is excluded.** See `a0_de_study.py` / `BLACK_HOLES.md`. **[prediction; sharp falsifier — currently in tension]**
 
 ## Tier 2 — Predicted, needs development
 
@@ -49,4 +53,4 @@ Because a₀ and dark energy are one field (mass ~ H₀, giving both a₀ = cH�
 
 ---
 
-**One-line framing:** *TFT's central testable claim is that dark matter and dark energy are one dynamical field — which makes galaxy rotation predict the dark-energy equation of state, a cross-observable link no other framework offers, already matching DESI's w₀ and falsifiable in its wₐ by DESI DR2 / Euclid.*
+**One-line framing:** *TFT's central testable claim is that dark matter and dark energy are one dynamical field — which makes galaxy rotation predict the dark-energy equation of state, a cross-observable link no other framework offers, matching DESI's w₀ and its finding that dark energy evolves, but in tension with DR2's preferred wₐ, which crosses the phantom divide TFT forbids.*

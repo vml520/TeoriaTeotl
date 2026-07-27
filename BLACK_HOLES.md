@@ -97,9 +97,14 @@ scalar, so **w ≥ −1 always: it cannot cross into phantom (w < −1)**
 now; matched to the observed w₀ = −0.88 it predicts **wₐ ≈ −0.24** with the field
 mass ~0.72 H₀ — one field for both a₀ and the equation of state **[computed]**.
 DESI's w₀wₐCDM fit prefers a *phantom crossing* (w < −1 in the past), which a
-thawing scalar cannot produce. **The falsifier is sharp: if DESI DR2 / Euclid
-confirm phantom crossing, TFT's dark energy is falsified; if the fit relaxes onto
-the thawing track (w ≥ −1), it is confirmed.** A near-term yes/no.
+thawing scalar cannot produce. **The falsifier is sharp — and as of DESI DR2
+(2025) the tension runs against the prediction:** the evolving-DE preference
+firmed from 2.6σ (DR1, DESI+CMB) to 3.1σ (DR2), 2.8–4.2σ with supernovae, and the
+DR2 best fit (w₀ = −0.838 ± 0.055, wₐ = −0.62) crosses w = −1 in the past, with
+DESI reporting non-phantom models disfavoured. TFT and DESI agree that dark energy
+evolves (both disfavour ΛCDM); they part on the magnitude of wₐ. The prediction
+w ≥ −1 stands and the current data do not meet it; if the crossing hardens with
+DR3 / Euclid, TFT's dark-energy sector is excluded.
 
 ## The ledger
 
