@@ -117,12 +117,52 @@ The transferable dictionary — identities that hold across every result above:
 - **|Λ| ~ 10⁻¹²²** = cosmological-constant problem.
 - **a₀ exact coefficient** (ω₀/H₀ ~ 1) = coincidence problem (why dark energy is dynamical now).
 - **η ≈ 6×10⁻¹⁰** magnitude = baryogenesis initial condition (net primordial helicity).
+- **v_EW = 246 GeV** (equivalently m_h = 125 GeV) = INPUT. TFT's identified condensate sits at
+  f = 2.09 M_Pl — 16.3 orders away — so the electroweak scale is not derived. Same class as the
+  entries above: mechanisms and ratios derived, absolute scales are floors.
+- **The Standard-Model gauge sector** — see §10. Not a floor of the usual kind (a number awaiting a
+  mechanism) but a structural barrier, and the reopening conditions are stated there.
 - Absolute E₀, ℓ₀; rigorous action-level modified-inertia law; per-galaxy SPARC χ²; BMC G3/G4.
 
 ## 10. FAILED — do not repeat
 - **Stage 2** (open-time sine-Gordon, mass = oscillating BC): radiation p=−1, not 1/r². Cause: phase had mass √Λ → Yukawa screening (Λ was O(1); the *cosmological* Λ is ultralight — see §6).
 - **Stage 6** (compact-time ℝ³×S¹): static profile a₀ pinned at zero (structural).
 - **Stage 7** (topological knots on a dissipative substrate): free 2D vortex dissolves; that substrate's stability was externally driven, not topological.
+
+### The SM / 16×16 reconstruction — closed (28 July 2026)
+Four routes to the Standard Model's gauge sector were run to their ends. **All four fail, and they
+fail for one reason wearing four faces: the single S¹.** Recorded here because each is formally
+excluded rather than merely unachieved — these are no-goes, not to-do items.
+- **The dial-product picture** — *arithmetically impossible, independently of TFT.* 16 = 2⁴ and
+  **3 ∤ 16**, so no product of dial counts containing a 3-state colour dial can ever equal 16
+  (exhaustive search over all sub-products of {3,2,2,2}: none = 16; full product 24). **The 16 is a
+  SPINOR — the even-parity half of {±}⁵ — not a lattice of dial settings.** An abelian product of Z_n
+  dials gives a lattice; a spinor is not a lattice. Corollary: colour must enter as **three binary
+  labels** whose permutations lift to SU(3), *not* as one Z₃ dial. (The Z₃ centre labels triality and
+  is correct as confinement physics, but a centre element cannot supply a triplet index.)
+- **Building the Clifford algebra from independent dials** — *impossible as a theorem.* Operators with
+  disjoint tensor support always commute (max |[A_i,B_j]| = 0.00e+00 over 400 random Hermitian pairs),
+  while a Clifford algebra requires anticommutation. Naive dial gammas get the 5 same-dial pairs right
+  and **all 40 cross-dial pairs wrong** — the same 5/40 split as the Cartan/root division of so(10).
+  **Anticommutation requires nonlocal structure**, and TFT's only nonlocality is spatial (vortex
+  linking), not internal.
+- **The odd-mode Kuramoto engine as a dial generator** — *closed.* Σ_{k odd} sin(kΔθ)/k is a truncated
+  square wave with **g > 0 throughout (0,π)**, so no locked relative phase exists besides in-phase;
+  g′(0) = +5 (stable), g′(π) = −5 (antipodal unstable). Simulation across four regimes and three seeds
+  finds **no multiplet state anywhere**. The lead conflated a *pairwise coupling function* with a
+  *potential harmonic* — the Z_n dials come from V = −cos(nβ), not from the coupling.
+- **Octonions as a TFT-forced structure** — *excluded by a rank count.* 𝕆 is objectively distinguished
+  (the Cayley–Dickson tower terminates there: sedenions have zero divisors, e.g.
+  (e₁+e₁₀)(e₄−e₁₅) = 0), and Aut(𝕆) = G₂ with the stabiliser of one imaginary unit being **su(3)**
+  (dim 14 → dim 8, rank 2, verified) — a genuine derivation of the *group*. But TFT cannot reach it:
+  FKS enhancement on n compact bosons yields rank n, **so(8) = D₄ needs rank 4, and monism supplies
+  one circle.** So the octonion route is *borrowed* mathematics — TFT would have to acquire 𝕆, not
+  imply it. **"Why 8?" replaces "why 3?"; the question is relocated, not closed.**
+
+**Reopening conditions** (the arc is closed, not forbidden): (1) a nonlocal *internal* ordering;
+(2) rank > 1 from a single circle; or (3) a demonstration that TFT *requires* a normed division
+algebra of maximal dimension — which would force 𝕆, and hence SU(3). Only (3) is a research
+programme rather than a contradiction.
 
 ## 11. Scorecard
 | Piece | Status |
@@ -136,6 +176,8 @@ The transferable dictionary — identities that hold across every result above:
 | Baryo/magneto/chirality linkage (anomaly) | DERIVED (one topological invariant); net η = INPUT |
 | G, \|Λ\|, a₀ coefficient, η magnitude | INPUT/OPEN — named deep problems, open everywhere |
 | Lepton generations & mass hierarchy | mechanism DEMONSTRATED (interference; electron = near-silent helical state); excitation/symmetry/energetic origins EXCLUDED; ε = 2.27° OPEN |
+| Standard-Model gauge sector (SU(2)/SU(3), the 16×16) | **NOT DERIVED — structurally barred.** Four routes closed (§10); the obstruction is the single S¹ and is one problem in four forms, so partial fixes do not help. Reopening conditions stated. |
+| Higgs sector (amplitude mode of the condensate) | Yukawa job RETIRED (chirality is winding parity, so no VEV is needed to permit a mass term); W/Z mass + WW unitarisation NOT ADDRESSABLE (same barrier); **conditional prediction: κ_λ ≥ 5/3**, forced by the same attractive-quartic sign structure that lets solitons exist — HL-LHC-testable. v_EW = INPUT (§9). |
 
 ## Evidence (all runnable, in this repo)
 Particle/EM/gravity: `verify_conservative_1d.py`, `verify_force_law_sign.py`, `verify_breather_1d.py`, `verify_oscillon_3d.py`, `verify_qball_3d.py`, `verify_goldstone_1r2.py`, `verify_force_sign.py`, `verify_poisson_metric.py`, `verify_gravity_coupling.py`, `verify_G_as_rate.py`, `stage3_orbits.py`, `stage5_mercury.py`, `tft_solar_system.py`.
