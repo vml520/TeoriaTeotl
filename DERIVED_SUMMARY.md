@@ -17,6 +17,8 @@ Two primitives **E₀** (phase-energy) and **ℓ₀** (coherence length); everyt
 - Force is an emergent process, not fundamental: F = −g_eff∇θ
 - Gravity = geodesics of an **emergent metric** sourced by the field's energy.
 - Premise: mass = a real periodic process, mc² = hf ⇒ ω = mc²/ℏ.
+- **The SI second is derived, not imported** (`verify_units_closure.py`, 1 Aug 2026). ℏ = E₀τ₀/2π together with ℓ₀ = cτ₀ fix the second from the two primitives, so no result here can carry a hidden unit convention — a units error would surface as a *dimensional mismatch*, not as a tension. Every gate runs in code units (ℓ₀ = c = E₀ = 1); the only carriers of 's' in the repo are c, ℏ, H₀.
+  - *Consequence — **INFERENCE**, see §4 and §9:* feeding in G = ℓ₀c⁴/E₀ closes the system — G = 2πℏc⁵/E₀², hence **E₀ = √(2π)·E_Pl, ℓ₀ = √(2π)·ℓ_Pl, τ₀ = √(2π)·t_Pl** (all three ratios 2.506628, exact as algebra, independent of the CODATA values). The 2π is the **circumference of the compact time-circle** — the same 2π as in a₀ = cH₀/2π and in ℏ = E₀τ₀/2π: the primitives are the Planck units dressed by one trip around S¹. **Conditional on G's O(1) coefficient being 1, which is the open quantum-gravity step — this does not derive G.**
 
 ## 2. DERIVED — particle sector
 - **Kink rest mass M_k = 8√Λ·E₀** (exact to 1e-9); **force law a = −2πf·Q/M_k** (F=Ma, ~2%). Mass & force from the field, nothing by hand.
@@ -34,6 +36,7 @@ Consequence (correct vs experiment): matter (ω) & antimatter (−ω) have oppos
 - **1/r potential**: the metric potential is **Poisson-sourced** by energy density, ∇²Φ = |∇θ|² (the paper's error was setting Φ *equal* to |∇θ|² → wrong 1/r⁴). Gauss's law → far field ∝ total enclosed energy = mass → Φ ~ −M/(4πr). Measured: Φ~1/r, force~1/r².
 - **Universal attraction**: energy density ≥ 0 → always an attractive well. Why neutral matter cancels EM charge but adds energy.
 - **G as squared rate of time** (PROPOSED reframing): G·ρ = T⁻² so √(Gρ) is a rate; G = ω_P²/ρ_P (Planck frequency² / Planck density). Recasts "derive G" as "what sets the vacuum's cycling rate." G's coefficient itself = the quantum-gravity problem (OPEN everywhere).
+  - *Sharpened 1 Aug 2026 (`verify_units_closure.py`, INFERENCE):* with ω₀ ≡ 1/τ₀ and ρ₀ ≡ E₀/(c²ℓ₀³), **G = ω₀²/ρ₀ holds exactly in TFT's own primitives** — the "rate of time" is literally the **inverse compact-time period**, not a borrowed Planck frequency, so the reframing is native rather than a Planck-unit coincidence. Same condition as §1: it assumes G = ℓ₀c⁴/E₀ with coefficient 1, and **the coefficient stays OPEN** (§9).
 
 ## 5. DELIVERED — the toy solar system (`tft_solar_system.py`)
 Planets as **geodesics** of the Sun's emergent metric. **One** frozen constant K = G·M_sun = 4π² (1 AU→1 yr); G not derived (allowed). Output: 8 periods ≤0.06%, Kepler III T²/a³=1.0000, **Mercury 42.90″/cy** (obs 42.98). *Caveats: Kepler is by-construction (any 1/r); Mercury 43″ is the generic 1PN result, not unique to TFT.*
@@ -113,7 +116,7 @@ The transferable dictionary — identities that hold across every result above:
 **Design rules that kept us honest (reuse these):** (1) mass/force/gravity must emerge from the field, never inserted; (2) one frozen calibration constant per absolute scale, then everything downstream is prediction; (3) label DERIVED vs DELIVERED-by-construction vs INPUT; (4) route every claim to a runnable check; (5) expect mechanisms & scalings to derive, absolute numbers to be inputs.
 
 ## 9. OPEN / floors (each = a named deep problem, not a TFT-specific gap)
-- **Newton's G** coefficient = quantum-gravity / emergent-metric step.
+- **Newton's G** coefficient = quantum-gravity / emergent-metric step. *(1 Aug 2026: this floor and "absolute E₀, ℓ₀" below are now known to be **one floor, not two** — `verify_units_closure.py` shows that fixing G's O(1) coefficient fixes E₀, ℓ₀ and τ₀ exactly, at √(2π) × the Planck values. Fewer independent unknowns; the wall itself is unmoved.)*
 - **|Λ| ~ 10⁻¹²²** = cosmological-constant problem.
 - **a₀ exact coefficient** (ω₀/H₀ ~ 1) = coincidence problem (why dark energy is dynamical now).
 - **η ≈ 6×10⁻¹⁰** magnitude = baryogenesis initial condition (net primordial helicity).
@@ -122,7 +125,7 @@ The transferable dictionary — identities that hold across every result above:
   entries above: mechanisms and ratios derived, absolute scales are floors.
 - **The Standard-Model gauge sector** — see §10. Not a floor of the usual kind (a number awaiting a
   mechanism) but a structural barrier, and the reopening conditions are stated there.
-- Absolute E₀, ℓ₀; rigorous action-level modified-inertia law; per-galaxy SPARC χ²; BMC G3/G4.
+- Absolute E₀, ℓ₀ (see the G bullet above — tied to G's coefficient, not independent of it); rigorous action-level modified-inertia law; per-galaxy SPARC χ²; BMC G3/G4.
 
 ## 10. FAILED — do not repeat
 - **Stage 2** (open-time sine-Gordon, mass = oscillating BC): radiation p=−1, not 1/r². Cause: phase had mass √Λ → Yukawa screening (Λ was O(1); the *cosmological* Λ is ultralight — see §6).
@@ -180,7 +183,7 @@ programme rather than a contradiction.
 | Higgs sector (amplitude mode of the condensate) | Yukawa job RETIRED (chirality is winding parity, so no VEV is needed to permit a mass term); W/Z mass + WW unitarisation NOT ADDRESSABLE (same barrier); **conditional prediction: κ_λ ≥ 5/3**, forced by the same attractive-quartic sign structure that lets solitons exist — HL-LHC-testable. v_EW = INPUT (§9). |
 
 ## Evidence (all runnable, in this repo)
-Particle/EM/gravity: `verify_conservative_1d.py`, `verify_force_law_sign.py`, `verify_breather_1d.py`, `verify_oscillon_3d.py`, `verify_qball_3d.py`, `verify_goldstone_1r2.py`, `verify_force_sign.py`, `verify_poisson_metric.py`, `verify_gravity_coupling.py`, `verify_G_as_rate.py`, `stage3_orbits.py`, `stage5_mercury.py`, `tft_solar_system.py`.
+Particle/EM/gravity: `verify_conservative_1d.py`, `verify_force_law_sign.py`, `verify_breather_1d.py`, `verify_oscillon_3d.py`, `verify_qball_3d.py`, `verify_goldstone_1r2.py`, `verify_force_sign.py`, `verify_poisson_metric.py`, `verify_gravity_coupling.py`, `verify_G_as_rate.py`, `verify_units_closure.py`, `stage3_orbits.py`, `stage5_mercury.py`, `tft_solar_system.py`.
 Rotation curves / a₀: `milkyway_rotation.py`, `verify_a0_g1.py … g5.py` (+ docs `G0_prereg_a0.md`, `G1–G3`).
 Baryo/magneto/chirality: `verify_chiral_g1.py`, `verify_chiral_g2.py` (+ docs `G0_prereg_bmc.md`, `G1_chiral_root.md`, `G2_chiral_anomaly.md`).
 Generations & mass hierarchy: `koide_selfdual_g1.py … g5.py`, `spectrum_sp1_breathers.py`, `spectrum_sp23_qball_tower.py`, `mass_m1_cancellation.py … m4_chirality.py`, `epsilon_e1_topo.py`, `epsilon_e2_breaking.py`, `epsilon_e4_scale.py` (+ docs `G0_prereg_spectrum.md`, `M0_prereg_mass_interference.md`, `E0_prereg_epsilon.md`, `GENERATIONS_PROGRAM.md`).
