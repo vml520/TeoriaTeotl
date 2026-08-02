@@ -167,6 +167,42 @@ excluded rather than merely unachieved — these are no-goes, not to-do items.
 algebra of maximal dimension — which would force 𝕆, and hence SU(3). Only (3) is a research
 programme rather than a contradiction.
 
+### The weak sector's obstruction is not topological (2 August 2026)
+
+A natural inference from "charge = integer winding" is that TFT *topologically forbids* the
+flavour-changing decays the weak interaction performs, since a topological invariant cannot change
+under continuous evolution. **That inference is wrong, and it is recorded here because it is the
+obvious thing to conclude.** Beta decay is winding-neutral:
+
+```
+neutron (0)  ->  proton (+1) + electron (-1) + antineutrino (0)      total winding 0 -> 0
+```
+
+No invariant changes. The process is winding/anti-winding **pair nucleation** out of a neutral
+configuration — it costs **energy, not topology** — and the amplitude zero it requires exists in
+ψ = ρe^{iθ}. (Whether the resulting defect is *stable* is a separate and open matter: Stage 7 in
+§10 found a free 2D vortex dissolves.) So there is no topological barrier to the weak sector, and
+none should be claimed.
+
+**What winding conservation does buy, and it is not nothing:** the proton is the lightest winding-1
+state, so winding conservation forbids proton decay — consistent with the >10³⁴ yr experimental
+limit, and obtained for free rather than imposed. The conservation law protects exactly what is
+observed to be protected.
+
+**What remains barred is the absolute rate, not the mechanism.** Producing 878.4 s requires an
+absolute scale, and E₀/ℓ₀ are the standing floor — shown in §1/§9 to be the *same* floor as
+Newton's G coefficient. The weak sector therefore does not add an independent open problem; it
+inherits the programme's oldest one.
+
+**A negative worth recording so the route is not re-opened.** Framing decay rates as relaxation
+toward equilibrium with the environment does reproduce the observed environmental dependence —
+e.g. bound-state beta decay, where ¹⁶³Dy is stable as a neutral atom but decays with t½ ≈ 47 d when
+fully ionised, because stripping the electrons opens a final state that Pauli occupancy had
+blocked. But such an account **cannot diverge from the standard one**, because entropy is a count of
+accessible states and phase space is a count of accessible states: they are the same operation. The
+reframing is exact, and therefore empirically empty. There is no measurement that can distinguish
+them, and the reason is structural rather than a limit of effort.
+
 ## 11. Scorecard
 | Piece | Status |
 |---|---|
@@ -180,6 +216,7 @@ programme rather than a contradiction.
 | G, \|Λ\|, a₀ coefficient, η magnitude | INPUT/OPEN — named deep problems, open everywhere |
 | Lepton generations & mass hierarchy | mechanism DEMONSTRATED (interference; electron = near-silent helical state); excitation/symmetry/energetic origins EXCLUDED; ε = 2.27° OPEN |
 | Standard-Model gauge sector (SU(2)/SU(3), the 16×16) | **NOT DERIVED — structurally barred.** Four routes closed (§10); the obstruction is the single S¹ and is one problem in four forms, so partial fixes do not help. Reopening conditions stated. |
+| Weak sector (flavour-changing decay) | **Obstruction is NOT topological** — beta decay is winding-neutral (0 → +1, −1, 0), i.e. pair nucleation, costing energy not topology (§10). Proton stability IS derived from winding conservation (>10³⁴ yr, free). **The absolute rate is NOT derived** — it needs the E₀/ℓ₀ scale, the same floor as G's coefficient (§1, §9). An entropy/relaxation reframing reproduces environmental dependence but is **provably empirically empty** (entropy counting = phase-space counting). |
 | Higgs sector (amplitude mode of the condensate) | Yukawa job RETIRED (chirality is winding parity, so no VEV is needed to permit a mass term); W/Z mass + WW unitarisation NOT ADDRESSABLE (same barrier); **conditional prediction: κ_λ ≥ 5/3**, forced by the same attractive-quartic sign structure that lets solitons exist — HL-LHC-testable. v_EW = INPUT (§9). |
 
 ## Evidence (all runnable, in this repo)
