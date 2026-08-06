@@ -71,6 +71,32 @@ realized (the seam phase) is a boundary condition, **not derived** — collapse 
 arrow** is a low-entropy boundary condition (the past hypothesis), correctly *not*
 derived from the time-symmetric dynamics — deriving it would violate T-symmetry.
 
+**A support withdrawn (added 5 August 2026).** It is natural to assume this account can
+lean on the field's dissipative behaviour — that an amplitude which decays is already
+halfway to a classical world. **Calculated: it cannot, and the result is a theorem rather
+than an estimate.** Under any *deterministic* decay of branch amplitudes,
+
+```
+rho_00 -> rho_00 e^(-b0 t),  rho_11 -> rho_11 e^(-b1 t),  rho_01 -> rho_01 e^(-(b0+b1) t/2)
+```
+
+the off-diagonal exponent is forced to the **arithmetic mean** of the two diagonal ones —
+exactly what renormalisation divides out. The normalised coherence C = |ρ₀₁|/√(ρ₀₀ρ₁₁) is
+therefore **invariant for every choice of decay rates and every time** (computed deviation
+0.0e+00, against a Lindblad comparison falling 1.000 → 0.018 over the same interval). No
+choice of rates evades it, because the amplitude equation forces that mean.
+
+A decaying amplitude produces **global loss, not loss of coherence between branches** —
+after renormalisation it decoheres exactly nothing. Genuine decoherence requires a
+**stochastic** element or real **entanglement** with an environment; a deterministic sink
+supplies neither.
+
+**Consequence for this section:** the loop-closure account above stands on loop-closure
+alone. It cannot draw support from amplitude dissipation, and any reading of the form "the
+framework is natively dissipative, so it natively explains the classical world" is
+**false**. Whatever produces the classical limit here, it is not a decaying amplitude. The
+floors stated above are unchanged; one assumed prop behind them is removed.
+
 ## 4. The tensor-completeness limit — the sharp negative (`tens_completeness.py`)
 
 Can a single **economical** (polynomial-resource) circle-valued field realize the
@@ -92,6 +118,31 @@ theory, degenerate with QM and no longer "just a classical circle-valued field."
 framework cannot be both economical-classical and full quantum mechanics.** This is
 the sharpest limit on the program's quantum ambition, and we state it without
 softening.
+
+**The same limit reached from single-photon optics (added 5 August 2026).** The
+photoelectric effect is usually cited as the proof that light is quantised, and it is
+tempting to count the framework's reproduction of it as a success for its account of
+light. **It is not, and the reason is old:** a classical field coupled to *quantised
+matter* already reproduces the threshold, the KE = hν − φ slope, and the instantaneity
+(Lamb & Scully 1969). The quantisation that produces the threshold lives in the **matter**,
+not the light. This framework quantises matter natively (integer winding, a discrete bound
+tower), so it reproduces every photoelectric observable — **and that fact carries no
+weight, because the effect never discriminated.**
+
+What discriminates is second-order coherence. **Calculated:** for any classical field —
+any theory in which intensity is a non-negative random variable — Cauchy–Schwarz gives
+g₂(0) ≥ 1. Verified across five distributions (coherent 1.000, thermal 2.008, uniform
+1.334, lognormal 4.261, bimodal 1.999; **minimum 1.000**). The field's light here is the
+massless Goldstone, a continuous classical mode, so it falls under the theorem and predicts
+g₂(0) ≥ 1.
+
+Measured: photon antibunching g₂(0) < 1 (Kimble–Dagenais–Mandel 1977), and beam-splitter
+anticorrelation α = 0.18 ± 0.06 — **13σ below the classical bound** (Grangier–Roger–Aspect
+1986). So: **the framework reproduces every photoelectric observable and fails the first
+observable that actually probes the quantisation of light.** That is this section's limit
+arriving from an independent direction, at one-photon scale, and it was crossed
+experimentally in 1977. Recovering it requires quantising the field — the same escape, with
+the same cost, as above.
 
 ## 5. The super-Planckian tension (`swmp_tension.py`)
 
