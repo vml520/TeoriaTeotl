@@ -99,7 +99,10 @@ mass ~0.72 H₀ — one field for both a₀ and the equation of state **[compute
 DESI's w₀wₐCDM fit prefers a *phantom crossing* (w < −1 in the past), which a
 thawing scalar cannot produce. **The falsifier is sharp — and as of DESI DR2
 (2025) the tension runs against the prediction:** the evolving-DE preference
-firmed from 2.6σ (DR1, DESI+CMB) to 3.1σ (DR2), 2.8–4.2σ with supernovae, and the
+firmed from 2.6σ (DR1, DESI+CMB) to 3.1σ (DR2), 2.8–4.2σ with supernovae — refreshed
+7 Aug 2026 to 2.7σ (DESI+CMB) / 3.2σ (+SNe) by DR2 Results IV with the full-shape
+Lyman-α forest (arXiv:2607.27410), a softening that does not change the direction
+(every parameterisation still has w₀+wₐ < −1, i.e. a crossing) — and the
 DR2 best fit (w₀ = −0.838 ± 0.055, wₐ = −0.62) crosses w = −1 in the past, with
 DESI reporting non-phantom models disfavoured. TFT and DESI agree that dark energy
 evolves (both disfavour ΛCDM); they part on the magnitude of wₐ. The prediction
