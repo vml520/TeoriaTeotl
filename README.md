@@ -162,16 +162,29 @@ open in *every* framework — not a gap unique to this one.
 
 ## From theory to solver to application
 
-The same phase-settling dynamics studied here as physics is also a practical **solver**. When the
-field relaxes, it minimizes frustration in a network of cyclic (phase) constraints — which is exactly
-a signed MAX-CUT / coupled-oscillator optimization. That solver lives in this repository
-(`winding_solver.py`, `maxcut tft.py`, `teotl_math.py`) and benchmarks in the band reported for
+The same phase-settling dynamics studied here as physics is also a practical **solver**. It is set
+up as a signed MAX-CUT / coupled-oscillator optimization, lives in this repository
+(`winding_solver.py`, `maxcut tft.py`, `teotl_math.py`), and benchmarks in the band reported for
 oscillator Ising machines (see `CONVOCATORIA.md`).
+
+> **Correction (13 August 2026) — the attribution, not the solver.** An earlier version of this
+> section said the solver works *because* "the field relaxes and minimizes frustration." **Measurement
+> does not support that.** The solver's architecture is *settle → random-hyperplane rounding → 1-opt
+> polish*, and a controlled comparison — identical rounding and polish, settling switched on versus
+> off — finds the settling contributes **−0.19% over 72 paired runs (Wilcoxon p = 0.42, 28 wins /
+> 37 losses)**: no detectable contribution. The classical post-processing does the work.
+> `winding_solver.py` shares the identical polish (see its own docstring). **The cut values are
+> unchanged and the benchmarks stand — what is withdrawn is the claim that the field settling is what
+> produces them.** A second test on discrimination rather than optimisation (kinetic proofreading,
+> the regime chosen to favour the field) reproduced the biology but found coupling *loses* 50 of 50
+> paired trials. Reported because it was measured, and because it was never previously tested.
 
 Its provenance and its uses form one chain:
 
-- **Theory** (this repo) — the winding/phase dynamics *is* the TFT field settling; that is what the
-  demonstrations above establish.
+- **Theory** (this repo) — the winding/phase dynamics is the TFT field settling. **The solver borrows
+  that topology as a computational device; it is not evidence that the field performs the
+  computation** (see the correction above, and `maxcut tft.py`'s own docstring: *"NOT a TFT physics
+  simulation"*).
 - **Solver** — the domain-agnostic core (a `WindingSolver` over a `ConstraintGraph`), validated
   against simulated annealing.
 - **Applications** — the solver powers **[Hum](https://github.com/vml520/Hum)**, a privacy-first
