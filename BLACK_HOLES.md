@@ -94,7 +94,8 @@ TFT's dark energy is the *same* ultralight phase field, with the sine-Gordon
 cosine potential — a pseudo-Nambu-Goldstone **thawing quintessence**, an ordinary
 scalar, so **w ≥ −1 always: it cannot cross into phantom (w < −1)**
 **[derived]**. The field mass that gives a₀ = cH₀/2π (~H₀) makes it just-thawing
-now; matched to the observed w₀ = −0.88 it predicts **wₐ ≈ −0.24** with the field
+now; matched to the observed w₀ = −0.88 it predicts **wₐ ≈ −0.20** (updated 15 Aug 2026;
+supersedes −0.24) with the field
 mass ~0.72 H₀ — one field for both a₀ and the equation of state **[computed]**.
 DESI's w₀wₐCDM fit prefers a *phantom crossing* (w < −1 in the past), which a
 thawing scalar cannot produce. **The falsifier is sharp — and as of DESI DR2

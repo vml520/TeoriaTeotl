@@ -11,13 +11,25 @@
 Productive regime: the **conservative** second-order field, then a **complex** field ψ = ρe^{iθ}. The **dissipative** (Kuramoto) and **topological-knot** attempts all failed — see §10. Don't restart there.
 
 ## 1. Foundational machinery (from the founding TFT paper)
-Two primitives **E₀** (phase-energy) and **ℓ₀** (coherence length); everything else derives:
+Two scales **E₀** (phase-energy) and **ℓ₀** (coherence length) organise everything below:
+
+> **Framing correction (15 Aug 2026).** This line previously read *"Two primitives … everything
+> else derives."* **E₀ and ℓ₀ are not free primitives, and c is not among the things that derive
+> from them.** The framework's own three relations — ℏ = E₀τ₀/2π, ℓ₀ = cτ₀, G = ℓ₀c⁴/E₀ — are
+> three equations in three unknowns with three *imported* constants, so E₀, τ₀ and ℓ₀ are
+> **determined by {ℏ, c, G}** (as √(2π) × the Planck values). In particular **E₀/ℓ₀ = c⁴/G
+> identically**, so relations of the form "X follows from the primitives" are frequently
+> G = ℓ₀c⁴/E₀ read backwards. The line below reading c = E₀/p₀ should be understood the same way:
+> it fixes p₀ given c, not c. **What survives is that E₀ and ℓ₀ are a useful organising pair and
+> that the relations below are internally consistent — not that they are an independent
+> starting point.**
 - dτ = ℏdθ/E (time = phase per energy); dℓ = ℏdθ/p (length = phase per momentum)
 - g_eff = E₀/ℓ₀; c = E₀/p₀; m = E₀/c²; ℏ = E₀τ₀/2π
 - Force is an emergent process, not fundamental: F = −g_eff∇θ
 - Gravity = geodesics of an **emergent metric** sourced by the field's energy.
 - Premise: mass = a real periodic process, mc² = hf ⇒ ω = mc²/ℏ.
-- **The SI second is derived, not imported** (`verify_units_closure.py`, 1 Aug 2026). ℏ = E₀τ₀/2π together with ℓ₀ = cτ₀ fix the second from the two primitives, so no result here can carry a hidden unit convention — a units error would surface as a *dimensional mismatch*, not as a tension. Every gate runs in code units (ℓ₀ = c = E₀ = 1); the only carriers of 's' in the repo are c, ℏ, H₀.
+- **The second is fixed by the framework's own relations, not chosen** (`verify_units_closure.py`, 1 Aug 2026). ℏ = E₀τ₀/2π together with ℓ₀ = cτ₀ determine it, so no result here can carry a hidden unit convention — a units error would surface as a *dimensional mismatch*, not as a tension. Every gate runs in code units (ℓ₀ = c = E₀ = 1); the only carriers of 's' in the repo are c, ℏ, H₀.
+  - **Correction (15 Aug 2026):** this bullet previously read *"the SI second is **derived, not imported** … from the two primitives."* **Both halves overstate.** The second follows from *three* relations — ℏ = E₀τ₀/2π, ℓ₀ = cτ₀, G = ℓ₀c⁴/E₀ — and the second of those **asserts** c rather than deriving it, so the construction is circular in c. And E₀, ℓ₀, τ₀ are not free primitives: three relations in three unknowns with three imported constants leaves them **fully determined by {ℏ, c, G}**. The operative content of this bullet is unaffected and still holds: the units are internally consistent, and the standing tensions are provably unit-immune (see below).
   - *Consequence — **INFERENCE**, see §4 and §9:* feeding in G = ℓ₀c⁴/E₀ closes the system — G = 2πℏc⁵/E₀², hence **E₀ = √(2π)·E_Pl, ℓ₀ = √(2π)·ℓ_Pl, τ₀ = √(2π)·t_Pl** (all three ratios 2.506628, exact as algebra, independent of the CODATA values). The 2π is the **circumference of the compact time-circle** — the same 2π as in a₀ = cH₀/2π and in ℏ = E₀τ₀/2π: the primitives are the Planck units dressed by one trip around S¹. **Conditional on G's O(1) coefficient being 1, which is the open quantum-gravity step — this does not derive G.**
 
 ## 2. DERIVED — particle sector
@@ -64,7 +76,7 @@ Full record: `BLACK_HOLES.md`. **Reading two derived facts — √(2GM/r) = the 
 - **NO SINGULARITY [TFT-native]:** the bounded phase field (|∇θ|≲1/ℓ₀, finite amplitude) caps the density at ~Planck density → a **regular Planck-density core** (r_core ~ 4.5e-23 m solar, regular-BH/Planck-star family) — distinctive vs GR's point singularity.
 - **The core BOUNCES [computed]:** a squeezed Q-ball breathes/oscillates (φ⁶ high-density repulsion = field degeneracy pressure) — same boundedness that resolves the singularity; time-dilated → Planck-star delayed burst (PBH ~6e22 kg bounces now, mass model-dependent).
 - **Entropy [computed area law + floor]:** S ∝ **area** (S~R^1.9, computed as the phase Goldstone's entanglement entropy, Srednicki — WHY BH entropy is holographic); the **¼** = the induced-gravity coefficient (S_ent=A/4G, ε cancels because one field gives S_ent AND G) — inherited/constrained, exact value a floor (cf. Immirzi). Magnitude ~1e77 solar, S∝M² reproduced.
-- **Dark energy CANNOT go phantom [derived, falsifiable]:** DE = the same phase field (pNGB thawing quintessence, ordinary scalar) → **w ≥ −1 always** (integration: w_min=−1.0000); matched to w₀=−0.88 → wₐ≈−0.24, mass ~H₀ (a₀-consistent, one field both). DESI's CPL prefers phantom crossing (w<−1 past) → **sharp falsifier. STATUS (DR2, 2025): in tension.** The evolving-DE preference firmed 2.6σ (DR1, DESI+CMB) → 3.1σ (DR2), 2.8–4.2σ +SNe; DR2 best fit w₀=−0.838±0.055, wₐ=−0.62 crosses w=−1 in the past and DESI reports non-phantom models **disfavoured**. TFT agrees DE evolves (both reject ΛCDM); they part on wₐ's magnitude. The prediction w≥−1 stands and the current data do not meet it — if the crossing hardens (DR3/Euclid), TFT's DE sector is excluded. **Refreshed 2026-08-07:** DESI DR2 Results IV (+full-shape Lyman-α, arXiv:2607.27410) gives **2.7σ (DESI+CMB) / 3.2σ (+SNe)** — *softer* than the earlier 3.1σ / 2.8–4.2σ, recorded because it happened rather than because it helps. Direction unchanged: arXiv:2510.21976 finds every parameterisation at w₀>−1, wₐ<0, **w₀+wₐ<−1** (Quintom-B = phantom past → quintessence now = a crossing). Easing from 4.2σ to 3.2σ is still a tension; nothing has approached 5σ either way.
+- **Dark energy CANNOT go phantom [derived, falsifiable]:** DE = the same phase field (pNGB thawing quintessence, ordinary scalar) → **w ≥ −1 always** (integration: w_min=−1.0000); matched to w₀=−0.88 → wₐ≈−0.20 (re-integrated 15 Aug 2026 at the corrected decay constant; supersedes −0.24; −0.196 as −dw/da, −0.168 under a CPL fit; insensitive to f at the 9% level over f = 1.5–10 M_Pl), mass ~H₀ (a₀-consistent, one field both). DESI's CPL prefers phantom crossing (w<−1 past) → **sharp falsifier. STATUS (DR2, 2025): in tension.** The evolving-DE preference firmed 2.6σ (DR1, DESI+CMB) → 3.1σ (DR2), 2.8–4.2σ +SNe; DR2 best fit w₀=−0.838±0.055, wₐ=−0.62 crosses w=−1 in the past and DESI reports non-phantom models **disfavoured**. TFT agrees DE evolves (both reject ΛCDM); they part on wₐ's magnitude. The prediction w≥−1 stands and the current data do not meet it — if the crossing hardens (DR3/Euclid), TFT's DE sector is excluded. **Refreshed 2026-08-07:** DESI DR2 Results IV (+full-shape Lyman-α, arXiv:2607.27410) gives **2.7σ (DESI+CMB) / 3.2σ (+SNe)** — *softer* than the earlier 3.1σ / 2.8–4.2σ, recorded because it happened rather than because it helps. Direction unchanged: arXiv:2510.21976 finds every parameterisation at w₀>−1, wₐ<0, **w₀+wₐ<−1** (Quintom-B = phantom past → quintessence now = a crossing). Easing from 4.2σ to 3.2σ is still a tension; nothing has approached 5σ either way.
 
 ## 7. DERIVED — baryogenesis / magnetogenesis / chirality = one topological invariant (BMC G1–G2)
 - The minimal action is **CP-symmetric** → chirality not *forced* (matter = antimatter).
@@ -112,7 +124,7 @@ The transferable dictionary — identities that hold across every result above:
 |---|---|
 | θ: ℝ³×S¹ → S¹ (phase field); complex ψ = ρe^{iθ} | the substrate; ρ = amplitude/"carrier," θ = phase |
 | time | phase cycling: dτ = ℏdθ/E. mass = frequency: ω = mc²/ℏ |
-| E₀, ℓ₀ (two primitives) | fix c, ℏ, g_eff, m, and (dimensionally) G, a₀ |
+| E₀, ℓ₀ (**not free primitives** — see note) | fix g_eff, m, and (dimensionally) a₀. They do **not** fix c or ℏ: c enters ℓ₀'s own definition (ℓ₀ = cτ₀), and E₀/ℓ₀ = c⁴/G *identically* (the Planck force). Given {ℏ, c, G}, E₀ = √(2π)E_Pl, ℓ₀ = √(2π)ℓ_Pl, τ₀ = √(2π)t_Pl are **determined**, so this row is a re-parameterisation of {ℏ, c, G} rather than an independent starting point. *(Corrected 15 Aug 2026; the row previously read "two primitives … fix c, ℏ, …", which runs backwards.)* |
 | winding W ∈ ℤ (π₁(S¹)) | topological charge = **baryon number** = **electric charge** (signed) |
 | ∇θ | the EM potential A (Goldstone); B = ∇×∇θ = flux tubes on winding lines, Φ = 2πW |
 | j^μ = ρ²∂^μθ (linear, signed) | electromagnetism (Coulomb, like-repels) |
