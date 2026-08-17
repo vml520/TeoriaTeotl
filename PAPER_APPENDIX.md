@@ -32,7 +32,7 @@
 | file | what it shows | status |
 |---|---|---|
 | `verify_a0_g1.py`…`g3.py` | the galactic acceleration scale α₀ = cH₀/2π ≈ 1.1×10⁻¹⁰ m/s², set by the cosmic expansion — not fitted | scale **[derived]**; exact coefficient = the coincidence problem |
-| `verify_a0_g4.py`, `milkyway_rotation.py` | modified inertia → deep-MOND limit; Milky Way curve to ~3% (baryons only); **Tully–Fisher exponent exactly 4** (obs 3.85±0.09) | mechanism + slope-4 **[derived]**; interpolation shape [open] |
+| `verify_a0_g4.py`, `milkyway_rotation.py` | modified inertia → deep-MOND limit; Milky Way curve to ~3% (baryons only); **Tully–Fisher exponent exactly 4** (obs 3.85±0.09) | slope-4 **[derived]**; **mechanism [heuristic — see the correction in `DERIVED_SUMMARY.md` §5: the horizon argument cannot be derived from a local action, and both identified routes are closed]**; interpolation shape [open] |
 | `verify_a0_g5.py` | TFT's law tracks the 175-galaxy SPARC acceleration relation within its scatter | **[consistency with SPARC]** |
 
 ## E. Dark energy — and the paper's central prediction

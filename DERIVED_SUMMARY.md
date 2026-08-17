@@ -66,6 +66,26 @@ Planets as **geodesics** of the Sun's emergent metric. **One** frozen constant K
 - **The derived-Newtonian sector FAILS** the Milky Way (32% off, baryons only) — same dark-matter problem as Newton. The fix is not in that sector.
 - **a₀ = cH₀/2π = 1.08×10⁻¹⁰ m/s² is DERIVED, not fitted** (MOND *fits* a₀): the phase field is **ultralight** (mass gap m = √Λ/ℓ₀ = the Hubble mass ⇒ Compton wavelength = Hubble radius ⇒ Λ ~ 10⁻¹²²). Its Compton frequency = H₀/2π (2π = h/ℏ = one S¹ cycle) → a₀ = c·f = cH₀/2π. **This is Vic's "α from Λ."** Effectively massless below the cosmic scale (→ §4 gravity), biting only at a₀. **Tested per-galaxy against SPARC** (`verify_a0_sparc_fit.py`, 2696 pts / 147 galaxies): our own log-space RAR fit gives g† = 1.16×10⁻¹⁰ (deep-MOND 1.33×10⁻¹⁰); the derived a₀ = 1.04–1.13×10⁻¹⁰ sits at **0.90–0.97 × g†**, scatter 0.133 dex (lit ~0.12) reproduced, scale universal where constrained → **consistent within ~20% systematics** (M/L, distances), nothing fitted to SPARC.
 - **Self-consistency (G2):** if that field *is* the dark energy (Friedmann), Λ cancels → a₀ ∝ cH₀ without solving the CC problem.
+> **Correction (16 August 2026) — the status of the mechanism below.** The horizon argument is a
+> **heuristic**, and four studies have now established that it cannot be derived as stated.
+> (i) Modified inertia requires **time-nonlocal** equations of motion (Milgrom, *Phys. Rev. D* **106**,
+> 064060, 2022); the argument below is **instantaneous**, so it is not modified inertia in that
+> sense — nor modified gravity, since it does not touch the Poisson equation. (ii) **No local action
+> can produce m_eff = m·μ(a/a₀)**: μ is non-analytic in |a|, and higher-derivative terms give
+> higher-*order* equations, not a rescaled mass. (iii) A retarded self-interaction — the one native
+> nonlocal structure — does not supply it either: the static self-energy is UV-dominated and
+> insensitive to any horizon cutoff, while the radiation-zone energy is a *radiated* energy carrying
+> a², which cut at c²/a gives a total derivative and cut at c/H₀ gives a higher-derivative term.
+> (iv) A memory kernel of any kind organises physics by **rate**, giving a transition at fixed
+> angular frequency (v ∝ R), whereas the observed transition is at fixed **acceleration** (v ∝ √R) —
+> and SPARC confirms this directly: acceleration organises the mass discrepancy **1.6× more tightly**
+> than frequency (0.134 vs 0.215 dex within-bin scatter). **The heuristic's step from "fraction of
+> the deformation inside the horizon" to "fraction of the inertia" is where the argument actually
+> lives, and no self-energy calculation supplies it.** The deep-MOND limit and Tully–Fisher slope
+> below follow from the *interpolation law* and are unaffected; what is withdrawn is the claim that
+> the mechanism is derived. Anyone attacking this should start from Milgrom's nonlocal-functional
+> construction, not from a field-theoretic self-interaction.
+
 - **Mechanism = modified inertia** ("inertia saturates"): inertia is cut off by the smaller of the acceleration horizon c²/a and the cosmic horizon c/H₀ → below a₀, μ → a/a₀ → **deep-MOND a = √(a_N a₀)** → flat curves + **baryonic Tully-Fisher V⁴ = GMa₀, slope exactly 4** (SPARC: 3.85±0.09).
 - **Fits:** Milky Way 2.9% (baryons only, derived a₀); **consistent with the SPARC RAR** within its 0.13-dex scatter.
 - **Caveats/OPEN:** exact a₀ coefficient = ω₀/H₀, a natural quintessence O(1) → the **coincidence problem**; the interpolation *shape* is model-dependent (as in MOND); a rigorous action-level derivation and a per-galaxy χ² (needs raw SPARC data) are open.

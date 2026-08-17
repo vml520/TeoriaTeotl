@@ -7,10 +7,35 @@
 **1. The galactic acceleration scale is not free: a₀ = cH₀/2π ≈ 1.1×10⁻¹⁰ m/s².**
 Parameter-free — set by the cosmic expansion rate. MOND must *fit* this; TFT *predicts* it. Matches observation within ~10%. **[prediction, matches data]**
 
-*Tested directly against SPARC, per galaxy* (`verify_a0_sparc_fit.py`; 2696 points from 147 galaxies): fitting the Radial Acceleration Relation ourselves gives g† = 1.16×10⁻¹⁰ m s⁻² (deep-MOND a₀ = 1.33×10⁻¹⁰), against which TFT's derived a₀ = cH₀/2π = 1.04–1.13×10⁻¹⁰ sits at **0.90–0.97 × g†** — consistent within the ~20% systematic band set by mass-to-light ratios and distances, with the relation's tightness reproduced (0.133 dex vs the literature's ~0.12) and the same scale recovered across galaxy mass wherever the data constrain it. Nothing here is fitted to SPARC; the 2π is the derived content, H₀ is an input.
+*Tested directly against SPARC, per galaxy* (`verify_a0_sparc_fit.py`; 2696 points from 147 galaxies): fitting the Radial Acceleration Relation ourselves gives g† = 1.16×10⁻¹⁰ m s⁻² (deep-MOND a₀ = 1.33×10⁻¹⁰), against which TFT's derived a₀ = cH₀/2π = 1.04–1.13×10⁻¹⁰ sits at **0.90–0.97 × g†** — consistent within the ~20% systematic band set by mass-to-light ratios and distances, with the relation's tightness reproduced (0.133 dex vs the literature's ~0.12) and the same scale recovered across galaxy mass wherever the data constrain it. Nothing here is fitted to SPARC; H₀ is an input.
+
+> **Correction (16 August 2026) — the 2π.** This sentence previously ended "the 2π is the derived
+> content." **That overstates and is withdrawn.** The 2π is the conversion h/ℏ between angular and
+> cyclic frequency, and it is *absorbable*: writing a₀ = cν₀ with ν₀ the mass gap's cyclic rate
+> removes it entirely. So the substantive claim is **"the relevant rate is cyclic, not angular,"**
+> and nothing in the framework *forces* that for the mass gap specifically — the appeal to "one
+> cycle of the circle" concerns traversal of S¹, whereas the mass gap is a curvature of the
+> potential. What does support it is that the framework applies the per-cycle convention
+> **consistently** (in ℏ = E₀τ₀/2π, in the field's inertia, and here), which is worth stating and
+> is not the same as forced. Empirically, against g† and the relation's 0.133 dex scatter: omitting
+> the factor entirely sits **5.5 scatter-widths** away and is excluded; 2π sits at **0.5**; but π
+> sits at **1.8** — disfavoured, not killed. **The data select a 2π-ish factor; they do not isolate
+> 2π.** What remains derived is the *mechanism* — the field is the dark energy, Λ cancels, and
+> a₀ ∝ cH₀ follows.
 
 **2. The baryonic Tully–Fisher exponent is exactly 4** (V⁴ ∝ M).
 Parameter-free consequence of the deep-MOND limit. Observed: 3.85 ± 0.09 (SPARC). **[prediction, matches data]**
+
+**2b. Inherited liability: galaxy clusters.** Reproducing MOND phenomenology on galaxy scales means
+inheriting MOND's most-discussed failure. In clusters a residual mass discrepancy of ≈1.5–2 survives
+the modification, and **this framework's position is slightly worse rather than better**: cluster
+accelerations sit near the transition (≈0.8 a₀ at 1 Mpc for Coma), where g ≈ √(g_N a₀) makes the
+required baryonic mass scale as 1/a₀ — so a₀ *derived* at 1.04×10⁻¹⁰ rather than *fitted* at
+1.2×10⁻¹⁰ raises the requirement by ≈9% and the residual to ≈1.6–2.2. **A fitted a₀ can drift upward
+to relieve this; a derived one cannot.** No resolution is offered, and nothing native rescues it:
+there is no larger external field for the most massive bound systems, tuning the interpolation would
+be fitting, and a dark-matter component is what the framework exists to avoid. **[known failure,
+stated]**
 
 **3. Dark matter and dark energy are the same field.**
 The galactic "dark-matter" scale equals the dark-energy scale (a₀ ↔ ρ_Λ). Corollary: **no dark-matter particle exists** — direct-detection and collider searches stay null. Distinctive from ΛCDM. **[prediction, falsifiable]**
