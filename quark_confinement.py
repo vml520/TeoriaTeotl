@@ -76,7 +76,10 @@ print(f"""[PASS] A TFT-native confinement picture, with the derivable parts deri
 
 OPEN (honest, flagged in QCD0):
   * Fractional charge (+-1/3,+-2/3) and color SU(3): the U(1) field gives
-    integer winding only; the 3-strand/Z3 junction is PROPOSED, needs a color
+    integer charge only; the 3-strand/Z3 junction is PROPOSED, needs a color
+    # (noun corrected 18 Aug 2026, CHRG1/UNC1: this read "integer winding".
+    #  Electric charge is the U(1) Noether charge; its integrality comes from the
+    #  number operator's spectrum on the single-valued S^1. The floor is unchanged.)
     group beyond U(1). NOT claimed.
   * The absolute scale Lambda -> Lambda_QCD: an absolute-value floor (like G,
     |Lambda_cc|, a0-coeff, eta, the generation amplitude, the Hopf theta).
