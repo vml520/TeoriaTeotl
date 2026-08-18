@@ -71,15 +71,35 @@ See `a0_de_study.py` / `BLACK_HOLES.md`. **[prediction; sharp falsifier — curr
 
 - ~~**Charge is quantized in integer units** because it is a winding number~~ — **WITHDRAWN 18 Aug 2026 (CHRG1).** **The winding is not the electric charge.** Electric charge is the monopole moment of the long-range field, and a winding configuration has none: the Gauss flux of a closed vortex loop is zero at every radius, while the U(1) Noether source gives −4πq. Structurally, **π₂(S¹) = 0** — an S¹-valued field on ℝ³ has no point-like topological charge at all; its defects are *lines*. Every derivation in this repo (Coulomb, the Q-ball's mass and charge) uses the **Noether** charge j⁰ = ρ²ω, which is **continuous** classically. **So TFT does not currently explain why charge comes in integer units** — this repo *imposes* U(1) charge quantisation as a condition (`THE_PARTICLE_SECTOR.md`:102), which is the same move this bullet criticised the Standard Model for. **[WITHDRAWN]**
 
-  > **A route remains, and it is not the topological one.** A Noether charge becomes integer upon **field quantisation**, and this repo's own number–phase uncertainty result (ΔN·Δθ ≥ ½, from single-valuedness on S¹) is exactly the structure that would do it. That would make charge quantisation **quantum rather than topological** — a weaker claim than was advertised here, but an honest one and possibly derivable. It has never been attempted.
-- **Gravity is universally attractive; matter and antimatter both fall** (✓ ALPHA-g 2023) — but GR+CPT predicts it too. **[consistency]**
-- **Solar system: Kepler + Mercury's 42.9″/century** from one constant — Kepler is by-construction, Mercury is the generic relativistic result. **[consistency]**
-- **Exact lepton universality coexisting with a 3477× mass hierarchy.** Gauge couplings are winding *integers* (topologically quantized → identical for all three generations); masses are *amplitudes* (continuous → hierarchical). One structure yields both observed facts at once. See `GENERATIONS_PROGRAM.md` / `mass_m4_chirality.py`. **[consistency]**
-- **Mesons are bosons and baryons are fermions**, from one rule: a quark is a soliton of odd self-linking (a spin-½ fermion by Finkelstein–Rubinstein), so hadron statistics = (−1)^(#quarks). The same **linking invariant carries spin, statistics, baryon number, and chirality**. See `THE_PARTICLE_SECTOR.md` / `spin_statistics.py`. **[consistency]**
-- **Parity violation is forced, not inserted**: the parity operation is winding reversal, and the weak (chiral) coupling is to the winding-odd channel → 100% V−A, and **no right-handed neutrino**. The **neutrino** is the pure-odd (massless-chiral) limit of the *same* lepton dial. See `neutrino_parity.py`. **[consistency / derived]**
-- **The confinement scale equals the hadron mass scale**: linear confinement with string tension σ = 8√Λ = the derived kink mass — one scale √Λ sets both, as in real QCD (m_proton ~ Λ_QCD). See `quark_confinement.py`. **[consistency]**
-- **Large neutrino mixing (PMNS) but small quark mixing (CKM)** from one mechanism: neutrinos sit near the mass-cancellation point → near-degenerate → maximal mixing; charged fermions are hierarchical → tiny mixing. **[candidate]**
-- **The quantum CHSH value 2√2 and its Tsirelson ceiling, and the Born rule, from a single-valued phase on compact time.** The local field gives S=2 (classical); demanding the S¹ phase be single-valued makes the hidden variable cancel → E(a,b)=cos(a−b) (no tuning) and caps CHSH at 2√2 automatically. The **Born rule** (single-outcome |ψ|², continuous Malus cos²(θ/2)) is then derived from the same closure via an exact envariance symmetry — the exponent 2 is coherent-superposition normalization, not a postulate. Quantum coherence = the phase closing on the S¹ time circle. **Reproduces QM — does not beat it and no feasible experiment distinguishes it** (the value is conceptual; the Born step is assumption-conditional, resting on additivity/non-contextuality). A search of the natural channels (`DIS0`) finds the theory **empirically degenerate** — Bell exactly degenerate at any loop size, the temporal energy-comb 1/T-suppressed (unobservable), GHZ/Mermin M=4=QM — with one open falsifiable edge: whether the field realizes the full 2ⁿ tensor Hilbert space (else falsified by GHZ). See `QUANTUM_FROM_COMPACT_TIME.md`. **[consistency / reinterpretation]**
+  > **RESTORED, in a weaker and more honest form — 18 Aug 2026 (UNC1).** The route named above was
+  > taken the same day, and it works: this repo's number–phase result (`uncertainty_s1.py`) already
+  > proves the integer spectrum — it had simply **labelled its operator "the winding."** N = −i∂_θ
+  > generates phase rotations, so it is the **number/Noether** charge (as Carruthers–Nieto, the
+  > cited source, call it). **Charge quantisation was never missing; it was mis-attributed.**
+  >
+  > Verified, with the control that makes it a result: on single-valued states the spectrum is
+  > exactly ℤ, and **twisting the boundary condition to ψ(θ+2π) = e^{iα}ψ(θ) moves every eigenvalue
+  > to n + α/2π** — so single-valuedness on S¹ is doing the work and the outcome could have been
+  > otherwise.
+  >
+  > **Scope, stated plainly, because the original bullet overclaimed.** ⚠ **The mechanism is the
+  > textbook compact-U(1) argument** ('t Hooft; Dirac) — *any* complex scalar with a compact phase
+  > gives it. TFT does **not** explain integer charge where the Standard Model cannot. What is
+  > distinctive is only the **provenance**: the SM *takes* U(1)_Y compact because it works, whereas
+  > TFT's field target **is** S¹ — a founding primitive adopted long before charge was considered.
+  >
+  > **The genuinely distinctive claim is a different one: species commensurability.** The real
+  > puzzle is not "why integers" for one species but **why Q_proton = −Q_electron exactly.** Two
+  > independent U(1)s with generic couplings give irrational charge ratios; the SM fixes its ratios
+  > using anomaly cancellation plus the observed fermion content. **In TFT every particle is a
+  > configuration of ONE field with ONE U(1), so every charge is an integer multiple of one unit
+  > automatically.** That is earned by the same single-field monism that costs this framework
+  > baryon and lepton number.
+  >
+  > **Cost:** charge quantisation is now a consequence of **quantising** the theory, not a classical
+  > or topological fact about it — and the quantisation step itself is posited (see the
+  > compact-phase companion). **[RESTORED — quantum, not topological; textbook mechanism, distinctive
+  > provenance]**
 
 ## Striking connection — mechanism demonstrated, coefficients open (state explicitly)
 

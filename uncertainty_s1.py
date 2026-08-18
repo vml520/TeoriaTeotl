@@ -10,7 +10,11 @@ def hdr(s): print("\n" + "=" * 70 + "\n" + s + "\n" + "=" * 70)
 
 Nth = 512
 th = np.arange(Nth) * 2*np.pi / Nth
-n_vals = np.fft.fftfreq(Nth, d=1.0/Nth)          # integer winding eigenvalues
+n_vals = np.fft.fftfreq(Nth, d=1.0/Nth)          # integer NUMBER/Noether eigenvalues
+                                                 # (corrected 18 Aug 2026, UNC1: this said
+                                                 #  'winding'. N = -i d/dtheta generates phase
+                                                 #  rotations => it is the Noether/number charge,
+                                                 #  not the topological winding.)
 
 def moments(psi):
     p = np.abs(psi)**2; p = p / p.sum()          # theta-probability
@@ -25,6 +29,7 @@ def moments(psi):
 hdr("1  exact commutator + integer spectrum (single-valued S^1 -> charge quantization)")
 print(f"  N = -i d/dtheta on S^1: spectrum = {np.sort(np.unique(np.round(n_vals)))[:5]}... (INTEGERS)")
 print("  single-valued e^{i theta} => N integer = charge quantization (published).")
+print("  NOTE (UNC1, 18 Aug 2026): N here is the NUMBER/NOETHER charge, not the winding.")
 # verify [N, cos th] = i sin th on a test state (finite differences of the action)
 psi = np.exp(1j*3*th) * np.exp(np.cos(th))       # arbitrary test state
 def Nop(f): return np.fft.ifft(n_vals * np.fft.fft(f))
