@@ -3,6 +3,17 @@
 *13 July 2026 (CHSH closure); 14 July 2026 (Born rule). A quantum-foundations
 companion, extending the CHSH result in `teotl chsh.py`.*
 
+> **Framing superseded, 17 August 2026 — the results are unaffected.** This note (and its title)
+> attribute the results to **compact time**, "the ℝ³×S¹ structure, time as a closed loop." An audit
+> of what each result actually uses found that **S¹ is the TARGET space of the phase field, not a
+> dimension of spacetime** — internal in the same sense the U(1) of electromagnetism is internal.
+> **Every result here — the CHSH closure, the Born rule, charge quantisation, number–phase
+> uncertainty — follows from single-valuedness of the PHASE on its circle, and none of them requires
+> time to be compact.** The correct reading throughout is therefore "compact *phase*," not "compact
+> *time*"; see the corrected substrate row in `DERIVED_SUMMARY.md`. **No number, derivation or
+> conclusion in this note changes** — what changes is the attribution. A full retitling is deferred;
+> this note records the correction in the meantime.
+
 The qubit emulator (`teotl qc.py`) reproduces single qubits faithfully — a lone
 qubit is just a phase and an amplitude, which a classical field carries. The
 hard part is entanglement: the Bell/CHSH correlations that are provably too
