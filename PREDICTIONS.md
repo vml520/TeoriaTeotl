@@ -86,7 +86,32 @@ See `a0_de_study.py` / `BLACK_HOLES.md`. **[prediction; sharp falsifier — curr
 
 ## Null / long-term
 
-- **The proton is absolutely stable** (τ_p > 10⁴⁰ yr) — baryon number is topological. Testable at Hyper-Kamiokande. **[prediction, null]**
+- **The proton is absolutely stable** (τ_p > 10⁴⁰ yr) — ~~baryon number is topological~~. Testable at Hyper-Kamiokande. **[WITHDRAWN 18 Aug 2026 — the stated basis does not exist]**
+
+  > **Why withdrawn (CHRG0).** The prediction rests on baryon number being a topological invariant.
+  > **It is not, because there is nothing left to carry it.** A single S¹-valued phase field supplies
+  > exactly **one** integer topological charge, the winding W — and this repo spends that same
+  > integer three times: as electric charge (the integer-charge result), as baryon number (this
+  > prediction), and as self-linking parity (the spin-statistics result, where
+  > `THE_PARTICLE_SECTOR.md` states **SL = W** outright).
+  >
+  > **The electron decides which use is legitimate.** It is a spin-½ fermion, so its self-linking
+  > must be odd, so **W must be odd** — and it has baryon number 0. If W were baryon number the
+  > electron would have W = 0, hence even self-linking, hence **spin 0**. It is not a boson.
+  > **So W is electric charge, and baryon number has no topological carrier.**
+  >
+  > The remaining candidates fail for computable reasons: magnetic helicity is **quadratic** in the
+  > windings, so it vanishes identically whenever W = 0 (the neutron, Q = 0, would get B = 0); the
+  > U(1) **Noether** charge is **continuous** classically and cannot be an integer baryon number;
+  > and self-linking reduces to **writhe** when the twist vanishes, which is also continuous.
+  >
+  > **This does not predict that the proton decays.** It withdraws the claim that TFT *forbids* it.
+  > Restoring the prediction requires new structure — a second phase field (abandoning the
+  > single-field monism the spec declares) or a quantised Noether charge — and either is a change
+  > of theory whose cost should be stated up front.
+  >
+  > **Related gap, previously unflagged:** by the same argument **lepton number has no carrier
+  > either**, and the term appeared nowhere in this repo before this note.
 - **No dark-matter particle** (from #3). **[prediction, null]**
 
 ---

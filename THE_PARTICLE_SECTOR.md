@@ -32,8 +32,8 @@ Computed, as parameter-free topology: the Gauss linking integral is quantized
 twisted loop equals its twist = the internal current winding (SL = 0,1,2,3 for
 winding 0,1,2,3). Then **odd self-linking → (−1) under 2π rotation → spin-½
 fermion; even → boson** [derived]. That self-linking is the *same* winding-line
-helicity as baryon number and chirality — **one linking invariant, four
-meanings**.
+helicity as ~~baryon number and~~ chirality — **one linking invariant, ~~four~~ three
+meanings** *(baryon number removed 18 Aug 2026, CHRG0 — see the status table)*.
 
 **Resolution [consistency]:** the leptons are not plain Q-balls — the true
 lepton is a vorton/Hopfion with *odd* self-linking. The Q-ball gave the mass
@@ -112,7 +112,7 @@ the final number is a floor.
 |---|---|
 | self-linking is a quantized topological invariant (Hopf link ±1, twist = winding) | **computed** |
 | odd self-linking → spin-½ fermion; Q-ball → spin-0 boson | **derived** |
-| spin, statistics, baryon number, chirality = one linking invariant | **derived** |
+| spin, statistics, ~~baryon number,~~ chirality = one linking invariant | **derived**, except **baryon number — withdrawn 18 Aug 2026 (CHRG0)**: the same integer cannot be self-linking parity *and* baryon number *and* electric charge. The electron (spin-½ ⇒ odd SL ⇒ odd W; B=0) forces W to be electric charge. |
 | leptons are vortons/Hopfions (odd linking), not plain Q-balls | **consistency** |
 | neutrino = pure winding-odd, massless-chiral limit of the lepton dial | **derived** |
 | parity violation forced by chirality = winding (100% V−A, no ν_R) | **derived** |
