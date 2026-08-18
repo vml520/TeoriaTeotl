@@ -25,7 +25,17 @@ Two scales **E₀** (phase-energy) and **ℓ₀** (coherence length) organise ev
 > starting point.**
 - dτ = ℏdθ/E (time = phase per energy); dℓ = ℏdθ/p (length = phase per momentum)
 - g_eff = E₀/ℓ₀; c = E₀/p₀; m = E₀/c²; ℏ = E₀τ₀/2π
-- Force is an emergent process, not fundamental: F = −g_eff∇θ
+- Force is an emergent process, not fundamental: **F = −E₀∇θ**, equivalently
+  **F/F_Planck = ℓ₀|∇θ|** — every force is the Planck force times the dimensionless phase strain.
+  - *Corrected 18 Aug 2026:* this previously read **F = −g_eff∇θ**. **That is dimensionally
+    inconsistent**: g_eff = E₀/ℓ₀ is *already* a force (energy/length), so g_eff∇θ has dimensions of
+    force per length. The consistent form carries one factor of ℓ₀, giving F = −E₀∇θ. **No result
+    changes** — every computation in this repository was done in code units where the distinction is
+    invisible — but the stated law was wrong as written. *(Noted alongside: since E₀/ℓ₀ = c⁴/G
+    identically, and the phase gradient is separately taken to be bounded by |∇θ| ≲ 1/ℓ₀, this form
+    implies F ≤ c⁴/G — the same posited bound that gives the Planck-density cap in `BLACK_HOLES.md`,
+    read as a force instead of a density. One assumption, two consequences; not independent
+    evidence.)*
 - Gravity = geodesics of an **emergent metric** sourced by the field's energy.
 - Premise: mass = a real periodic process, mc² = hf ⇒ ω = mc²/ℏ.
 - **The second is fixed by the framework's own relations, not chosen** (`verify_units_closure.py`, 1 Aug 2026). ℏ = E₀τ₀/2π together with ℓ₀ = cτ₀ determine it, so no result here can carry a hidden unit convention — a units error would surface as a *dimensional mismatch*, not as a tension. Every gate runs in code units (ℓ₀ = c = E₀ = 1); the only carriers of 's' in the repo are c, ℏ, H₀.
