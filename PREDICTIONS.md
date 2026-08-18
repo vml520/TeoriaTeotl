@@ -69,7 +69,9 @@ See `a0_de_study.py` / `BLACK_HOLES.md`. **[prediction; sharp falsifier — curr
 
 ## Structural results — real, but *consistency*, not novel predictions
 
-- **Charge is quantized in integer units** because it is a winding number — answers "why integer charge" (the Standard Model inserts it by hand). In the Skyrme/topological-soliton lineage. **[consistency]**
+- ~~**Charge is quantized in integer units** because it is a winding number~~ — **WITHDRAWN 18 Aug 2026 (CHRG1).** **The winding is not the electric charge.** Electric charge is the monopole moment of the long-range field, and a winding configuration has none: the Gauss flux of a closed vortex loop is zero at every radius, while the U(1) Noether source gives −4πq. Structurally, **π₂(S¹) = 0** — an S¹-valued field on ℝ³ has no point-like topological charge at all; its defects are *lines*. Every derivation in this repo (Coulomb, the Q-ball's mass and charge) uses the **Noether** charge j⁰ = ρ²ω, which is **continuous** classically. **So TFT does not currently explain why charge comes in integer units** — this repo *imposes* U(1) charge quantisation as a condition (`THE_PARTICLE_SECTOR.md`:102), which is the same move this bullet criticised the Standard Model for. **[WITHDRAWN]**
+
+  > **A route remains, and it is not the topological one.** A Noether charge becomes integer upon **field quantisation**, and this repo's own number–phase uncertainty result (ΔN·Δθ ≥ ½, from single-valuedness on S¹) is exactly the structure that would do it. That would make charge quantisation **quantum rather than topological** — a weaker claim than was advertised here, but an honest one and possibly derivable. It has never been attempted.
 - **Gravity is universally attractive; matter and antimatter both fall** (✓ ALPHA-g 2023) — but GR+CPT predicts it too. **[consistency]**
 - **Solar system: Kepler + Mercury's 42.9″/century** from one constant — Kepler is by-construction, Mercury is the generic relativistic result. **[consistency]**
 - **Exact lepton universality coexisting with a 3477× mass hierarchy.** Gauge couplings are winding *integers* (topologically quantized → identical for all three generations); masses are *amplitudes* (continuous → hierarchical). One structure yields both observed facts at once. See `GENERATIONS_PROGRAM.md` / `mass_m4_chirality.py`. **[consistency]**
@@ -98,7 +100,10 @@ See `a0_de_study.py` / `BLACK_HOLES.md`. **[prediction; sharp falsifier — curr
   > **The electron decides which use is legitimate.** It is a spin-½ fermion, so its self-linking
   > must be odd, so **W must be odd** — and it has baryon number 0. If W were baryon number the
   > electron would have W = 0, hence even self-linking, hence **spin 0**. It is not a boson.
-  > **So W is electric charge, and baryon number has no topological carrier.**
+  > **So baryon number has no topological carrier.** *(Corrected 18 Aug 2026: this note first
+  > continued "…so W **is** electric charge." **That was a non-sequitur** — spin-½ constrains only the
+  > **parity** of W, not its value, and CHRG1 has since shown W cannot be electric charge at all. The
+  > argument **against** B = W is untouched, so this withdrawal stands.)*
   >
   > The remaining candidates fail for computable reasons: magnetic helicity is **quadratic** in the
   > windings, so it vanishes identically whenever W = 0 (the neutron, Q = 0, would get B = 0); the
