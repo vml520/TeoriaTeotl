@@ -55,7 +55,17 @@ See `a0_de_study.py` / `BLACK_HOLES.md`. **[prediction; sharp falsifier — curr
 
 **6. a₀ evolves with cosmic time: a₀(z) ∝ cH(z).** Early-universe galaxies had a *higher* transition acceleration — a clean discriminator from constant-a₀ MOND; testable with high-z rotation curves. **[candidate]**
 
-**7. ⭐ Primordial magnetic fields are helical, with a handedness locked to the matter–antimatter asymmetry.** A parity-odd cosmic signature (CMB parity / Faraday rotation) — the most original prediction; no standard model produces it. **[candidate]**
+**7. Primordial magnetic fields are helical, with a handedness correlated with the matter–antimatter asymmetry.** A parity-odd cosmic signature (CMB parity / Faraday rotation); no standard model produces it. **[CONJECTURE — downgraded 18 Aug 2026, was ⭐ "the most original prediction"]**
+
+> **Why downgraded (BMCA0 audit).** "Locked" requires the sign of the helicity to be *determined by*
+> the sign of the baryon asymmetry. **It is not, and the lock breaks in both directions:** two
+> unlinked W=+1 windings give maximal baryon asymmetry with **zero** helicity and no handedness at
+> all; a linked W=+1/W=−1 pair gives **zero** baryon asymmetry with maximal helicity and a definite
+> handedness. Baryon number and helicity are independent topological invariants (see
+> `DERIVED_SUMMARY.md` §7), and **no TFT mechanism correlating them was ever built** — G3 and G4
+> were never run. The correlation remains reasonable *as a conjecture*, since in the Vachaspati
+> scenario one mechanism does generate both; but in TFT that mechanism is precisely what is missing.
+> **This was published as a starred prediction with no derivation behind it.**
 
 ## Structural results — real, but *consistency*, not novel predictions
 

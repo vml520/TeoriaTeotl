@@ -1,5 +1,16 @@
 # G2 — The anomaly linkage: one invariant, three faces
 
+> ## ⚠ SUPERSEDED 18 Aug 2026 — the central claim of this note is withdrawn.
+> An audit (`bmca0_audit.py`, prereg `BMCA0_prereg.md`) found that **baryon number and magnetic
+> helicity are two INDEPENDENT invariants, not one invariant with three faces**, and that **the
+> chiral anomaly is neither automatic nor derived here**. The table below is the evidence: **B is
+> constant at 2 down the entire column while H sweeps −8π² to +8π².** Every transition between these
+> configurations has ΔB = 0 and ΔH ≠ 0, forcing κ = 0 in the claimed ΔB = −κΔH. Structurally,
+> winding number is *conserved* under deformation, so it cannot supply anomalous non-conservation;
+> and there are **no fermions here** to have an anomaly at all. **The numbers below are correct and
+> were reproduced independently — the identifications drawn from them are not.** See
+> `DERIVED_SUMMARY.md` §7 for the corrected statement.
+
 *Runnable: `verify_chiral_g2.py`. Result: baryon number, magnetic helicity, and chirality are the same winding topology, so the chiral anomaly is automatic in TFT.*
 
 ## The identifications (each standard, non-fitted)

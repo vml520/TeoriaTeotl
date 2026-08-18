@@ -108,12 +108,25 @@ Full record: `BLACK_HOLES.md`. **Reading two derived facts — √(2GM/r) = the 
 - **Entropy [computed area law + floor]:** S ∝ **area** (S~R^1.9, computed as the phase Goldstone's entanglement entropy, Srednicki — WHY BH entropy is holographic); the **¼** = the induced-gravity coefficient (S_ent=A/4G, ε cancels because one field gives S_ent AND G) — inherited/constrained, exact value a floor (cf. Immirzi). Magnitude ~1e77 solar, S∝M² reproduced.
 - **Dark energy CANNOT go phantom [derived, falsifiable]:** DE = the same phase field (pNGB thawing quintessence, ordinary scalar) → **w ≥ −1 always** (integration: w_min=−1.0000); matched to w₀=−0.88 → wₐ≈−0.20 (re-integrated 15 Aug 2026 at the corrected decay constant; supersedes −0.24; −0.196 as −dw/da, −0.168 under a CPL fit; insensitive to f at the 9% level over f = 1.5–10 M_Pl), mass ~H₀ (a₀-consistent, one field both). DESI's CPL prefers phantom crossing (w<−1 past) → **sharp falsifier. STATUS (DR2, 2025): in tension.** The evolving-DE preference firmed 2.6σ (DR1, DESI+CMB) → 3.1σ (DR2), 2.8–4.2σ +SNe; DR2 best fit w₀=−0.838±0.055, wₐ=−0.62 crosses w=−1 in the past and DESI reports non-phantom models **disfavoured**. TFT agrees DE evolves (both reject ΛCDM); they part on wₐ's magnitude. The prediction w≥−1 stands and the current data do not meet it — if the crossing hardens (DR3/Euclid), TFT's DE sector is excluded. **Refreshed 2026-08-07:** DESI DR2 Results IV (+full-shape Lyman-α, arXiv:2607.27410) gives **2.7σ (DESI+CMB) / 3.2σ (+SNe)** — *softer* than the earlier 3.1σ / 2.8–4.2σ, recorded because it happened rather than because it helps. Direction unchanged: arXiv:2510.21976 finds every parameterisation at w₀>−1, wₐ<0, **w₀+wₐ<−1** (Quintom-B = phantom past → quintessence now = a crossing). Easing from 4.2σ to 3.2σ is still a tension; nothing has approached 5σ either way.
 
-## 7. DERIVED — baryogenesis / magnetogenesis / chirality = one topological invariant (BMC G1–G2)
+## 7. PARTLY WITHDRAWN — baryogenesis / magnetogenesis / chirality (BMC G1–G2)
+
+> **Corrected 18 Aug 2026 (BMCA0 audit).** This section previously read *"DERIVED — …= one
+> topological invariant."* **The headline identification is false and is withdrawn.** Baryon number
+> ΣW is *linear* in the windings and blind to linking; helicity (2π)²ΣWᵢWⱼLkᵢⱼ is *quadratic* and
+> depends on linking. They are **two independent invariants of one object, plus a sign** — not one
+> invariant with three faces. Both counterexamples are explicit: two unlinked W=+1 windings give
+> **B=2, H=0**; a linked W=+1/W=−1 pair gives **B=0, H=+8π²**. The G2 results table below in fact
+> *shows* this — B is constant at 2 down the whole column while H sweeps −8π² to +8π² — and was
+> captioned as demonstrating the opposite. Verified with an independently written Gauss linking
+> integral that reproduces G2's own three rows exactly (`bmca0_audit.py`).
+> **The topological machinery is sound and is kept; what fails is the claim that it is one thing.**
 - The minimal action is **CP-symmetric** → chirality not *forced* (matter = antimatter).
 - The chiral invariant **exists** = the **helicity (linking number) of winding lines** (Lk = ±1 handed / 0 unlinked; CP flips its sign). This is Vic's **"chirality from winding directions."**
-- **One invariant, three faces:** baryon number = winding charge ΣW; magnetic helicity = flux linking (2π)²ΣWᵢWⱼLkᵢⱼ (since A=∇θ ⇒ winding lines are flux tubes, Φ=2πW); chirality = sign of the helicity.
-- Therefore the **chiral anomaly ΔB ∝ ΔH_mag is automatic in TFT** (not a postulate) — the Vachaspati baryogenesis–magnetogenesis link, forced by topology. Coefficient topological (2π-per-winding), × N_f (INPUT).
-- **INPUT/OPEN:** the *net* helicity generated → magnitude of η ≈ 6×10⁻¹⁰ (an initial condition). G3 (net-winding mechanism) and G4 (coherent helical field) are open. *More speculative than the gravity work.*
+- **Two invariants and a sign** (corrected): baryon number = winding charge ΣW; magnetic helicity = flux linking (2π)²ΣWᵢWⱼLkᵢⱼ (since A=∇θ ⇒ winding lines are flux tubes, Φ=2πW); chirality = sign of the helicity. **The third genuinely is a face of the second. The first is independent of both.**
+- **The chiral anomaly is NOT automatic and NOT derived** (was: *"automatic in TFT, not a postulate"* — **withdrawn**). Two independent reasons. **(i)** Every transition among G2's own three configurations has ΔB = 0 with ΔH ≠ 0, so the claimed ΔB = −κΔH forces **κ = 0**. The deeper reason is structural: winding number is *conserved* under continuous deformation — that is what makes it topological — so **it cannot supply the anomalous non-conservation an anomaly exists to describe.** **(ii)** The chiral anomaly is a fermion-loop effect, and **there are no fermions in this construction**; G2 imports the coefficient N_f explicitly. What G2 actually establishes is a structural **analogy** to the B/N_CS pair — genuine and reusable, but not a derivation.
+- **No mechanism exists for either genesis.** G1 found the minimal action *exactly* CP-symmetric, so net chirality is not forced; **G3 (net-winding mechanism) and G4 (coherent helical large-scale field) were never run.** And since A = ∇θ makes B = ∇×∇θ vanish except distributionally on the winding lines, TFT's "magnetic field" is supported on a set of **measure zero** — a static identification of vortices with quantised flux tubes, not a genesis and not a large-scale field.
+- **INPUT/OPEN:** the *net* helicity generated → magnitude of η ≈ 6×10⁻¹⁰ (an initial condition; this flag was pre-registered at G0 and was honest). *More speculative than the gravity work.*
+- **What survives:** quantised flux Φ=2πW on winding lines; helicity as a genuine invariant; chirality = sign H; the CP-symmetry result; and η's magnitude as an IC. **What does not: the one-invariant claim, the automatic anomaly, and both "genesis" labels.**
 
 ## 7b. The generations & mass-hierarchy program (11–12 July 2026)
 Full gated record: `GENERATIONS_PROGRAM.md`. Headlines:
@@ -155,12 +168,12 @@ The transferable dictionary — identities that hold across every result above:
 | **θ: ℝ³ × ℝ → S¹** (phase field); complex ψ = ρe^{iθ} | the substrate; ρ = amplitude/"carrier," θ = phase. **Corrected 17 Aug 2026:** this row previously read *θ: ℝ³×S¹ → S¹*, which showed **two circles** and implied a compact time dimension. **S¹ is the TARGET space of the phase — internal, in the same sense the U(1) of electromagnetism is internal — not a dimension of spacetime.** An audit of every derived result found that eight of ten use only the target reading (winding/charge, CHSH, Born, number–phase uncertainty, the e^{inθ} ladder, forced periodicity of the potential, kinks and the classical sector), one uses neither, and exactly one — the thermal/KMS argument — used the compact-base reading. That one is withdrawn: compactifying Euclidean time is how every finite-temperature theory is computed and implies nothing about time being a circle, and the corpus had assigned the same circle two periods differing by 2×10⁶¹ (τ₀ ≈ 1.35×10⁻⁴³ s versus 2π/H₀ ≈ 2.88×10¹⁸ s). **Nothing else changes; the framework is a U(1)-valued field on ordinary space and ordinary time.** |
 | time | phase cycling: dτ = ℏdθ/E. mass = frequency: ω = mc²/ℏ |
 | E₀, ℓ₀ (**not free primitives** — see note) | fix g_eff, m, and (dimensionally) a₀. They do **not** fix c or ℏ: c enters ℓ₀'s own definition (ℓ₀ = cτ₀), and E₀/ℓ₀ = c⁴/G *identically* (the Planck force). Given {ℏ, c, G}, E₀ = √(2π)E_Pl, ℓ₀ = √(2π)ℓ_Pl, τ₀ = √(2π)t_Pl are **determined**, so this row is a re-parameterisation of {ℏ, c, G} rather than an independent starting point. *(Corrected 15 Aug 2026; the row previously read "two primitives … fix c, ℏ, …", which runs backwards.)* |
-| winding W ∈ ℤ (π₁(S¹)) | topological charge = **baryon number** = **electric charge** (signed) |
+| winding W ∈ ℤ (π₁(S¹)) | topological charge — identified with **electric charge** (signed). ⚠ **Corrected 18 Aug 2026:** this row also equated W with **baryon number**. It cannot be both: the neutron needs B=1 (⇒W=1) and Q=0 (⇒W=0) at once. The usual repair — composite baryons of fractionally charged quarks — is **blocked by TFT's own declared floor** (`THE_PARTICLE_SECTOR.md`:92, "the U(1) field gives integer charge only"). **Unresolved collision, not a wording slip.** |
 | ∇θ | the EM potential A (Goldstone); B = ∇×∇θ = flux tubes on winding lines, Φ = 2πW |
 | j^μ = ρ²∂^μθ (linear, signed) | electromagnetism (Coulomb, like-repels) |
 | T^μν (quadratic, ≥0) | gravity (universal, emergent geometry; ∇²Φ = energy density → 1/r) |
 | mass gap m = √Λ/ℓ₀ | Yukawa range 1/m. Λ~O(1) → microscopic screening; Λ~10⁻¹²² → ultralight (Hubble-scale) |
-| helicity = linking of winding lines | chirality = magnetic helicity = (via anomaly) baryon number — one invariant |
+| helicity = linking of winding lines | chirality = sign of magnetic helicity. ⚠ *Corrected 18 Aug 2026:* the "= (via anomaly) baryon number — one invariant" clause is **withdrawn** (see §7). |
 | two fundamental rates | Planck/UV → G; Hubble/IR → a₀. 2π = one S¹ cycle in both |
 | localized 3D particle | needs a conserved charge (Q-ball); a pure-phase 3D lump radiates |
 
@@ -263,7 +276,7 @@ them, and the reason is structural rather than a limit of effort.
 | Matter & antimatter both attract | DERIVED — matches ALPHA-g |
 | Toy solar system: Kepler + Mercury 42.90″ | DELIVERED (Kepler by-construction; Mercury generic-1PN) |
 | Galaxy rotation curves, no dark matter | DERIVED scale a₀=cH₀/2π + mechanism; MW 2.9%, SPARC-consistent, Tully-Fisher slope 4 |
-| Baryo/magneto/chirality linkage (anomaly) | DERIVED (one topological invariant); net η = INPUT |
+| Baryo/magneto/chirality linkage (anomaly) | ⚠ **WITHDRAWN 18 Aug 2026** — two independent invariants, not one; anomaly neither automatic nor derived; no genesis mechanism (G3/G4 never run). Topological machinery survives. See §7. |
 | G, \|Λ\|, a₀ coefficient, η magnitude | INPUT/OPEN — named deep problems, open everywhere |
 | Lepton generations & mass hierarchy | mechanism DEMONSTRATED (interference; electron = near-silent helical state); excitation/symmetry/energetic origins EXCLUDED; ε = 2.27° OPEN |
 | Standard-Model gauge sector (SU(2)/SU(3), the 16×16) | **NOT DERIVED — structurally barred.** Four routes closed (§10); the obstruction is the single S¹ and is one problem in four forms, so partial fixes do not help. Reopening conditions stated. |
