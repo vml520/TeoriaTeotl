@@ -90,7 +90,9 @@ mass — **one scale √Λ sets both the hadron mass and the confinement tension
 Honest: "quarks are wall-endpoints" is the topological-confinement seed made
 concrete on the derived kink — a model of what a quark is, not a derivation of
 QCD. Fractional charge and color SU(3) are a **[floor]** (the U(1) field gives
-integer winding only; the 3-strand/Z₃ junction is [proposed]).
+integer charge only; the 3-strand/Z₃ junction is [proposed]). *(Noun corrected 18 Aug 2026,
+UNC1: this read "integer winding". The integrality comes from the number/Noether operator's
+spectrum on the single-valued S¹, not from a topological winding — the floor is unchanged.)*
 
 ## 4. The mass numbers — an honest terminus (`spec_selfconsistent.py`)
 

@@ -233,6 +233,12 @@ programme rather than a contradiction.
 
 ### The weak sector's obstruction is not topological (2 August 2026)
 
+*(Note added 18 Aug 2026, CHRG1/UNC1: the premise quoted here — "charge = integer winding" — has
+itself since been **withdrawn**; electric charge is the Noether charge, and its integrality comes
+from the number operator's spectrum, not from a winding. **That does not weaken this section — it
+strengthens it.** The inference recorded below was already wrong on its own terms; it is now wrong
+twice over, since the invariant it invoked was never the charge to begin with.)*
+
 A natural inference from "charge = integer winding" is that TFT *topologically forbids* the
 flavour-changing decays the weak interaction performs, since a topological invariant cannot change
 under continuous evolution. **That inference is wrong, and it is recorded here because it is the

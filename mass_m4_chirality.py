@@ -6,8 +6,12 @@ derived winding-line chirality arc); FAIL = no link found.
 
 Basis: TFT identifications already on file --
   chirality = winding direction        (BMC arc, G1/G2, DERIVED structure)
-  antiparticle = opposite winding      (charge arc, DERIVED)
-  charge = integer winding, quantized  (charge arc, DERIVED)
+  antiparticle = opposite Noether charge (omega -> -omega)   (charge arc, DERIVED)
+  charge = integer NUMBER/NOETHER spectrum, quantized        (charge arc, DERIVED)
+  # Nouns corrected 18 Aug 2026 (CHRG1/UNC1): electric charge is the U(1) Noether
+  # charge, not the topological winding. Its integrality comes from the number
+  # operator's spectrum on the single-valued S^1. Nothing in this script's
+  # computation changes -- only what the conserved quantity is called.
 The M2' composition: generation-k mode amplitude q_k = 1 + A cos(alpha_k),
 alpha_k = delta + 2pi k/3. cos(alpha) = (e^{i alpha} + e^{-i alpha})/2 is
 the EQUAL-weight sum of the two internal winding directions: the mass

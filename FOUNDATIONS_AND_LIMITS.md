@@ -125,8 +125,9 @@ tempting to count the framework's reproduction of it as a success for its accoun
 light. **It is not, and the reason is old:** a classical field coupled to *quantised
 matter* already reproduces the threshold, the KE = hν − φ slope, and the instantaneity
 (Lamb & Scully 1969). The quantisation that produces the threshold lives in the **matter**,
-not the light. This framework quantises matter natively (integer winding, a discrete bound
-tower), so it reproduces every photoelectric observable — **and that fact carries no
+not the light. This framework quantises matter natively (an integer number/Noether
+spectrum and a discrete bound tower — *noun corrected 18 Aug 2026, UNC1; this read "integer
+winding"*), so it reproduces every photoelectric observable — **and that fact carries no
 weight, because the effect never discriminated.**
 
 What discriminates is second-order coherence. **Calculated:** for any classical field —
