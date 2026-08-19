@@ -1,5 +1,15 @@
 # G1 — The chiral root: does TFT have a chiral structure?
 
+> ## ⚠ PARTLY SUPERSEDED 18 Aug 2026 — read with `DERIVED_SUMMARY.md` §7.
+> **What SURVIVES, and is the honest core of this note:** the minimal action is exactly CP-symmetric,
+> so **net chirality is NOT forced** — that result is untouched and was correctly labelled.
+> **What is WITHDRAWN:** the section below headed *"one invariant, three faces"*. An audit
+> (`bmca0_audit.py`) found baryon number (ΣW, linear in the windings) and magnetic helicity
+> ((2π)²ΣWᵢWⱼLkᵢⱼ, quadratic and linking-dependent) are **two independent invariants**, not one with
+> three faces — two unlinked W=+1 windings give B=2, H=0, while a linked W=+1/W=−1 pair gives B=0,
+> H=+8π². **The linking machinery here is correct and reusable; the identification drawn from it is
+> not.** See also the superseded banner on `G2_chiral_anomaly.md`.
+
 *Runnable check: `verify_chiral_g1.py`. Outcome: the chiral invariant EXISTS (= winding-line helicity, Vic's "winding directions"), but the minimal action is CP-symmetric so net chirality is not forced.*
 
 ## A. The minimal action is CP-symmetric

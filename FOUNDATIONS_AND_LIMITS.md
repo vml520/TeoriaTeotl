@@ -151,8 +151,8 @@ The dark-energy fit of §2 requires a decay constant **f ≳ 1.45 M_Pl** — sup
 Planckian, a genuine swampland concern shared with *all* thawing quintessence.
 Clockwork/alignment mechanisms would lower it but need *many* circles, breaking the
 one-S¹ picture. **Monodromy** — winding the *single* circle Q ~ 15 times — is
-compatible with one circle and native to TFT (winding = charge = the theory's own
-integer), giving an effective super-Planckian f from a sub-Planckian fundamental. So
+compatible with one circle and native to TFT (the winding is the theory's own
+integer — *corrected 18 Aug 2026: this read “winding = charge”; **electric charge is the U(1) Noether charge**, not the winding, which sources no monopole field. The monodromy argument needs only that the winding is an integer, so it is unaffected*), giving an effective super-Planckian f from a sub-Planckian fundamental. So
 the tension is **not eliminated but relocated** to a winding-number floor (same class
 as the framework's other integer/initial-condition inputs).
 
