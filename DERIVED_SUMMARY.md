@@ -10,11 +10,11 @@
 > - **The phase θ is a pseudo-Nambu–Goldstone boson.** A shift symmetry θ → θ + c protects it, so
 >   radiative corrections to its mass are *proportional to the symmetry breaking itself*. **A small
 >   mass is technically natural** — it stays small once it is small. This is why axions are light,
->   and it is why the tiny number in the phase potential (κ ≈ 1.7×10⁻¹²¹ = 2N·Λ) is not a tuning in
->   the usual sense.
+>   and it is why the tiny number in the phase potential (κ = 2N·Λ, which at the paper's N = 1/2 is
+>   **κ = Λ = 8.71×10⁻¹²²** exactly) is not a tuning in the usual sense.
 > - **The amplitude ρ is an ordinary radial mode with no protecting symmetry.** Corrections go as the
->   cutoff, δm² ~ Λ_cut²/16π², dragging it to **f/(4π) ≈ 2×10²⁷ eV**. Placing the electron at 511 keV
->   requires a tuning of **~6×10⁻⁴⁴**.
+>   cutoff, δm² ~ Λ_cut²/16π², dragging it to **f/(4π) ≈ 9.7×10²⁶ eV**. Placing the electron at
+>   511 keV requires a tuning of **~3×10⁻⁴³**.
 >
 > **The map onto this document is exact:**
 >
@@ -181,7 +181,7 @@ Full record: `THE_PARTICLE_SECTOR.md`. **One linking invariant (the derived wind
 - **Fermions from a bosonic field [derived]:** a spherical Q-ball is a spin-0 BOSON; a twisted vortex loop with ODD self-linking is a spin-½ FERMION (Finkelstein–Rubinstein). Linking computed as parameter-free topology (Hopf link ±1, twist=winding). So leptons are vortons/Hopfions (odd linking), NOT plain Q-balls — the Q-ball was only the mass/charge skeleton. (Resolves: the mass work modeled leptons as bosons.)
 - **Neutrinos & parity [derived], no SU(2):** the neutrino = the pure winding-ODD (massless-chiral) limit of the SAME lepton dial (electron 99.85% there; its 0.15% even content IS its mass). Parity violation FORCED — winding reversal flips the odd channel → weak coupling is 100% V−A, no ν_R. Large PMNS / small CKM from ν near-degeneracy vs charged-lepton hierarchy [proposed].
 - **Confinement [computed]:** quark = winding-line end; no free end; sine-Gordon term → domain wall of tension σ = 8√Λ = the DERIVED kink mass → linear V(L)=σL. Meson=boson, baryon=fermion (linking parity). ONE scale √Λ sets both hadron mass AND confinement tension (as in real QCD).
-- **FLOORS (the honest boundary):** absolute scales (ν-mass, Λ_QCD) and NON-ABELIAN groups (SU(2)_L for the full weak force, color SU(3) for the full strong force, fractional charge) — the U(1) field gives integer charge (from the number/Noether spectrum — *noun corrected 18 Aug 2026, UNC1; this read "integer winding"*) and derives mechanisms/scale-relations, not absolutes or non-abelian structure. Same pattern as G, |Λ_cc|, a₀-coeff, η. **See §9's consolidated sub-Planckian mass floor** — the absolute-scale gap is now stated as one problem (a Planckian condensate at f = 2.09 M_Pl against particle masses 17–23 orders below it) rather than a list.
+- **FLOORS (the honest boundary):** absolute scales (ν-mass, Λ_QCD) and NON-ABELIAN groups (SU(2)_L for the full weak force, color SU(3) for the full strong force, fractional charge) — the U(1) field gives integer charge (from the number/Noether spectrum — *noun corrected 18 Aug 2026, UNC1; this read "integer winding"*) and derives mechanisms/scale-relations, not absolutes or non-abelian structure. Same pattern as G, |Λ_cc|, a₀-coeff, η. **See §9's consolidated sub-Planckian mass floor** — the absolute-scale gap is now stated as one problem (a Planckian condensate at f = M_Planck ≈ 1.22×10¹⁹ GeV against particle masses 17–22 orders below it) rather than a list.
 
 ## 7d. Quantum correlations from compact time (13 July 2026; Born rule 14 July 2026)
 Full record (with prominent caveats): `QUANTUM_FROM_COMPACT_TIME.md`. **The local field saturates CHSH at S=2.0000 (classical); compact time DERIVES the quantum value AND the Born rule.**
@@ -223,11 +223,11 @@ The transferable dictionary — identities that hold across every result above:
 - **a₀ exact coefficient** (ω₀/H₀ ~ 1) = coincidence problem (why dark energy is dynamical now).
 - **η ≈ 6×10⁻¹⁰** magnitude = baryogenesis initial condition (net primordial helicity).
 - **THE SUB-PLANCKIAN MASS FLOOR** *(consolidated and sharpened 18 Aug 2026)* — **one floor, two
-  instances, only one of which was recorded.** TFT's identified condensate sits at **f = 2.09 M_Pl
-  ≈ 2.55×10²⁸ eV**, and every particle scale lies far below it:
-  - **v_EW = 246 GeV** (equivalently m_h = 125 GeV) — **17 orders** below f. *(Recorded here since
-    2026; the original entry read "16.3 orders".)*
-  - **the electron, m_e = 511 keV** — **22.7 orders** below f. **This instance was never recorded**,
+  instances, only one of which was recorded.** TFT's condensate sits at **f = M_Planck (non-reduced)
+  = √(8π)·M̄_Pl ≈ 1.22×10¹⁹ GeV = 1.22×10²⁸ eV** — the value derived in the a₀ paper from
+  f = √(2N)·M_Planck at N = 1/2 — and every particle scale lies far below it:
+  - **v_EW = 246 GeV** (equivalently m_h = 125 GeV) — **16.7 orders** below f.
+  - **the electron, m_e = 511 keV** — **22.4 orders** below f. **This instance was never recorded**,
     because the mass program derives Koide *ratios* and never had to place an absolute.
 
   **So the open problem is a single missing mechanism: how a Planckian condensate yields
@@ -236,8 +236,9 @@ The transferable dictionary — identities that hold across every result above:
 
   **Two scales, kept distinct** *(they were previously conflated under "the soliton interior")*:
   - the **phase** potential's scale is fixed — μ⁴ = E₀κ/ℓ₀³ with **E₀ cancelling from the mass
-    entirely**, leaving m_φ = √(κ/2N)/ℓ₀, so **κ = 2N·Λ ≈ 1.7×10⁻¹²¹ carries all of it.** That is the
-    cosmological-constant fine-tuning, not a separate unknown.
+    entirely**, leaving m_φ = √(κ/2N)/ℓ₀, so **κ = 2N·Λ carries all of it — and at the paper's
+    N = 1/2 this is κ = Λ = 8.71×10⁻¹²² exactly.** That is the cosmological-constant fine-tuning,
+    not a separate unknown.
   - the **amplitude** potential's scale is where the particle masses live, and it is identified with
     f — hence Planckian, hence the 17- and 22.7-order gaps above.
 
