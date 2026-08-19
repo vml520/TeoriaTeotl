@@ -5,6 +5,43 @@
 
 **The one meta-lesson (read this first if you're building another TFT app):** TFT reliably derives **structures, mechanisms, and scale *relations* — parameter-free**. It does **not** derive **absolute values**: every absolute number we chased (Newton's G, |Λ|, a₀'s exact coefficient, the baryon asymmetry η) bottomed out at a *named, field-wide* open problem (quantum gravity, the cosmological-constant problem, the coincidence problem, the baryogenesis initial condition). So: expect to derive the *mechanism and the scaling*, and to carry *one calibration constant / initial condition* per absolute scale. That is not a TFT weakness — those numbers are unsolved everywhere.
 
+> **Sharpened 18 Aug 2026 — the split is not "structure vs absolute". It is SYMMETRY PROTECTION.**
+> The framework's field is ψ = ρe^{iθ}, and its two sectors are protected differently:
+> - **The phase θ is a pseudo-Nambu–Goldstone boson.** A shift symmetry θ → θ + c protects it, so
+>   radiative corrections to its mass are *proportional to the symmetry breaking itself*. **A small
+>   mass is technically natural** — it stays small once it is small. This is why axions are light,
+>   and it is why the tiny number in the phase potential (κ ≈ 1.7×10⁻¹²¹ = 2N·Λ) is not a tuning in
+>   the usual sense.
+> - **The amplitude ρ is an ordinary radial mode with no protecting symmetry.** Corrections go as the
+>   cutoff, δm² ~ Λ_cut²/16π², dragging it to **f/(4π) ≈ 2×10²⁷ eV**. Placing the electron at 511 keV
+>   requires a tuning of **~6×10⁻⁴⁴**.
+>
+> **The map onto this document is exact:**
+>
+> | claim | sector | protected? | status here |
+> |---|---|---|---|
+> | dark energy w ≥ −1; a₀ = cω₀/2π; charge quantisation; CHSH, Born, number–phase | **phase** | **yes** | **DERIVED** |
+> | lepton mass absolutes; v_EW; r ≈ 0.318, A ≈ √2 | **amplitude** | no | **FLOOR** |
+>
+> **Every derived claim sits in the protected sector; every floor sits in the unprotected one.**
+> So the floors are not a scattered list of stubborn numbers — **they are one sector, identified by a
+> single property. TFT derives what a shift symmetry protects, and floors on everything else.**
+>
+> **What this does NOT say.** It does not say the mass program is wrong. Its near-cancellation
+> mechanism ("the electron is 99.85% winding-odd") organises the *spectrum* and does so well — tau
+> 98% even against electron 0.15% is a factor ~653, the right order for m_τ/m_e = 3477. **But an
+> even-fraction of 1.5×10⁻³ is 2.8 orders of suppression against the 22.7 needed to reach the
+> electron from f.** It is a *ratio* mechanism, which is what it was built to be; **it was never an
+> absolute-scale mechanism, and should not be read as one.**
+>
+> **What would be needed.** The open question is not "derive m_e" but **"why is the radial mode
+> light?"** The known answers are a protecting symmetry or a dynamically generated scale. TFT has
+> neither in the amplitude sector: dimensional transmutation is closed (the scalar quartic runs to a
+> Landau pole, not to zero — no asymptotic freedom), and instanton effects generate potentials for
+> *pseudo-scalars*, not masses for radial modes, so **the mechanism that plausibly explains the phase
+> sector cannot be transported to the particle sector.** Supplying one is a research programme, not a
+> calculation.
+
 ---
 
 ## 0. Regime that works
