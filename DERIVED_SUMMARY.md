@@ -12,9 +12,28 @@
 >   mass is technically natural** — it stays small once it is small. This is why axions are light,
 >   and it is why the tiny number in the phase potential (κ = 2N·Λ, which at the paper's N = 1/2 is
 >   **κ = Λ = 8.71×10⁻¹²²** exactly) is not a tuning in the usual sense.
-> - **The amplitude ρ is an ordinary radial mode with no protecting symmetry.** Corrections go as the
->   cutoff, δm² ~ Λ_cut²/16π², dragging it to **f/(4π) ≈ 9.7×10²⁶ eV**. Placing the electron at
->   511 keV requires a tuning of **~3×10⁻⁴³**.
+> - **The amplitude ρ is an ordinary radial mode, with no protecting symmetry *generically*.**
+>   Corrections go as the cutoff, δm² ~ Λ_cut²/16π², dragging it toward **f/(4π) ≈ 9.7×10²⁶ eV**.
+>
+>   > **Narrowed 19 Aug 2026.** This first read *"with no protecting symmetry"* flatly, and quoted a
+>   > tuning of ~3×10⁻⁴³ for the electron. **Two qualifications, both of which weaken it:**
+>   > **(i) The lepton sector DOES have a protecting symmetry, derived in this repo.** Winding
+>   > reversal θ → −θ is an *exact* symmetry of the minimal action (`G1_chiral_root.md`; reproduced
+>   > independently), the mass-making channel is its **even** projection, and the pure winding-**odd**
+>   > state is **massless** — it is the neutrino. So m = 0 is symmetry-enforced and every lepton mass
+>   > is the *breaking* of it, exactly as a chiral fermion mass is. **A symmetry-protected small mass
+>   > is not fine-tuned**, so the tuning framing does not apply to the electron.
+>   > **(ii) The tuning figure assumed Λ_cut = f**, and **f is a decay constant, not an established
+>   > cutoff** — the corpus fixes no cutoff anywhere. The tuning is real in kind; its size is not
+>   > established.
+>   >
+>   > **What does NOT change:** the *map* below. Every derived claim still sits in the protected
+>   > sector and every floor in the unprotected one — and the open problem is now sharper, not
+>   > softer. **The symmetry explains why a light lepton EXISTS; it does not set the scale.**
+>   > Back-solving m = (even fraction)ⁿ × M₀ fails: no n makes the electron and the tau agree
+>   > (n = 1 off by 0.7 orders, n = 2 by 2.1, n = 3 by 4.9). **So the open question is "what sets the
+>   > lepton sector's scale?" — one number, alongside v_EW and Λ_QCD — rather than a 22-order
+>   > tuning.**
 >
 > **The map onto this document is exact:**
 >
