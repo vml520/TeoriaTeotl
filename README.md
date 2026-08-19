@@ -1,7 +1,14 @@
 # Teotl Field Theory — Computational Demonstrations
 
-Companion code for *⟨paper title⟩* (V. Luna, ⟨year⟩). Each program is a small, self-contained check
+Companion code for *The galactic acceleration scale from a compact phase: what the topology fixes, and what it does not* (V. Luna, 2026). Each program is a small, self-contained check
 that anyone can run in a few seconds.
+
+> **How to read the documents in this repo.** `DERIVED_SUMMARY.md` carries the **current** status of
+> every claim and is the file to trust. The `*_prereg.md` and gate-record files (`G0_…`, `G1_…`,
+> `G2_…`, and similar) are **dated records**: they state what was predicted and computed at the time
+> and are deliberately **not** rewritten when a later audit changes the answer, because rewriting them
+> would falsify the log. Several carry a superseded banner pointing to the correction. **If a gate
+> record and `DERIVED_SUMMARY.md` disagree, `DERIVED_SUMMARY.md` is current.**
 
 > **What these are.** Demonstrations and consistency checks — **not proofs.** They show that the
 > framework's mechanisms produce the stated behavior, and that it reproduces known physics where it
@@ -9,7 +16,7 @@ that anyone can run in a few seconds.
 > proves the theory; that is what experiment is for. The framework is **in progress**; this is what
 > it does so far.
 
-The whole thing rests on four scales (**E₀, ℓ₀, τ₀, α₀**) and three equations
+The whole thing rests on four scales (**E₀, ℓ₀, τ₀, a₀**) and three equations
 (**mc² = hf**, *time = the turning of phase*, *force = the slope of the phase*) — see the paper.
 These programs exercise those few pieces across five orders of magnitude in scale:
 **particle → planet → galaxy → cosmos.**
@@ -62,7 +69,7 @@ not a unique prediction · **[input]** a value the framework does not yet fix.
 ### D. The cosmic scale — galaxies without dark matter
 | file | what it shows | status |
 |---|---|---|
-| `verify_a0_g1.py` … `g5.py` | the galactic acceleration scale α₀ = cH₀/2π — set by the universe's expansion, not fitted | scale **derived**; exact coefficient = the "why now" coincidence problem |
+| `verify_a0_g1.py` … `g5.py` | the galactic acceleration scale a₀ = cH₀/2π — set by the universe's expansion, not fitted | scale **derived**; exact coefficient = the "why now" coincidence problem |
 | `milkyway_rotation.py` | Milky Way rotation curve to ~3%, baryons only; tracks the 175-galaxy acceleration relation | **fits** (transition shape model-dependent, as in MOND) |
 | `verify_a0_g4.py` | the mass–rotation (Tully–Fisher) exponent = exactly 4 (observed 3.85 ± 0.09) | **derived**, parameter-free |
 
@@ -157,7 +164,7 @@ constant, the coincidence problem, the baryon asymmetry).
 
 Across every result: the framework derives **mechanisms and scale-relations** without free
 parameters, and carries **one calibration constant per absolute scale**. The remaining absolute
-numbers (G, |Λ|, α₀'s exact coefficient, the baryon asymmetry) each reduce to a problem that is
+numbers (G, |Λ|, a₀'s exact coefficient, the baryon asymmetry) each reduce to a problem that is
 open in *every* framework — not a gap unique to this one.
 
 ## From theory to solver to application
@@ -200,7 +207,7 @@ keep their own home; this section is the link between them, not a merge of them.
 ## Cite
 
 If you use this code, please cite the archived release:
-`https://doi.org/10.5281/zenodo.⟨ID⟩`
+*(a Zenodo DOI has not yet been minted — cite the repository URL and commit hash until it is)*
 
 ## License
 

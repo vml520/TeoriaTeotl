@@ -1,10 +1,10 @@
 # Appendix: Computational Demonstrations
 
-*Companion code for ⟨paper title⟩ (V. Luna, ⟨year⟩). Each program is standalone (Python 3 + NumPy), prints its own result, and runs in seconds.*
+*Companion code for *The galactic acceleration scale from a compact phase: what the topology fixes, and what it does not* (V. Luna, 2026). Each program is standalone (Python 3 + NumPy), prints its own result, and runs in seconds.*
 
 > **What these are.** Demonstrations and consistency checks — **not proofs.** Labels: **[derived]** follows from the framework · **[consistency]** reproduces known physics, not a unique prediction · **[input]** a value the framework does not fix · **[open]** attempted, not solved. Nothing here claims uniqueness or proves the theory; that is what experiment is for. The framework is **in progress** — this is what it does so far. Together the programs span **five orders of magnitude — particle → planet → galaxy → cosmos — from one field and one set of equations.**
 
-**Repository:** `https://github.com/vml520/TeoriaTeotl` · **Archived (cite this):** `https://doi.org/10.5281/zenodo.⟨ID⟩`
+**Repository:** `https://github.com/vml520/TeoriaTeotl` · **Archived (cite this):** *(a Zenodo DOI has not yet been minted — cite the repository URL and commit hash until it is)*
 
 ---
 
@@ -31,7 +31,7 @@
 ## D. Galaxies without dark matter
 | file | what it shows | status |
 |---|---|---|
-| `verify_a0_g1.py`…`g3.py` | the galactic acceleration scale α₀ = cH₀/2π ≈ 1.1×10⁻¹⁰ m/s², set by the cosmic expansion — not fitted | scale **[derived]**; exact coefficient = the coincidence problem |
+| `verify_a0_g1.py`…`g3.py` | the galactic acceleration scale a₀ = cH₀/2π ≈ 1.1×10⁻¹⁰ m/s², set by the cosmic expansion — not fitted | scale **[derived]**; exact coefficient = the coincidence problem |
 | `verify_a0_g4.py`, `milkyway_rotation.py` | modified inertia → deep-MOND limit; Milky Way curve to ~3% (baryons only); **Tully–Fisher exponent exactly 4** (obs 3.85±0.09) | slope-4 **[derived]**; **mechanism [heuristic — see the correction in `DERIVED_SUMMARY.md` §5: the horizon argument cannot be derived from a local action, and both identified routes are closed]**; interpolation shape [open] |
 | `verify_a0_g5.py` | TFT's law tracks the 175-galaxy SPARC acceleration relation within its scatter | **[consistency with SPARC]** |
 
