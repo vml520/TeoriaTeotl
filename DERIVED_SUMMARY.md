@@ -128,6 +128,45 @@ Consequence (correct vs experiment): matter (ω) & antimatter (−ω) have oppos
 ## 5. DELIVERED — the toy solar system (`tft_solar_system.py`)
 Planets as **geodesics** of the Sun's emergent metric. **One** frozen constant K = G·M_sun = 4π² (1 AU→1 yr); G not derived (allowed). Output: 8 periods ≤0.06%, Kepler III T²/a³=1.0000, **Mercury 42.90″/cy** (obs 42.98). *Caveats: Kepler is by-construction (any 1/r); Mercury 43″ is the generic 1PN result, not unique to TFT.*
 
+  > **⚠ SCOPE CORRECTED 21 Aug 2026 (PPN0). The caveat above says Mercury's 43″ is "not unique to
+  > TFT". The accurate statement is stronger: it is not REACHABLE from what this framework derives.**
+  > The PPN perihelion factor is **(2 + 2γ − β)/3**, which equals 1 only when the **spatial** metric
+  > is present. This framework derives only the weak-field **00** equation, i.e. **γ = 0**, giving
+  > **14.33″/century — one third of the observed 42.98.** The 42.90″ above came from integrating a
+  > **full Schwarzschild metric**, whose spatial part is not produced here.
+  >
+  > **The four classic tests, scoped honestly:**
+  >
+  > | effect | needs | this framework, as derived |
+  > |---|---|---|
+  > | gravitational time dilation | g₀₀ | **✓ works** — solar redshift 2.1×10⁻⁶ |
+  > | spatial contraction | g_rr | absent |
+  > | light deflection | g₀₀ + g_rr | **half** — 0.88″ vs 1.75″ (Einstein's own 1911 value) |
+  > | frame dragging | g₀ᵢ | **zero** — vs Gravity Probe B's 37.2 ± 7.2 mas/yr |
+  >
+  > **Three of these are GAPS, not failures: lensing, contraction and dragging are never claimed
+  > here.** Mercury *is* claimed, and that is what this note corrects.
+  >
+  > **The structural reason, and it is one gap not four:** ∇²Φ = 4πc²|∇θ|² is a **scalar** equation
+  > yielding **one** function, where even the simplest static geometry needs **two** (g₀₀ and g_rr).
+  > **A scalar cannot be a geometry** — so this framework distorts *time* without distorting *space*.
+  > In GR the two are locked (g₀₀·g_rr = −1 exactly, at every radius) **by the field equation**, which
+  > is precisely what is absent here.
+  >
+  > **What still stands, and is unaffected:** the **1/r shape** and the **universal sign** (T⁰⁰ is
+  > positive-definite, so matter and antimatter both attract) are derived, and gravitational time
+  > dilation works. **What is imported is the metric's spatial part and G's value.**
+  >
+  > **A route exists and is short.** Writing the same geometry as a *flow* — the
+  > Gullstrand–Painlevé/river form this repo already uses for black holes (`BH0_prereg_blackhole.md`:
+  > *"√(2GM/r) = the inflow/contraction rate of space… River / Gullstrand–Painlevé model, from TFT's
+  > own inflow rate"*) — supplies the missing spatial part, and **an equal-and-opposite contraction is
+  > exactly γ = 1, giving 1.751″ against the observed 1.750″.** Giving the flow an angular component
+  > supplies g₀ᵢ and hence dragging. ⚠ **But that form IS Schwarzschild** (verified: identical g₀₀ from
+  > r/r_s = 2 to 1000), so it would fix these tests **by being GR** — a reformulation, not a rival —
+  > **and √(2GM/r) still imports GM**, exactly as the frozen K = GM above does. **Shape derived, scale
+  > imported.**
+
 ## 6. DERIVED — galaxy rotation curves without dark matter (a₀ program G0–G5)
 - **The derived-Newtonian sector FAILS** the Milky Way (32% off, baryons only) — same dark-matter problem as Newton. The fix is not in that sector.
 - **a₀ = cH₀/2π = 1.04×10⁻¹⁰ m/s² is DERIVED, not fitted** *(value corrected 18 Aug 2026: this read 1.08×10⁻¹⁰, which is cH₀/2π at H₀ = 70. At the Planck/DESI H₀ = 67.4 used by the paper and by `PREDICTIONS.md` the value is 1.04×10⁻¹⁰ — and that is the one consistent with the “87% of observed” figure quoted later in this file, since 1.04/1.20 = 87%.)* (MOND *fits* a₀): the phase field is **ultralight** (mass gap m = √Λ/ℓ₀ = the Hubble mass ⇒ Compton wavelength = Hubble radius ⇒ Λ ~ 10⁻¹²²). Its Compton frequency = H₀/2π (2π = h/ℏ = one S¹ cycle) → a₀ = c·f = cH₀/2π. **This is Vic's "α from Λ."** Effectively massless below the cosmic scale (→ §4 gravity), biting only at a₀. **Tested per-galaxy against SPARC** (`verify_a0_sparc_fit.py`, 2696 pts / 147 galaxies): our own log-space RAR fit gives g† = 1.16×10⁻¹⁰ (deep-MOND 1.33×10⁻¹⁰); the derived a₀ = 1.04–1.13×10⁻¹⁰ sits at **0.90–0.97 × g†**, scatter 0.133 dex (lit ~0.12) reproduced, scale universal where constrained → **consistent within ~20% systematics** (M/L, distances), nothing fitted to SPARC.
