@@ -221,6 +221,22 @@ Full record: `BLACK_HOLES.md`. **Reading two derived facts — √(2GM/r) = the 
 - **Two invariants and a sign** (corrected): ~~baryon number = winding charge ΣW~~ (**further corrected 18 Aug 2026, CHRG0/CHRG1: W is neither baryon number nor electric charge — it is the vortex/self-linking charge. See the winding row below; baryon number has no topological carrier, and electric charge is the Noether charge**); magnetic helicity = flux linking (2π)²ΣWᵢWⱼLkᵢⱼ (since A=∇θ ⇒ winding lines are flux tubes, Φ=2πW); chirality = sign of the helicity. **The third genuinely is a face of the second. The first is independent of both.**
 - **The chiral anomaly is NOT automatic and NOT derived** (was: *"automatic in TFT, not a postulate"* — **withdrawn**). Two independent reasons. **(i)** Every transition among G2's own three configurations has ΔB = 0 with ΔH ≠ 0, so the claimed ΔB = −κΔH forces **κ = 0**. The deeper reason is structural: winding number is *conserved* under continuous deformation — that is what makes it topological — so **it cannot supply the anomalous non-conservation an anomaly exists to describe.** **(ii)** The chiral anomaly is a fermion-loop effect, and **there are no fermions in this construction**; G2 imports the coefficient N_f explicitly. What G2 actually establishes is a structural **analogy** to the B/N_CS pair — genuine and reusable, but not a derivation.
 - **No mechanism exists for either genesis.** G1 found the minimal action *exactly* CP-symmetric, so net chirality is not forced; **G3 (net-winding mechanism) and G4 (coherent helical large-scale field) were never run.** And since A = ∇θ makes B = ∇×∇θ vanish except distributionally on the winding lines, TFT's "magnetic field" is supported on a set of **measure zero** — a static identification of vortices with quantised flux tubes, not a genesis and not a large-scale field.
+
+  > **⚠ CLOSED AT THE SOURCE 21 Aug 2026 (INFL0) — G3 and G4 are not merely unrun.** This framework's
+  > symmetry breaking is **pre-inflationary**, by a wide margin: with f = 1.22×10¹⁹ GeV and the tensor
+  > bound r < 0.03 giving H_inf < 4.3×10¹³ GeV, the largest de Sitter temperature the field can see is
+  > **H_inf/2π < 6.8×10¹² GeV — smaller than f by 6.6 orders.** The symmetry is therefore broken
+  > throughout inflation and never thermally restored. Reversing this would need H_inf ≈ 2πf ≈ 10²⁰
+  > GeV — seven orders above the observational limit and above the Planck mass — so it does not depend
+  > on the inflationary model.
+  >
+  > **Consequence: any defects formed at breaking are inflated away. This framework predicts NO cosmic
+  > strings, NO domain walls and NO primordial winding-line network in the observable universe** — a
+  > falsifiable statement this file did not previously make. **So G4's raw material is absent: the
+  > magnetogenesis route is closed at the source, not open-but-unfinished.**
+  >
+  > *(The same fact justifies treating θᵢ as a single global number rather than a distribution: one
+  > inflated patch covers the observable volume, so θᵢ is homogeneous.)*
 - **INPUT/OPEN:** the *net* helicity generated → magnitude of η ≈ 6×10⁻¹⁰ (an initial condition; this flag was pre-registered at G0 and was honest). *More speculative than the gravity work.*
 - **What survives:** quantised flux Φ=2πW on winding lines; helicity as a genuine invariant; chirality = sign H; the CP-symmetry result; and η's magnitude as an IC. **What does not: the one-invariant claim, the automatic anomaly, and both "genesis" labels.**
 
