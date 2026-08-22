@@ -30,7 +30,7 @@
 - **Face 3 — chirality:** sign of the helicity.
 All three are the *same* winding topology.
 
-## The anomaly is automatic
+## ~~The anomaly is automatic~~ — WITHDRAWN (the section is kept as the record of what was claimed)
 The chiral anomaly dB/dt = −κ dH/dt (⇔ B + κH conserved) says: generate magnetic helicity ⇔ generate a baryon asymmetry of definite handedness. In TFT this is **not a postulate** — baryon number *is* winding charge and magnetic helicity *is* the linking of that same winding, so any process that changes the winding topology changes both together. This is the Vachaspati baryogenesis–magnetogenesis link, here forced by topology.
 
 ## Status
