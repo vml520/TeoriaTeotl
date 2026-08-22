@@ -14,6 +14,17 @@ Honest floor carried forward (flagged, not tested here): WHY probability = charg
 fraction (the typicality identification). Stage 2's gate is only: does the S^1
 charge measure yield |c0|^2, exponent 2, additively.
 """
+# ----------------------------------------------------------------------------
+# FRAMING SUPERSEDED 22 Aug 2026 -- the RESULTS are unaffected.
+# This script's prose refers to "compact time" / the R^3 x S^1 structure. An audit
+# of what each result actually uses found that S^1 is the TARGET space of the phase
+# field, not a dimension of spacetime -- internal in the same sense the U(1) of
+# electromagnetism is internal. Every result here follows from SINGLE-VALUEDNESS OF
+# THE PHASE on its circle, and none requires time to be compact. The base manifold
+# is R^3 x R. NO NUMBER OR CONCLUSION CHANGES; the correct reading throughout is
+# "compact PHASE", not "compact TIME". See QUANTUM_FROM_COMPACT_TIME.md's banner.
+# ----------------------------------------------------------------------------
+
 import json
 import numpy as np
 

@@ -9,6 +9,12 @@ that anyone can run in a few seconds.
 > and are deliberately **not** rewritten when a later audit changes the answer, because rewriting them
 > would falsify the log. Several carry a superseded banner pointing to the correction. **If a gate
 > record and `DERIVED_SUMMARY.md` disagree, `DERIVED_SUMMARY.md` is current.**
+>
+> **The same applies to the `.py` scripts.** They are dated records that print what was computed
+> at the time. Where a later audit changed the reading, the script carries a banner at the top
+> saying so — **read the banner before the output.** The computations themselves are correct and
+> are deliberately left running as written; what a banner corrects is the *interpretation*, not
+> the numbers.
 
 > **What these are.** Demonstrations and consistency checks — **not proofs.** They show that the
 > framework's mechanisms produce the stated behavior, and that it reproduces known physics where it

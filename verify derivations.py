@@ -2,6 +2,17 @@
 Units: E0 = l0 = c = 1, so kappa_1 = E0*l0 = 1, omega_m = sqrt(L)*c/l0.
 EOM from corrected action:  theta_tt = c^2 theta_xx - (L c^2/l0^2) sin(theta) + f*c^2/kappa
 """
+# ----------------------------------------------------------------------------
+# FRAMING SUPERSEDED 22 Aug 2026 -- the RESULTS are unaffected.
+# This script's prose refers to "compact time" / the R^3 x S^1 structure. An audit
+# of what each result actually uses found that S^1 is the TARGET space of the phase
+# field, not a dimension of spacetime -- internal in the same sense the U(1) of
+# electromagnetism is internal. Every result here follows from SINGLE-VALUEDNESS OF
+# THE PHASE on its circle, and none requires time to be compact. The base manifold
+# is R^3 x R. NO NUMBER OR CONCLUSION CHANGES; the correct reading throughout is
+# "compact PHASE", not "compact TIME". See QUANTUM_FROM_COMPACT_TIME.md's banner.
+# ----------------------------------------------------------------------------
+
 import numpy as np
 
 # ── Check 1: kink rest energy  E_kink = 8 sqrt(Lambda) E0 ────────────────────

@@ -5,6 +5,21 @@ mass squeezes winding into a domain WALL of finite tension -> LINEAR
 confinement, string tension sigma = kink/wall tension proportional to sqrt(Lambda),
 the SAME sqrt(Lambda) that sets particle masses. Statistics from the SPIN arc.
 """
+# ============================================================================
+# PARTLY SUPERSEDED 22 Aug 2026 -- READ BEFORE THE OUTPUT.
+# This script states "ONE scale sqrt(Lambda) sets BOTH the hadron mass and the
+# confinement tension". That is a CODE-UNIT statement with no hadronic content in
+# physical units: carried through, the effective string tension is mu = 8 f^2 --
+# the mass gap CANCELS -- giving ~1.2e57 eV^2 against QCD's ~1.9e17, i.e. 40 orders
+# too large, because f is Planckian.
+# Two dimensional slips travel with it: the 1+1D kink MASS is equated with a 3+1D
+# wall TENSION, and "V(L) = sigma L" needs a STRING tension, not a wall tension.
+# WHAT SURVIVES IS STRONGER THAN WHAT WAS CLAIMED: the confinement MECHANISM is
+# FORCED, not assumed -- the single-minimum cosine collapses the vacuum manifold, so
+# every winding drags a domain wall and a winding-line end cannot be freed.
+# See DERIVED_SUMMARY.md section 8.
+# ============================================================================
+
 import json
 import numpy as np
 def hdr(s): print("\n"+"="*70+"\n"+s+"\n"+"="*70)

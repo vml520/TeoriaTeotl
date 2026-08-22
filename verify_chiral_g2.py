@@ -15,6 +15,24 @@ generating magnetic helicity generates a baryon asymmetry, with kappa TOPOLOGICA
 winding and the fermion count N_f). The COEFFICIENT is derived up to N_f (an input); the NET amount
 of helicity generated (hence net eta) is an initial condition / deep-unknown.
 """
+# ============================================================================
+# SUPERSEDED 22 Aug 2026 -- READ BEFORE THE OUTPUT.
+# This script PRINTS three claims that have since been WITHDRAWN:
+#   "ONE topological invariant, three faces"  -- baryon number (linear in W) and
+#      magnetic helicity (quadratic, linking-dependent) are TWO INDEPENDENT
+#      invariants. Counterexamples: two unlinked W=+1 windings give B=2, H=0; a
+#      linked W=+1/W=-1 pair gives B=0, H=+8pi^2.
+#   "W = winding = baryon number"             -- baryon number has NO carrier in
+#      this framework (see DERIVED_SUMMARY.md section 9).
+#   "the anomaly is AUTOMATIC in TFT"         -- every transition among these
+#      configurations has dB=0 with dH!=0, forcing kappa=0; and winding number is
+#      CONSERVED, so it cannot supply anomalous non-conservation. There are also no
+#      fermions here to have an anomaly.
+# THE COMPUTATION IS CORRECT AND WAS REPRODUCED INDEPENDENTLY. The linking numbers,
+# fluxes and helicities it prints are right. What is withdrawn is the IDENTIFICATION
+# drawn from them. See G2_chiral_anomaly.md and DERIVED_SUMMARY.md section 7.
+# ============================================================================
+
 import numpy as np
 
 def linking_number(C1, C2):

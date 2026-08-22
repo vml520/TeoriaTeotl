@@ -18,6 +18,16 @@ the EQUAL-weight sum of the two internal winding directions: the mass
 channel is the winding-reversal-EVEN projection. The odd projection is
 A sin(alpha). M4 asks what the cancellation point is in this language.
 """
+# ============================================================================
+# NOUN CORRECTED 22 Aug 2026. This script's prose says "charge = winding DERIVED".
+# ELECTRIC CHARGE IS THE U(1) NOETHER CHARGE, not the winding: a winding
+# configuration sources no monopole field (its Gauss flux is zero at every radius),
+# and pi_2(S^1) = 0 means an S^1-valued field on R^3 has no point-like topological
+# charge at all. Charge integrality comes from the NUMBER operator's spectrum on the
+# single-valued circle. NO COMPUTATION IN THIS SCRIPT CHANGES -- only what the
+# conserved quantity is called. See DERIVED_SUMMARY.md's substrate row.
+# ============================================================================
+
 import json
 import numpy as np
 

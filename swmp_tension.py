@@ -2,6 +2,13 @@
 Pre-reg: SWMP0_prereg.md. Is f>M_Pl robust, and does TFT offer a one-S^1-compatible
 evasion (monodromy via winding)? No tuning; Omega_Lambda, f0 are inputs.
 """
+# ============================================================================
+# NOUN CORRECTED 22 Aug 2026. This script prints "winding = charge = the theory's
+# integer". ELECTRIC CHARGE IS THE U(1) NOETHER CHARGE, not the winding (see
+# DERIVED_SUMMARY.md's substrate row). The MONODROMY ARGUMENT IS UNAFFECTED: it
+# needs only that the WINDING is an integer, which it is.
+# ============================================================================
+
 import json
 import numpy as np
 

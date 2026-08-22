@@ -4,6 +4,17 @@ COHERENT amplitude sums (not arbitrary probability reweightings). That (a)
 derives the correlation = cos(a-b) with the hidden variable CANCELLING, and (b)
 caps it at Tsirelson 2sqrt2 automatically -- resolving the 2.90 overshoot.
 """
+# ----------------------------------------------------------------------------
+# FRAMING SUPERSEDED 22 Aug 2026 -- the RESULTS are unaffected.
+# This script's prose refers to "compact time" / the R^3 x S^1 structure. An audit
+# of what each result actually uses found that S^1 is the TARGET space of the phase
+# field, not a dimension of spacetime -- internal in the same sense the U(1) of
+# electromagnetism is internal. Every result here follows from SINGLE-VALUEDNESS OF
+# THE PHASE on its circle, and none requires time to be compact. The base manifold
+# is R^3 x R. NO NUMBER OR CONCLUSION CHANGES; the correct reading throughout is
+# "compact PHASE", not "compact TIME". See QUANTUM_FROM_COMPACT_TIME.md's banner.
+# ----------------------------------------------------------------------------
+
 import json
 import numpy as np
 def hdr(s): print("\n"+"="*68+"\n"+s+"\n"+"="*68)
