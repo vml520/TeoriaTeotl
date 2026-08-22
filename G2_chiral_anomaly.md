@@ -11,7 +11,7 @@
 > were reproduced independently — the identifications drawn from them are not.** See
 > `DERIVED_SUMMARY.md` §7 for the corrected statement.
 
-*Runnable: `verify_chiral_g2.py`. Result: baryon number, magnetic helicity, and chirality are the same winding topology, so the chiral anomaly is automatic in TFT.*
+*Runnable: `verify_chiral_g2.py`. **Result as originally stated — and withdrawn, see the banner above:** "baryon number, magnetic helicity, and chirality are the same winding topology, so the chiral anomaly is automatic in TFT." The computation is correct; the identification drawn from it is not.*
 
 ## The identifications (each standard, non-fitted)
 - **A = ∇θ** — the phase gradient is the EM potential (the Goldstone/Stückelberg picture that gave the Coulomb sector).

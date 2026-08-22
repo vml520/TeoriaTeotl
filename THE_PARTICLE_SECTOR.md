@@ -10,8 +10,18 @@ of the particle picture — spin and statistics, the neutrino, parity, and quark
 confinement — and draws the honest boundary where a U(1) framework stops.
 
 The through-line: **one topological invariant — the winding-line linking /
-helicity, already derived in the baryo/magneto/chirality arc — turns out to
-carry spin, statistics, baryon number, and chirality all at once.** Everything
+helicity — carries spin, statistics and chirality.**
+
+> **⚠ Corrected 22 Aug 2026.** This opening previously read *"…carries spin, statistics, **baryon
+> number**, and chirality all at once"*, and cited the baryo/magneto/chirality arc as having derived
+> it. **Both parts are withdrawn.** **Baryon number is not carried by this invariant — it has no
+> carrier in this framework at all** (see `DERIVED_SUMMARY.md` §9). And the arc's *"one invariant,
+> three faces"* claim was itself withdrawn: baryon number ΣW and magnetic helicity
+> (2π)²ΣWᵢWⱼLkᵢⱼ are **two independent invariants**, not one — the counterexamples are explicit
+> (two unlinked W=+1 windings give B=2, H=0; a linked W=+1/W=−1 pair gives B=0, H=+8π²).
+> **What survives, and is the honest core of this note: spin, statistics and chirality do come from
+> the one linking invariant.** The status table below was corrected on 18 Aug; **this opening line
+> was missed, and is corrected now.** Everything
 below is a reading of that one fact, plus the sine-Gordon mass and the mass
 dial. Labels: **[derived]** · **[computed]** · **[consistency]** ·
 **[proposed]** · **[floor]** (an absolute value / non-abelian group the U(1)
