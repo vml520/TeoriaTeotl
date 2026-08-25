@@ -15,6 +15,7 @@ authors:
   - family-names: Luna
     given-names: V.
     affiliation: "Independent researcher, Tucson, Arizona, USA"
+    orcid: "https://orcid.org/0009-0007-7307-5504"
 repository-code: "https://github.com/vml520/TeoriaTeotl"
 license: MIT
 version: 1.0.0
