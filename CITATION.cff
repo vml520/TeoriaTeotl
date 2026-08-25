@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the archived release."
+title: "TeoriaTeotl: computational demonstrations for Teotl Field Theory"
+abstract: >-
+  Runnable checks accompanying the Teotl Field Theory programme: a phase field on
+  ordinary space and time, from which the code derives or tests electromagnetism,
+  emergent gravity, the galactic acceleration scale, quantum-correlation results
+  (CHSH closure, Born rule, number-phase uncertainty), and the particle sector.
+  Each script is standalone, prints its own result, and states what it establishes.
+  The repository is deliberately a dated record: scripts and gate notes are not
+  rewritten when a later audit changes a reading; corrections are carried in banners,
+  and DERIVED_SUMMARY.md holds the current status of every claim.
+type: software
+authors:
+  - family-names: Luna
+    given-names: V.
+    affiliation: "Independent researcher, Tucson, Arizona, USA"
+repository-code: "https://github.com/vml520/TeoriaTeotl"
+license: MIT
+version: 1.0.0
+date-released: 2026-08-25
+keywords:
+  - dark energy
+  - quintessence
+  - modified Newtonian dynamics
+  - acceleration scale
+  - pseudo-Nambu-Goldstone boson
+  - galaxy rotation curves
+  - emergent gravity
+  - quantum foundations

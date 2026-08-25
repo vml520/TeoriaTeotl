@@ -1,0 +1,23 @@
+{
+  "title": "TeoriaTeotl: computational demonstrations for Teotl Field Theory",
+  "description": "<p>Runnable checks accompanying the Teotl Field Theory programme: a phase field on ordinary space and time, from which the code derives or tests electromagnetism, emergent gravity, the galactic acceleration scale, quantum-correlation results (CHSH closure, Born rule, number&ndash;phase uncertainty), and the particle sector.</p><p>Each script is standalone, prints its own result, and states what it establishes. The repository is deliberately a <strong>dated record</strong>: scripts and gate notes are not rewritten when a later audit changes a reading. Corrections are carried in banners at the top of the affected file, and <code>DERIVED_SUMMARY.md</code> holds the current status of every claim. Where a gate record and the summary disagree, the summary is current.</p><p>The SPARC galaxy analysis is reproducible from public data with the code included here.</p>",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Luna, V.",
+      "affiliation": "Independent researcher, Tucson, Arizona, USA"
+    }
+  ],
+  "keywords": [
+    "dark energy",
+    "quintessence",
+    "modified Newtonian dynamics",
+    "acceleration scale",
+    "pseudo-Nambu-Goldstone boson",
+    "galaxy rotation curves",
+    "emergent gravity",
+    "quantum foundations"
+  ],
+  "access_right": "open"
+}
