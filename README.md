@@ -213,7 +213,12 @@ keep their own home; this section is the link between them, not a merge of them.
 ## Cite
 
 If you use this code, please cite the archived release:
-*(a Zenodo DOI has not yet been minted — cite the repository URL and commit hash until it is)*
+**Concept DOI (always resolves to the latest release — cite this):**
+`https://doi.org/10.5281/zenodo.22101610`
+
+**This version (v1.0.0):** `https://doi.org/10.5281/zenodo.22101611`
+
+Or use `CITATION.cff` in the repository root, which GitHub renders as a ready-made citation.
 
 ## License
 

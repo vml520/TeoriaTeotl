@@ -4,7 +4,7 @@
 
 > **What these are.** Demonstrations and consistency checks — **not proofs.** Labels: **[derived]** follows from the framework · **[consistency]** reproduces known physics, not a unique prediction · **[input]** a value the framework does not fix · **[open]** attempted, not solved. Nothing here claims uniqueness or proves the theory; that is what experiment is for. The framework is **in progress** — this is what it does so far. Together the programs span **five orders of magnitude — particle → planet → galaxy → cosmos — from one field and one set of equations.**
 
-**Repository:** `https://github.com/vml520/TeoriaTeotl` · **Archived (cite this):** *(a Zenodo DOI has not yet been minted — cite the repository URL and commit hash until it is)*
+**Repository:** `https://github.com/vml520/TeoriaTeotl` · **Archived (cite this):** `https://doi.org/10.5281/zenodo.22101610` (concept DOI, always the latest release; v1.0.0 is `10.5281/zenodo.22101611`)
 
 ---
 
