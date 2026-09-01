@@ -15,7 +15,7 @@ import importlib.util, sys
 import numpy as np
 
 spec = importlib.util.spec_from_file_location(
-    "teotl_qc", "/tmp/TT3/teotl qc.py")
+    "teotl_qc", "/tmp/TT3/teotl_qc.py")
 mod = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(mod)
 

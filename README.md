@@ -34,7 +34,7 @@ its geometry and topology).
 **Convocatoria / collaboration.** This project's open call for scientific collaboration — its
 philosophical roots, epistemic discipline, open problems, and why its intellectual home is Mexico —
 is in [`CONVOCATORIA.md`](CONVOCATORIA.md) (in Spanish). The quantum-sector experiments it describes
-(`teotl qc.py`, `teotl chsh.py`, `maxcut tft.py`, `verify derivations.py`, `winding_solver.py`) live
+(`teotl_qc.py`, `teotl chsh.py`, `maxcut tft.py`, `verify derivations.py`, `winding_solver.py`) live
 in this repository alongside the demonstrations below — including the CHSH/Bell **negative result**
 (the local field saturates S = 2.0000 and does not cross it), reported with the same discipline as
 the positives.

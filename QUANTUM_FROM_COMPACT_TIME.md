@@ -14,7 +14,7 @@ companion, extending the CHSH result in `teotl chsh.py`.*
 > conclusion in this note changes** — what changes is the attribution. A full retitling is deferred;
 > this note records the correction in the meantime.
 
-The qubit emulator (`teotl qc.py`) reproduces single qubits faithfully — a lone
+The qubit emulator (`teotl_qc.py`) reproduces single qubits faithfully — a lone
 qubit is just a phase and an amplitude, which a classical field carries. The
 hard part is entanglement: the Bell/CHSH correlations that are provably too
 strong for any *local* classical description. `teotl chsh.py` reported the
