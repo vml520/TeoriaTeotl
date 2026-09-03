@@ -406,6 +406,58 @@ accessible states and phase space is a count of accessible states: they are the 
 reframing is exact, and therefore empirically empty. There is no measurement that can distinguish
 them, and the reason is structural rather than a limit of effort.
 
+## 10b. Teotl quanta — a working emulator, and what it does NOT settle (2 Sep 2026)
+
+Built on one principle: **everything is teotl.** A teotl quantum is the field's minimum excitation —
+a point carrying one internal phase, cycling. |n⟩ = cycles carried; energy E_C n²; coupling moves one
+cycle. Everything below is consequence, not addition.
+
+**`teotl_rotor_qc.py` — DERIVED.** Self-test: X-gate fidelity 0.9950, Ramsey phase error 4.4×10⁻¹⁶,
+CZ conditional-phase error 0.0109, **Bell concurrence 0.9997**, norms exact. Works where a soliton
+field version failed, because the spectrum is exactly integer, the energy is bounded below (a real
+ground state), and H is a finite matrix — so evolution is exactly unitary and the numerical drift
+that defeated the field version is structurally impossible.
+
+**Phase count p (hopping moves n by ±p) — DERIVED selection rule.** Exchange requires **p₁ = p₂**;
+not imposed, it falls out of the operator, since the exchange moves p₁ cycles off one and p₂ onto the
+other. Suppression **15.9× / 65.2× / 146.4×** for p = 1/2/3. **A second, stronger selector follows
+from mass = cycle rate:** energy conservation gives **n_A − n_B = p**, measured at 92× suppression
+(p = 2). Two quanta can be coupled or decoupled by changing their **states**.
+
+**Two caveats, both measured, both against my own first claims:**
+- **The ZZ channel is p-blind** (0.29726 / 0.29823 / 0.29860 matched vs mismatched). p blocks only
+  *exchange*; mismatched quanta still entangle. **A selection rule on one channel, not a
+  connectivity switch.**
+- **No commensurate enhancement.** Multiples ≈ coprimes; suppression tracks **|p₁ − p₂|**.
+
+**`teotl_field_qc.py` — both maps (ℝ³ position, S¹ phase), couplings DERIVED.** Range = the
+**reduced** Compton length; coupling J ∝ e^{−r/λ}/r (Yukawa). **Prediction: λ_n ∝ 1/n², so a more
+excited quantum has SHORTER reach** — influence radius 2.92/0.73/0.32 for n = 1/2/3. Free parameters
+**2 → 1**. The sphere of influence is a **rate limit, not an on/off switch**: concurrence ~0.997 at
+every separation, CZ time 2.6 → 46.9 → 7675 for sep 0.5 → 2 → 6.
+
+**Metric — SOURCED (Construction B).** Uses the weak-field form, **not** g_ij = δ_ij(1+|∇θ|²/E₀²),
+which §10 records as falsified. Energy density ≥ 0 everywhere ⇒ contraction has one sign. **More
+excited ⇒ deeper well:** dτ/dt = 0.971/0.830/0.533 for n = 1/2/3.
+
+**⚠ WHAT THIS DOES NOT SETTLE — three open items, stated plainly:**
+1. **The metric is SOURCED, not DYNAMICAL.** There is still **no equation of motion for the metric**
+   anywhere in this work. Computing the geometry the quanta produce is not the same as geometry that
+   evolves. **This is the gap between having a gravity sector and having gravity.**
+2. **The n² mass spectrum does NOT give the lepton hierarchy.** μ/e needs √206.77 = 14.379 (not an
+   integer). τ/e needs 58.968, near 59 — **recorded as coincidence and refused**, since the other
+   ratio misses badly. Structural: tower ratios *decrease* (4, 2.25, 1.78) while the hierarchy
+   *increases* (207, 17). Same wall §10's spectrum work already reached.
+3. **Not competitive as a QC tool.** 2 qubits, no noise models, no scaling past ~3–4 quanta.
+   `scqubits` does the Cooper-pair box, cos(2φ) and coherence estimation properly. **What is claimed
+   here is the derivation, not the tool.**
+
+**Independently reproduced a real device class.** The phase-count structure at p = 2 is the cos(2φ)
+qubit, whose parity protection — *"couples only charge states within the same parity sector"* — is
+exactly the sector decoupling measured here. Arrived at from the principle, not imported.
+
+---
+
 ## 11. Scorecard
 | Piece | Status |
 |---|---|
