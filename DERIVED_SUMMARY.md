@@ -63,6 +63,10 @@
 
 ---
 
+> **This file is the DETAIL.** For the one-page picture — what is claimed, what is open,
+> what was withdrawn — see [`STATUS.md`](STATUS.md). Sections below are numbered in the order
+> results were *derived*, not the order they are best *read*; STATUS.md gives the reading order.
+
 ## 0. Regime that works
 Productive regime: the **conservative** second-order field, then a **complex** field ψ = ρe^{iθ}. The **dissipative** (Kuramoto) and **topological-knot** attempts all failed — see §10. Don't restart there.
 
@@ -459,10 +463,17 @@ exactly the sector decoupling measured here. Arrived at from the principle, not 
 
 ### The mass hierarchy: both counting routes excluded, and ε reduces to σ (3 Sep 2026)
 
-**A new, non-circular bound.** E_n = E_C n² is **superadditive**, so splitting always lowers energy
-(|2⟩→|1⟩+|1⟩ costs 4, yields 2). **Every state above n = 1 is unstable to fragmentation — each teotl
-quantum is intrinsically a two-state system**, by dynamics rather than by truncation. Unlike the
-cutoff routes, this bound follows from the spectrum's shape and **not** from ℓ₀ = cτ₀.
+**A bound, and it is not circular — but it is REGIME-DEPENDENT.** E_n = E_C n² is **superadditive**,
+so splitting always lowers energy (|2⟩→|1⟩+|1⟩ costs 4, yields 2); every state above n = 1 is then
+unstable to fragmentation and each quantum is two-state. This follows from the spectrum's shape and
+**not** from ℓ₀ = cτ₀.
+
+> **⚠ CORRECTION (3 Sep 2026, audit): this is a CHARGE-REGIME result and does NOT apply to TFT.**
+> Superadditivity is a property of E ∝ n². **TFT requires the *phase* regime** (long-range phase
+> coherence is phase localisation), where the tower is approximately harmonic, E_n ≈ ħω(n+½), and
+> splitting **costs** energy — |1⟩+|1⟩ is 3.0 against a whole of 2.5. **There every state is stable:
+> no fragmentation bound, and quanta are not two-state.** The bound holds for the emulator, which
+> runs at E_J/E_C = 0.05, not for the theory.
 
 **So particles must be composites. Binding was tested and fails too:** M(N)/M(1) = 1, 2, 3, 4, 5 —
 exactly linear, consecutive ratios 2.0 → 1.25, decreasing toward 1.

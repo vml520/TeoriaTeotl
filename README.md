@@ -3,6 +3,10 @@
 Companion code for *The galactic acceleration scale from a compact phase: what the topology fixes, and what it does not* (V. Luna, 2026). Each program is a small, self-contained check
 that anyone can run in a few seconds.
 
+> ### ▶ **New here? Read [`STATUS.md`](STATUS.md) first — one page.**
+> It states what is claimed, what is open (three numbers), what was withdrawn, and what is closed,
+> with pointers to the derivation for each. Everything below is the detail behind it.
+>
 > **How to read the documents in this repo.** `DERIVED_SUMMARY.md` carries the **current** status of
 > every claim and is the file to trust. The `*_prereg.md` and gate-record files (`G0_…`, `G1_…`,
 > `G2_…`, and similar) are **dated records**: they state what was predicted and computed at the time

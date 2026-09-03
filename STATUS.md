@@ -1,0 +1,86 @@
+# Teotl Field Theory — current status
+
+*One page. What is claimed, what is open, what was withdrawn. Everything here links to
+`DERIVED_SUMMARY.md` for the derivation and to a runnable script for the number.*
+
+**Last audited 3 September 2026.**
+
+---
+
+## The theory in a paragraph
+
+Physical reality is a single complex field ψ = ρe^{iθ}. Its **phase** turns on a circle, and **time
+is the cycling of that phase** — so mass is a rate, not a substance. The circle is not assumed: it is
+the field's vacuum manifold, so compactness is *earned*. From that one premise a large part of
+quantum mechanics follows as consequence rather than postulate, gravity appears as the geometry the
+field's energy induces, and the dark sectors become aspects of one field. The programme's discipline
+is that every claim is gated, and negative results are recorded as prominently as positive ones.
+
+---
+
+## DERIVED — holds independently of how the field is described
+
+These rest only on the low-energy field living on a circle. **Audited 3 Sep 2026: none is
+regime-dependent; the teotl-quanta reframing changes none of them.**
+
+| claim | where |
+|---|---|
+| **Charge quantisation** — integer, from single-valuedness of the phase | §2, §7d |
+| **Number–phase uncertainty** ΔN·Δθ ≥ ½ — a theorem, not a postulate | §7d |
+| **CHSH closure → 2√2**, and the **Born rule** \|c\|² from envariance | §7d |
+| **Spin-statistics** — spin-½ from ℤ₂ self-linking of vortex lines | §7c |
+| **Gravity's shape and sign** — 1/r, universal attraction, matter and antimatter alike | §4 |
+| **Solar-system reproduction** — Kepler + Mercury's 42.9″, one frozen constant | §5 |
+| **a₀ ∝ cH₀ *scaling*** — because the field *is* the dark energy, so Λ cancels | §6 |
+
+---
+
+## OPEN — three dimensionless numbers, and that is the whole list
+
+Consolidated 1–3 Sep 2026. A dozen previously-declared "floors" reduce to these.
+
+| number | what it is | status |
+|---|---|---|
+| **Λ** ≈ 8.7×10⁻¹²² | the cosmological constant | **shared with all of physics** — not TFT's alone |
+| **σ** | the soliton-interior shape | the mass hierarchy and the metric coefficient both reduce to it |
+| **Nξ** | the kinetic normalisation | physical but UV-anchored; inert at low energy |
+
+**The cutoff *scale* is not among them** — E₀, ℓ₀, τ₀ follow from measured {ħ, c, G}. What is
+undetermined is σ's *value* at that scale, which is the ordinary effective-field-theory situation.
+
+---
+
+## WITHDRAWN — claimed, then retracted by our own checks
+
+Listed so a reader meets them once, here, rather than discovering them scattered.
+
+| withdrawn claim | why | when |
+|---|---|---|
+| a₀'s **2π** is derived | the field equation gives cω₀; the 2π is a factor of 6.28 the framework cannot supply | Aug 2026 |
+| **charge = winding** | charge is the Noether charge; winding has no monopole moment | Aug 2026 |
+| **baryon number = winding** | no carrier; the proton-stability claim went with it | Aug 2026 |
+| metric ansatz g_ij = δ_ij(1+\|∇θ\|²/E₀²) | wrong shape (1/r⁴); the weak-field form is what works | Aug 2026 |
+| **T-duality** prevents the infinities | a field winds for free; only extended objects stretch | Sep 2026 |
+| quanta are **two-state** (fragmentation bound) | true in the charge regime only; TFT's regime is harmonic and stable | Sep 2026 |
+
+---
+
+## CLOSED — do not repeat
+
+| question | verdict |
+|---|---|
+| SU(2)/SU(3) from one circle | **no** — four independent routes, one wall (added structure required) |
+| modified inertia from an action | **no** — four studies; the mechanism is a horizon heuristic |
+| the lepton hierarchy from *counting* | **no** — excitation and binding both give ratios that flatten while the data explode |
+| compact time **replaces** quantisation | **no** — it fixes the spectrum *within* QM; it does not derive QM |
+
+---
+
+## Where to look
+
+- **`DERIVED_SUMMARY.md`** — every derivation, with the script that computes it.
+- **`PREDICTIONS.md`** — the falsifiable edges.
+- **`teotl_rotor_qc.py`, `teotl_field_qc.py`** — the quanta emulator (self-test: `python3 teotl_rotor_qc.py`).
+  **Note:** it runs in the *charge* regime; TFT proper needs the *phase* regime. It is a working
+  emulator, not a model of TFT's regime.
+- **`teotl_substrate.py`** — **abandoned, marked at the top of the file.** Kept for the record.
