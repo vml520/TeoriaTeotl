@@ -35,12 +35,35 @@ regime-dependent; the teotl-quanta reframing changes none of them.**
 
 ---
 
-## OPEN — three dimensionless numbers, and that is the whole list
+## OPEN (1) — undetermined constants
 
-Consolidated 1–3 Sep 2026. A dozen previously-declared "floors" reduce to these.
+Consolidated 1–3 Sep 2026. A dozen previously-declared "floors" reduce to **three numbers**.
 
 | number | what it is | status |
 |---|---|---|
+| **Λ** ≈ 8.7×10⁻¹²² | the cosmological constant | **shared with all of physics** — not TFT's alone |
+| **σ** | the soliton-interior shape | the mass hierarchy and the metric coefficient both reduce to it |
+| **Nξ** | the kinetic normalisation | physical but UV-anchored; inert at low energy |
+
+**The cutoff *scale* is not among them** — E₀, ℓ₀, τ₀ follow from measured {ħ, c, G}. What is
+undetermined is σ's *value* at that scale, which is the ordinary effective-field-theory situation.
+
+## OPEN (2) — unanswered questions
+
+Distinct from the constants above: these are **not missing numbers but missing physics**, and work
+could still close them.
+
+| question | where it stands |
+|---|---|
+| **Is there an equation of motion for the metric?** | **No.** The metric is *sourced* but not dynamical. Getting one needs covariantisation — which four structures lean against — plus an induced coefficient that is the σ floor. |
+| **What carries baryon number?** | **Nothing identified.** Winding was withdrawn as the carrier, and the proton-stability claim went with it. |
+| **What does the winding number W do?** | **Unassigned.** It carries a local sector label: no monopole moment, confined, no relics. A proposed T-duality role was withdrawn (3 Sep). |
+| **Does the field account for the dark sector?** | **Not fully.** The phase sector cannot clump on cluster scales; the amplitude sector clumps but is not transparent. Neither supplies the observed lensing offset. |
+| **What sets the mass hierarchy's angle?** | Structure is exact (√m_k = M(1 + A cos(δ + 2πk/3)) reproduces all three leptons), but the one free angle **reduces to σ**. Degree-6 dynamics can place it; that is a fit, not a derivation. |
+| **The particle spectrum** | The least-developed sector: no first-principles masses or couplings. |
+| **Is TFT's phase-regime requirement negotiable?** | Unresolved, and it matters — the argument for it is from what other results *need*, **not a theorem**. It decides whether the quanta emulator models the theory or is a separate object sharing a Hamiltonian. |
+
+---|---|---|
 | **Λ** ≈ 8.7×10⁻¹²² | the cosmological constant | **shared with all of physics** — not TFT's alone |
 | **σ** | the soliton-interior shape | the mass hierarchy and the metric coefficient both reduce to it |
 | **Nξ** | the kinetic normalisation | physical but UV-anchored; inert at low energy |
