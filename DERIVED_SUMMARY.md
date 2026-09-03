@@ -481,6 +481,28 @@ n ≡ 0 mod 3 appear, so degrees 3–5 admit only n = 3 and force extrema onto 6
 **But the degree-6 coefficient is the sextic, i.e. σ. So ε is not a new free parameter: it reduces to
 σ**, the floor already recorded. The count of independent unknowns does not grow.
 
+### T-duality: examined and ruled out for TFT (3 Sep 2026)
+
+**The mechanism is real.** E² = (n/R)² + (wR)² is exactly invariant under R → k/R with n ↔ w
+(verified to 1e-12), so probing below the self-dual radius costs the same as probing above its
+reciprocal — there is no new physics below it. **It is the one mechanism that prevents
+short-distance infinities without an external anchor**, and unlike a cutoff it is an internal
+symmetry.
+
+**TFT cannot have it, and the reason is general.** A compact *field* on a circle of circumference L
+has θ(x+L) = θ(x) + 2πw, hence ∂θ = 2πw/L and **E_w = (f²/2)(2πw)²/L — inversely proportional to L,
+the same direction as momentum.** A *string* winding scales as **L**, the opposite direction, which
+is what makes the swap possible.
+
+**T-duality requires an extended object that must physically stretch to wrap. A field winds for
+free — the gradient simply spreads out.** So no duality is available on any circle: not the compact
+time direction, not a spatial one.
+
+Two related claims are withdrawn: that this route escapes the cutoff problem (it would, but is
+unavailable), and that it assigns a role to the winding sector (it does not — the winding number is
+a vortex charge in non-compact space, not momentum's partner on a shared compact dimension).
+
+
 ---
 
 ## 11. Scorecard
