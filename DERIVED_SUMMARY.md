@@ -456,6 +456,31 @@ excited ⇒ deeper well:** dτ/dt = 0.971/0.830/0.533 for n = 1/2/3.
 qubit, whose parity protection — *"couples only charge states within the same parity sector"* — is
 exactly the sector decoupling measured here. Arrived at from the principle, not imported.
 
+
+### The mass hierarchy: both counting routes excluded, and ε reduces to σ (3 Sep 2026)
+
+**A new, non-circular bound.** E_n = E_C n² is **superadditive**, so splitting always lowers energy
+(|2⟩→|1⟩+|1⟩ costs 4, yields 2). **Every state above n = 1 is unstable to fragmentation — each teotl
+quantum is intrinsically a two-state system**, by dynamics rather than by truncation. Unlike the
+cutoff routes, this bound follows from the spectrum's shape and **not** from ℓ₀ = cτ₀.
+
+**So particles must be composites. Binding was tested and fails too:** M(N)/M(1) = 1, 2, 3, 4, 5 —
+exactly linear, consecutive ratios 2.0 → 1.25, decreasing toward 1.
+
+**The structural argument, independent of coupling strength:** the observed log-mass increments are
+5.332 then 2.822 — they **shrink by half**. A binding law adds more binding as N grows (N(N−1)/2
+pairs), so its increments **grow or flatten**. Wrong direction. **⇒ Not merely "excitation towers
+fail" but "anything monotone in a count fails."**
+
+**The interference route survives, and M3's pointer is confirmed.** Under the ℤ₃ sum only harmonics
+n ≡ 0 mod 3 appear, so degrees 3–5 admit only n = 3 and force extrema onto 60° multiples (excluded at
+26,620σ). **Degree 6 is the first to admit {3, 6}** and can place an extremum at the observed
+δ = 132.73282° with ratio a₆/a₃ = −0.318 (O(1), untuned), a genuine minimum for a₃ < 0.
+
+**This is a FIT, not a derivation** — one equation, one ratio, fed the observed δ; nothing spare.
+**But the degree-6 coefficient is the sextic, i.e. σ. So ε is not a new free parameter: it reduces to
+σ**, the floor already recorded. The count of independent unknowns does not grow.
+
 ---
 
 ## 11. Scorecard
