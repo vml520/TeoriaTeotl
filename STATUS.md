@@ -3,7 +3,7 @@
 *One page. What is claimed, what is open, what was withdrawn. Everything here links to
 `DERIVED_SUMMARY.md` for the derivation and to a runnable script for the number.*
 
-**Last audited 3 September 2026.**
+**Last audited 4 September 2026.**
 
 ---
 
@@ -30,8 +30,25 @@ regime-dependent; the teotl-quanta reframing changes none of them.**
 | **CHSH closure → 2√2**, and the **Born rule** \|c\|² from envariance | §7d |
 | **Spin-statistics** — spin-½ from ℤ₂ self-linking of vortex lines | §7c |
 | **Gravity's shape and sign** — 1/r, universal attraction, matter and antimatter alike | §4 |
-| **Solar-system reproduction** — Kepler + Mercury's 42.9″, one frozen constant | §5 |
+| **Solar-system reproduction** — Kepler + Mercury's 42.9″, one frozen constant *(⚠ Mercury needs the spatial metric, which costs one **inserted** posit — see the note below)* | §5 |
 | **a₀ ∝ cH₀ *scaling*** — because the field *is* the dark energy, so Λ cancels | §6 |
+
+> **The metric sector, completed 4 September 2026 — and priced.** One **inserted** condition,
+> **f·h = 1** (the fundamental cell occupying a fixed coordinate extent per axis), fixes the spatial
+> metric and gives **γ = 1** (Cassini 0.91 σ, against 4.35×10⁴ σ before). Lorentz covariance — which
+> the framework already had — then supplies the vector sector for **free**: **frame dragging 39.2
+> mas/yr** against GP-B's 37.2 ± 7.2 (**0.28 σ**). **All four classic tests now clear: dilation,
+> deflection 1.7512″, Mercury 42.98″/cy, Shapiro 1.0000, dragging 39.2.**
+>
+> **It is NOT in the DERIVED table above, and deliberately.** f·h = 1 does not follow from the
+> framework's primitives, and its *reading* is chosen: the 4-volume reading gives **γ = 1/3** and is
+> excluded. **One inserted posit plus one chosen reading** — cheaper than importing the field
+> equations, not free.
+>
+> **And these four tests do not discriminate.** The resulting 1PN metric **is** GR's, which is the
+> stated aim (reinterpret GR so it can meet the quantum sector, not refute it) — but it means clearing
+> them is a **consistency floor, not evidence for the framework**. The first real difference is at
+> 2PN: **1.6×10⁻¹⁶ at Mercury.** Real, unmeasurable.
 
 ---
 
@@ -68,7 +85,7 @@ could still close them.
 
 | question | where it stands |
 |---|---|
-| **Is there an equation of motion for the metric?** | **No.** The metric is *sourced* but not dynamical. Getting one needs covariantisation — which four structures lean against — plus an induced coefficient that is the σ floor. |
+| **Is there an equation of motion for the metric?** | **Still no** — the metric is *sourced*, not dynamical, and that is unchanged. **But the metric's missing COMPONENTS are no longer missing (4 Sep 2026):** one inserted condition, **f·h = 1**, fixes the spatial sector (**γ = 1**, Cassini 0.91 σ), and Lorentz covariance then supplies the vector sector free (**frame dragging 39.2 mas/yr**, GP-B 0.28 σ). All four classic tests now clear. **The components are had; the *dynamics* generating them are not.** |
 | **What carries baryon number?** | **Nothing identified.** Winding was withdrawn as the carrier, and the proton-stability claim went with it. |
 | **What does the winding number W do?** | **Unassigned.** It carries a local sector label: no monopole moment, confined, no relics. A proposed T-duality role was withdrawn (3 Sep). |
 | **Does the field account for the dark sector?** | **Not fully.** The phase sector cannot clump on cluster scales; the amplitude sector clumps but is not transparent. Neither supplies the observed lensing offset. |

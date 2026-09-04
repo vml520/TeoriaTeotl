@@ -171,6 +171,64 @@ Planets as **geodesics** of the Sun's emergent metric. **One** frozen constant K
   > **and √(2GM/r) still imports GM**, exactly as the frozen K = GM above does. **Shape derived, scale
   > imported.**
 
+  > ---
+  >
+  > ### ✅ SUPERSEDED 4 September 2026 — the spatial and vector sectors are now reachable
+  >
+  > **The note above is correct as of 21 August and is retained in full. Its central negative claims
+  > — Mercury "not reachable", dragging "zero", "a scalar cannot be a geometry" — no longer hold.**
+  >
+  > **What changed.** Studies GIJ0 and GOI0 supplied the two missing metric sectors. Writing
+  > g₀₀ = −f², g_ij = h²δ_ij, one condition — **f·h = 1**, i.e. *the fundamental cell (τ₀, ℓ₀)
+  > occupies a position-independent coordinate extent per axis* — fixes the whole spatial sector and
+  > gives **γ = 0.999999988** (Cassini: 0.91 σ, against 4.35×10⁴ σ at γ = 0). The **vector** sector
+  > then costs nothing: TFT's action is Lorentz invariant (LOR0), so boosting the static solution
+  > gives h̄₀ᵢ = (v/c)h̄₀₀ by tensor transformation alone, **|ratio to GR| = 1.000001**.
+  >
+  > | effect | 21 Aug (γ = 0) | now | observed |
+  > |---|---|---|---|
+  > | time dilation | ✓ | ✓ | ✓ |
+  > | light deflection | 0.8756″ | **1.7512″** | 1.7512″ |
+  > | Mercury perihelion | 14.33″/cy | **42.98″/cy** | 42.98″/cy |
+  > | Shapiro delay | 0.50 × GR | **1.0000** | 1.0 |
+  > | frame dragging | 0.00 | **39.20 mas/yr** | 37.2 ± 7.2 |
+  >
+  > **⚠ Credit where the record already had it, and this matters for how much GIJ0 can claim.** The
+  > note above *already identified the missing lock* — *"in GR the two are locked (g₀₀·g_rr = −1
+  > exactly, at every radius) by the field equation"* — and *already found a route to γ = 1* via the
+  > Gullstrand–Painlevé flow form. **f·h = 1 is that same lock.** GIJ0 did **not** discover that γ = 1
+  > is reachable; the corpus knew on 21 August. What GIJ0 adds is a **motivation stated in this
+  > framework's own terms** (cells tiling the posited background) rather than adopting the GP form
+  > wholesale, and GOI0 adds the vector sector for free. **And it cannot be claimed that the per-axis
+  > reading was reached independently of the 21 August note, which names exactly that condition.**
+  >
+  > **⚠ The 21 August objection — *"it would fix these tests by being GR — a reformulation, not a
+  > rival"* — still applies, and is now the stated GOAL rather than a defect:** the aim is to
+  > *reinterpret* GR so it can meet the quantum sector, not to refute it. **But the consequence must
+  > be stated plainly: because the 1PN metric here IS GR's, these four tests do NOT discriminate
+  > between this framework and GR. They are a consistency floor that had to be cleared, not evidence
+  > for the framework.** The first genuine difference appears at 2PN (f·h = 1 − M²/4r² for
+  > Schwarzschild), where it is **1.6×10⁻¹⁶ at Mercury — real, and unmeasurable.**
+  >
+  > **⚠ The cost, labelled.** **f·h = 1 is INSERTED, not derived** — it does not follow from
+  > {ψ = ρe^{iθ}, ℓ₀ = cτ₀, mass = cycle rate}. **And its reading is chosen, not forced:** the
+  > 4-volume reading (√−g = 1) gives **γ = 1/3** and is excluded; only the **per-axis** reading gives
+  > γ = 1. The honest total is **one inserted posit plus one chosen reading**, which is cheaper than
+  > importing the field equations but is not free.
+  >
+  > **What was checked and did NOT go the framework's way, reported because it is what makes the
+  > above non-trivial:** the closure relation ℓ₀ = cτ₀ **alone cannot fix the spatial metric** (it
+  > relates two proper-frame quantities; h drops out identically), and the intuitive
+  > excitation-size reading gives **γ = −1, the wrong sign**. On the vector side, the natural
+  > superfluid reading — shift = phase flow — gives **∇×∇θ = 0 and therefore exactly zero dragging**.
+  >
+  > **One structural question was raised and settled (P6R0):** is f·h = 1 a gauge condition or a
+  > physical principle needing a preferred frame? **Neither.** Gauge cannot change an observable, and
+  > this moves deflection by 0.88″; and the construction references only **source–observer relative**
+  > velocity, so the preferred-frame parameters α₁, α₂, α₃ are **structurally absent**. The condition
+  > is boost-invariant at first order in Φ, failing only at O(Φ²) with coefficient
+  > −8β²/(1−β²)² (measured −3.555869 vs analytic −3.555556).
+
 ## 6. DERIVED — galaxy rotation curves without dark matter (a₀ program G0–G5)
 - **The derived-Newtonian sector FAILS** the Milky Way (32% off, baryons only) — same dark-matter problem as Newton. The fix is not in that sector.
 - **⚠ WITHDRAWN 4 Sep 2026 — this read "a₀ = cH₀/2π = 1.04×10⁻¹⁰ m/s² is DERIVED, not fitted".** The **proportionality a₀ ∝ cH₀ is derived** (and is Milgrom's, 1983); the **coefficient is not**. TWOPI1 found TFT's own field equation gives the *reduced* Compton range (decay length 1.000000 vs reduced, 0.159155 vs full) ⇒ a₀ = cω₀, and the thermal route's 2π's cancel ⇒ a = cH₀ — both landing on the value this project's own test excludes at 5.5 scatter-widths. INER0 closed the modified-inertia escape. **The data select the 2π; the theory does not supply it.** See `A0_STATUS.md`. Original entry follows for provenance: **a₀ = cH₀/2π = 1.04×10⁻¹⁰ m/s²** *(value corrected 18 Aug 2026: this read 1.08×10⁻¹⁰, which is cH₀/2π at H₀ = 70. At the Planck/DESI H₀ = 67.4 used by the paper and by `PREDICTIONS.md` the value is 1.04×10⁻¹⁰ — and that is the one consistent with the “87% of observed” figure quoted later in this file, since 1.04/1.20 = 87%.)* (MOND *fits* a₀): the phase field is **ultralight** (mass gap m = √Λ/ℓ₀ = the Hubble mass ⇒ Compton wavelength = Hubble radius ⇒ Λ ~ 10⁻¹²²). Its Compton frequency = H₀/2π (2π = h/ℏ = one S¹ cycle) → a₀ = c·f = cH₀/2π. **This is Vic's "α from Λ."** Effectively massless below the cosmic scale (→ §4 gravity), biting only at a₀. **Tested per-galaxy against SPARC** (`verify_a0_sparc_fit.py`, 2696 pts / 147 galaxies): our own log-space RAR fit gives g† = 1.16×10⁻¹⁰ (deep-MOND 1.33×10⁻¹⁰); the derived a₀ = 1.04–1.13×10⁻¹⁰ sits at **0.90–0.97 × g†**, scatter 0.133 dex (lit ~0.12) reproduced, scale universal where constrained → **consistent within ~20% systematics** (M/L, distances), nothing fitted to SPARC.
