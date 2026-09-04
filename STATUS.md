@@ -91,6 +91,31 @@ undetermined is σ's *value* at that scale, which is the ordinary effective-fiel
 > excitations do exist in this potential and survive to t = 2400 retaining 34% of core energy, against
 > 0.2% for a pure-phase control — so "an excitation that persists" is a real object here. It is
 > **long-lived, not eternal**: the late-time decay rate is −2.0×10⁻⁵ per unit time and still falling.)*
+>
+> **What sets that lifetime, and what makes anything here exactly stable (LIFE0, 4 Sep 2026).**
+> The excitation oscillates at **ω ≈ 0.66 m** — *below* the mass gap — so radiation at the fundamental
+> is kinematically shut. The only open channel is the **second harmonic** (2ω ≈ 1.32 > m), suppressed
+> by **P(2ω)/P(ω) ≈ 2×10⁻⁷**. **That suppression is the lifetime**, and the single ratio ω/m fixes
+> both facts: how far below the gap it sits decides both that the fundamental is closed and how weak
+> the escaping harmonic is.
+>
+> **A *charged* configuration is a different case: it is absolutely stable.** Coleman's criterion —
+> a charge-Q lump cannot decay into Q free quanta of mass m if E/Q < m — is satisfied with margin:
+> **E/Q = 0.681 and 0.695 against m = 1.** Decay is **forbidden**, not slow. The conserved quantity
+> doing the work is this framework's own **U(1) Noether charge, which is electric charge** (CHRG1).
+> **So the stable particle here is the charged one, for the same reason the electron is stable in
+> nature: it is the lightest charged thing and charge conservation has nowhere to send it.**
+>
+> **The constraint that follows, and it is a real one.** The uncharged excitation has **Q = 0**, so
+> the criterion is not merely unmet but **undefined** — there is no conserved quantity to obstruct
+> decay, which is therefore rate-limited and never forbidden. **Nothing in this framework's inventory
+> supplies exact stability except the Noether charge.** A purely uncharged persistent excitation
+> cannot be a stable particle here.
+>
+> *Caveat: the charged runs still shed ~4% of core energy, consistent with relaxation off the initial
+> profile plus absorber losses rather than an open decay channel — but that run does not separate the
+> two, and E/Q was evaluated at a single time. The stability claim rests on the criterion, not on a
+> converged profile.*
 
 ## OPEN (2) — unanswered questions
 
