@@ -4,12 +4,39 @@
 
 ## Tier 1 — Genuine, distinctive predictions (lead with these)
 
-**1. The galactic acceleration scale is not free: a₀ = cH₀/2π ≈ 1.1×10⁻¹⁰ m/s².**
-Parameter-free — set by the cosmic expansion rate. MOND must *fit* this; TFT *predicts* it. Matches observation within ~10%. **[prediction, matches data]**
+**1. The galactic acceleration scale is tied to the expansion rate: a₀ ∝ cH₀.**
+The **proportionality** follows from the mechanism (the field is the dark energy; Λ cancels). The
+**coefficient is not derived** — see the withdrawal below. **[open — mechanism derived, coefficient not]**
 
-*Tested directly against SPARC, per galaxy* (`verify_a0_sparc_fit.py`; 2696 points from 147 galaxies): fitting the Radial Acceleration Relation ourselves gives g† = 1.16×10⁻¹⁰ m s⁻² (deep-MOND a₀ = 1.33×10⁻¹⁰), against which TFT's derived a₀ = cH₀/2π = 1.04–1.13×10⁻¹⁰ sits at **0.90–0.97 × g†** — consistent within the ~20% systematic band set by mass-to-light ratios and distances, with the relation's tightness reproduced (0.133 dex vs the literature's ~0.12) and the same scale recovered across galaxy mass wherever the data constrain it. Nothing here is fitted to SPARC; H₀ is an input.
+> ## ⚠ WITHDRAWN (4 September 2026): "a₀ = cH₀/2π, parameter-free"
+>
+> **This entry previously read "The galactic acceleration scale is not free: a₀ = cH₀/2π…
+> Parameter-free… MOND must *fit* this; TFT *predicts* it. [prediction, matches data]". That claim
+> is withdrawn.** The 16 August note below is retained for provenance but is **itself understated**.
+>
+> Study **TWOPI1** (26 Aug 2026) checked two independent routes and **both return the factor 1, not
+> 1/2π**: the linearised field equation's propagator pole fixes the range to the **reduced** Compton
+> wavelength (fitted decay length **1.000000** vs reduced, **0.159155** vs full), giving a₀ = cω₀;
+> and the Milgrom-style thermal condition carries 2π on *both* sides, so they **cancel exactly**,
+> giving a = cH₀. **Both land on a₀ = cH₀ — the value this project's own test records as 5.5
+> scatter-widths from g† and "excluded outright".**
+>
+> So the 2π is **not an absorbable convention** but a **6.28× factor the framework needs to reach the
+> data and cannot obtain from its own dynamics.** The escape TWOPI1 left open — a genuine
+> *modified-inertia* mechanism — was then closed by **INER0**, which found field inertia ≡ stiffness
+> ≡ f², so TFT is committed to modified *gravity*.
+>
+> **What survives:** the mechanism (**a₀ ∝ cH₀**), a proportionality **Milgrom established in 1983**;
+> and the SPARC work below, which is empirical and unaffected. **The data select a 2π-ish factor
+> (2π at 0.5 scatter-widths, π at 1.8, none at 5.5) — the data select it, the theory does not derive
+> it.** Full statement: **`A0_STATUS.md`**.
 
-> **Correction (16 August 2026) — the 2π.** This sentence previously ended "the 2π is the derived
+*Tested directly against SPARC, per galaxy* (`verify_a0_sparc_fit.py`; 2696 points from 147 galaxies): fitting the Radial Acceleration Relation ourselves gives g† = 1.16×10⁻¹⁰ m s⁻² (deep-MOND a₀ = 1.33×10⁻¹⁰), against which the value cH₀/2π = 1.04–1.13×10⁻¹⁰ *(the coefficient selected by the data, not derived — see above)* sits at **0.90–0.97 × g†** — consistent within the ~20% systematic band set by mass-to-light ratios and distances, with the relation's tightness reproduced (0.133 dex vs the literature's ~0.12) and the same scale recovered across galaxy mass wherever the data constrain it. Nothing here is fitted to SPARC; H₀ is an input.
+
+> **Correction (16 August 2026) — the 2π.** ⚠ *Retained for provenance; **SUPERSEDED** by the
+> 4 September withdrawal above, which found this framing too mild — the dynamics do not merely
+> fail to force the convention, they deliver the other answer.*
+> This sentence previously ended "the 2π is the derived
 > content." **That overstates and is withdrawn.** The 2π is the conversion h/ℏ between angular and
 > cyclic frequency, and it is *absorbable*: writing a₀ = cν₀ with ν₀ the mass gap's cyclic rate
 > removes it entirely. So the substantive claim is **"the relevant rate is cyclic, not angular,"**
@@ -30,9 +57,11 @@ Parameter-free consequence of the deep-MOND limit. Observed: 3.85 ± 0.09 (SPARC
 inheriting MOND's most-discussed failure. In clusters a residual mass discrepancy of ≈1.5–2 survives
 the modification, and **this framework's position is slightly worse rather than better**: cluster
 accelerations sit near the transition (≈0.8 a₀ at 1 Mpc for Coma), where g ≈ √(g_N a₀) makes the
-required baryonic mass scale as 1/a₀ — so a₀ *derived* at 1.04×10⁻¹⁰ rather than *fitted* at
-1.2×10⁻¹⁰ raises the requirement by ≈9% and the residual to ≈1.6–2.2. **A fitted a₀ can drift upward
-to relieve this; a derived one cannot.** No resolution is offered, and nothing native rescues it:
+required baryonic mass scale as 1/a₀ — so adopting 1.04×10⁻¹⁰ rather than the *fitted* 1.2×10⁻¹⁰
+raises the requirement by ≈9% and the residual to ≈1.6–2.2. **A freely fitted a₀ can drift upward to
+relieve this; one pinned to cH₀/2π cannot** *(though, per `A0_STATUS.md`, that coefficient is now
+selected by the data rather than derived — so this liability is softer than previously stated)*.
+No resolution is offered, and nothing native rescues it:
 there is no larger external field for the most massive bound systems, tuning the interpolation would
 be fitting, and a dark-matter component is what the framework exists to avoid. **[known failure,
 stated]**
@@ -45,7 +74,8 @@ The field is the S¹ phase with the sine-Gordon cosine potential = a pseudo-Namb
 *(Updated 15 Aug 2026: re-integrated at the corrected decay constant, giving **wₐ ≈ −0.20** — −0.196 as −dw/da at a=1, −0.168 under a CPL fit over 0<z<2. This supersedes the earlier −0.24. The result is insensitive to f: holding w₀ = −0.88 and re-shooting the misalignment, wₐ moves only from −0.213 to −0.194 across f = 1.5–10 M_Pl.)* Opposite of a cosmological constant, and opposite of a phantom. **[prediction — the no-phantom feature is the sharp falsifier]**
 
 **5. ⭐ Galaxies predict dark energy (the centerpiece).**
-Because a₀ and dark energy are one field (mass ~ H₀, giving both a₀ = cH₀/2π and just-thawing-now), the scale that fits *galaxy rotation curves* **forces** the dark-energy equation of state: w₀ ≈ −0.88 and a specific wₐ ≈ −0.20, with w ≥ −1. No other framework connects these (MOND has no dark energy; ΛCDM has neither a₀ nor evolution). **The falsifier is categorical, not a matter of degree:** DESI's w₀wₐCDM fit prefers a *phantom crossing* (w < −1 in the past) that a thawing scalar cannot produce.
+Because a₀ and dark energy are one field (mass ~ H₀, giving both a₀ ∝ cH₀ — *coefficient not
+derived, see `A0_STATUS.md`* — and just-thawing-now), the scale that fits *galaxy rotation curves* **forces** the dark-energy equation of state: w₀ ≈ −0.88 and a specific wₐ ≈ −0.20, with w ≥ −1. No other framework connects these (MOND has no dark energy; ΛCDM has neither a₀ nor evolution). **The falsifier is categorical, not a matter of degree:** DESI's w₀wₐCDM fit prefers a *phantom crossing* (w < −1 in the past) that a thawing scalar cannot produce.
 
 **Status as of August 2026 — the tension still runs against this prediction.** Across two releases the preference for an *evolving* equation of state has firmed rather than faded: 2.6σ in DR1 (DESI+CMB) → **3.1σ in DR2**, and 2.8–4.2σ once supernovae are added. The DR2 best fit (DESI+CMB+Pantheon+) is w₀ = −0.838 ± 0.055, wₐ = −0.62 (+0.22/−0.19) — a trajectory that **crosses w = −1 in the past** — and DESI reports that non-phantom models are **disfavoured**. TFT and DESI *agree* on what separates both from a cosmological constant: dark energy evolves, and ΛCDM is disfavoured. They part on the magnitude of wₐ — on whether w ever dipped below −1. We state the prediction (**w ≥ −1**) and we state that the current measurements do not meet it. If the crossing hardens with DR3 / Euclid, **TFT's dark-energy sector is excluded.** **Refreshed 7 August 2026.** The most recent DESI analysis — DR2 Results IV, adding the full-shape Lyman-α forest (arXiv:2607.27410) — puts the evolving-DE preference at **2.7σ (DESI+CMB)** and **3.2σ (with supernovae)**, *softer* than the earlier DR2 figures of 3.1σ and 2.8–4.2σ. **This is recorded because it happened, not because it helps.** The direction is unchanged: the dedicated Lyman-α analysis (arXiv:2510.21976, A&A 2026) finds *every* parameterisation favouring w₀ > −1, wₐ < 0 and **w₀ + wₐ < −1** — Quintom-B, i.e. phantom in the past and quintessence today, which is a crossing, and a crossing is what this prediction forbids. A tension easing from 4.2σ to 3.2σ is still a tension. No combination has approached 5σ in either direction; Lyman-α with galaxy BAO alone reaches only ~1.6σ.
 

@@ -34,7 +34,7 @@ Reading $mc^2 = hf$ literally — the clock *is* the turning of the phase, $d\ta
 
 The step is a **change of variables plus a single postulate**: *assume the fundamental object is one $U(1)$ phase, and refuse to insert anything by hand.* When you do that, the parts of physics that are secretly "phase geometry" — integer quantization, gauge structure, the two Noether currents, emergent-metric gravity, phase-as-time — reassemble themselves without being separately assumed.
 
-Even the galaxy result is "the same equation, one length moved": the phase's mass gap $m=\sqrt{\Lambda}/\ell_0$ sits either at the microscopic scale (ordinary screening) or at the Hubble scale (→ a MOND-like law with $a_0 = cH_0/2\pi$). One knob, two regimes.
+Even the galaxy result is "the same equation, one length moved": the phase's mass gap $m=\sqrt{\Lambda}/\ell_0$ sits either at the microscopic scale (ordinary screening) or at the Hubble scale (→ a MOND-like law with $a_0 \propto cH_0$). One knob, two regimes. *(The coefficient in $a_0 = cH_0/2\pi$ is selected by the data, not derived — see `A0_STATUS.md`.)*
 
 This is why it can feel like *a backdoor into what was already there* — because it largely **is** what was already there: Noether's theorem, the homotopy of $S^1$, $U(1)$ bundles, Sakharov's emergent gravity — re-derived from a single doorway instead of assembled from separate postulates. Finding that many things are one thing in disguise is what **unification** means.
 

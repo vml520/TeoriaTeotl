@@ -35,7 +35,7 @@ ordinary external-time reading fits the same data.
 If that same S¹ is the cosmological dark-energy field (an axion-like pNGB), a single
 circle at the Hubble scale ties together four things:
 
-- **a₀ = cH₀/2π ≈ 1.05×10⁻¹⁰ m s⁻²** — 87% of the observed galactic acceleration
+- **a₀ ∝ cH₀**, numerically cH₀/2π ≈ 1.05×10⁻¹⁰ m s⁻² — 87% of the observed galactic acceleration. **The coefficient is not derived (withdrawn 4 Sep 2026, `A0_STATUS.md`);** the proportionality is, and is Milgrom's (1983).
   scale, the 2π from the circle;
 - the **dark-energy equation of state**: the cosine potential gives thawing
   quintessence with **w ≥ −1 always** (no phantom crossing, analytic) and
@@ -159,7 +159,7 @@ as the framework's other integer/initial-condition inputs).
 **Does the tension leak into R³ uncertainty?** No — it is **decoupled**. The field's
 de Sitter fluctuation δφ ~ H₀/2π is *f-independent* and equals **a₀/c**; super-
 Planckian f only shrinks the *angle* uncertainty δθ ~ H₀/(2πf) (the phase
-classicalizes). So the observable R³ acceleration-uncertainty scale a₀ = cH₀/2π is
+classicalizes). So the observable R³ acceleration-uncertainty scale a₀ ∝ cH₀ *(coefficient not derived, `A0_STATUS.md`)* is
 set by the circle's size (H₀), **protected** from the super-Planckian problem, which
 stays confined to field space. (The Planck-scale duality still holds abstractly:
 super-Planckian f is the field-space mirror of the R³ minimal-length/GUP limit — but
