@@ -32,7 +32,7 @@
 | file | what it shows | status |
 |---|---|---|
 | `verify_a0_g1.py`…`g3.py` | the galactic acceleration scale, a₀ ∝ cH₀, set by the cosmic expansion | proportionality **[derived]**; **coefficient NOT derived — withdrawn 4 Sep 2026, see `A0_STATUS.md`** |
-| `verify_a0_g4.py`, `milkyway_rotation.py` | modified inertia → deep-MOND limit; Milky Way curve to ~3% (baryons only); **Tully–Fisher exponent exactly 4** (obs 3.85±0.09) | slope-4 **[derived]**; **mechanism [heuristic — see the correction in `DERIVED_SUMMARY.md` §5: the horizon argument cannot be derived from a local action, and both identified routes are closed]**; interpolation shape [open] |
+| `verify_a0_g4.py`, `milkyway_rotation.py` | modified **gravity** → deep-MOND limit *(INER0: inertia ≡ stiffness ≡ f², so "modified inertia" is the wrong label)*; Milky Way curve to ~3% (baryons only); **Tully–Fisher exponent exactly 4** (obs 3.85±0.09) | slope-4 **[derived]**; **mechanism [heuristic — see the correction in `DERIVED_SUMMARY.md` §5: the horizon argument cannot be derived from a local action, and both identified routes are closed]**; interpolation shape [open] |
 | `verify_a0_g5.py` | TFT's law tracks the 175-galaxy SPARC acceleration relation within its scatter | **[consistency with SPARC]** |
 
 ## E. Dark energy — and the paper's central prediction

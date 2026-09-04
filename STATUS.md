@@ -48,6 +48,19 @@ Consolidated 1–3 Sep 2026. A dozen previously-declared "floors" reduce to **th
 **The cutoff *scale* is not among them** — E₀, ℓ₀, τ₀ follow from measured {ħ, c, G}. What is
 undetermined is σ's *value* at that scale, which is the ordinary effective-field-theory situation.
 
+> **⚠ σ's status is contingent on the particle model (noted 4 Sep 2026).** The sextic term whose
+> coefficient σ is exists for exactly one reason: **Derrick's theorem**, which forces a *static 3-D
+> lump* to carry a stabiliser. That requirement comes from modelling the particle as a **Q-ball /
+> amplitude soliton**. Under a particle model of **persistent excitations** — a mode rather than a
+> lump — **Derrick never applies, no stabiliser is required, and σ is not a parameter of the theory
+> at all.** Study IMPORT0 (4 Sep 2026) found σ is therefore an artefact of a **modelling choice**,
+> not a floor the framework itself imposes.
+>
+> **This is NOT yet a withdrawal.** The corpus still records the amplitude-soliton reading, and which
+> particle model TFT actually asserts is unsettled. **Recorded here so the reader knows σ's status
+> depends on that open question, and that everything reducing to σ — the mass-hierarchy angle, the
+> metric coefficient, the fission window — inherits the same contingency.**
+
 ## OPEN (2) — unanswered questions
 
 Distinct from the constants above: these are **not missing numbers but missing physics**, and work
@@ -62,14 +75,6 @@ could still close them.
 | **What sets the mass hierarchy's angle?** | Structure is exact (√m_k = M(1 + A cos(δ + 2πk/3)) reproduces all three leptons), but the one free angle **reduces to σ**. Degree-6 dynamics can place it; that is a fit, not a derivation. |
 | **The particle spectrum** | The least-developed sector: no first-principles masses or couplings. |
 | **Is TFT's phase-regime requirement negotiable?** | Unresolved, and it matters — the argument for it is from what other results *need*, **not a theorem**. It decides whether the quanta emulator models the theory or is a separate object sharing a Hamiltonian. |
-
----|---|---|
-| **Λ** ≈ 8.7×10⁻¹²² | the cosmological constant | **shared with all of physics** — not TFT's alone |
-| **σ** | the soliton-interior shape | the mass hierarchy and the metric coefficient both reduce to it |
-| **Nξ** | the kinetic normalisation | physical but UV-anchored; inert at low energy |
-
-**The cutoff *scale* is not among them** — E₀, ℓ₀, τ₀ follow from measured {ħ, c, G}. What is
-undetermined is σ's *value* at that scale, which is the ordinary effective-field-theory situation.
 
 ---
 

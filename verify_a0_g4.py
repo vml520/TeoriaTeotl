@@ -27,7 +27,7 @@ R_H = c/H0
 print("  crossover: acceleration length l_a = c^2/a  equals the Hubble radius at a ~ cH0:")
 print(f"    c^2/a0 = {c**2/a0:.3e} m ;  2*pi*R_H = {2*np.pi*R_H:.3e} m  (equal: a0 = cH0/2pi)\n")
 
-# --- 2. Milky Way with the DERIVED deep-MOND limit (simple interpolation, derived a0) ---
+# --- 2. Milky Way with the deep-MOND limit (a0 coefficient data-selected, see A0_STATUS.md) ---
 Md, Rd = 5.0e10*Msun, 2.6*kpc
 Mb, ab = 1.5e10*Msun, 0.5*kpc
 Mg, Rg = 1.2e10*Msun, 7.0*kpc
@@ -42,17 +42,19 @@ def V_tft(R):
 R_kpc = np.array([5, 8, 12, 16, 20, 25])
 V_obs = np.array([225, 230, 222, 214, 205, 198])
 V     = np.array([V_tft(r*kpc) for r in R_kpc])
-print("  Milky Way, TFT modified-inertia law (derived a0, limit-respecting interpolation):")
+print("  Milky Way, TFT modified-GRAVITY law (INER0: inertia == stiffness == f^2, so")
+print("  'modified inertia' is the wrong label); a0 coefficient data-selected:")
 print("  " + "{:>7s} {:>12s} {:>10s}".format("R(kpc)", "V_TFT(km/s)", "observed"))
 for r, v, vo in zip(R_kpc, V, V_obs):
     print("  " + "{:>7.0f} {:>12.1f} {:>10.0f}".format(r, v, vo))
 rms = np.sqrt(np.mean(((V-V_obs)/V_obs)**2))*100
 print(f"  rms deviation = {rms:.1f}%   (empirical-RAR fit was 3.6%)\n")
 
-# --- 3. the DERIVED parameter-free prediction: baryonic Tully-Fisher ---
+# --- 3. baryonic Tully-Fisher: the EXPONENT 4 is parameter-free; the normalisation uses a0 ---
 Mbar = Md+Mb+Mg
 Vflat = (G*Mbar*a0)**0.25/1e3
-print("  baryonic Tully-Fisher (DERIVED, parameter-free): V_flat = (G M_bary a0)^(1/4)")
+print("  baryonic Tully-Fisher: V_flat = (G M_bary a0)^(1/4) -- the EXPONENT 4 is derived and")
+print("  parameter-free; the NORMALISATION carries a0, whose coefficient is data-selected.")
 print(f"    M_bary = {Mbar/Msun:.2e} Msun  ->  V_flat = {Vflat:.0f} km/s   (observed MW ~200-220)")
 print("\n  DERIVED: mechanism (modified inertia from horizons) + deep-MOND limit + Tully-Fisher.")
 print("  MODEL-DEPENDENT (open): the exact interpolation shape in the transition -- as in MOND.")

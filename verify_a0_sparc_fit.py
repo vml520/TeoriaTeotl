@@ -79,7 +79,8 @@ gbar = G_UNIT * Vbar2[cut] / R[cut]
 gid = ID[cut]
 
 print("=" * 72)
-print("TFT's derived a0 vs a direct per-galaxy fit to SPARC")
+print("TFT's a0 scale vs a direct per-galaxy fit to SPARC")
+print("(coefficient NOT derived -- see A0_STATUS.md; proportionality a0 ~ cH0 is Milgrom 1983)")
 print("=" * 72)
 print(f"  usable points after cuts (Q<3, inc>=30 deg, e_V/V<0.1): {cut.sum()}"
       f" from {len(np.unique(gid))} galaxies")
@@ -96,7 +97,7 @@ def fit_a0_log(gb, go):
     return 10 ** minimize_scalar(f, bounds=(-11, -9), method="bounded").x
 
 
-# --- (1) the fitted scale, and TFT's parameter-free prediction ---------------
+# --- (1) the fitted scale, and the cH0/2pi value (coefficient data-selected) --
 gdag = fit_a0_log(gbar, gobs)
 deep = gbar < 1e-11                                    # deep-MOND regime: g_obs^2/g_bar -> a0
 a0_dm = np.median(gobs[deep] ** 2 / gbar[deep])
@@ -141,7 +142,12 @@ print("  within the ~20% systematic band set by mass-to-light and distance uncer
 print("  The relation's tightness (~0.13 dex) is reproduced, and the scale is the same across")
 print("  galaxy mass wherever the data actually constrain it (the most massive bin has too few")
 print("  sub-a0 points to constrain a0, so its apparent offset is not evidence of a trend).")
-print("  HONEST BOUNDS: a0's *coefficient* (the 2 pi) is the derived content; the absolute")
+print("  HONEST BOUNDS (revised 4 Sep 2026): this line previously read 'a0's *coefficient*")
+print("  (the 2 pi) is the derived content'. THAT IS WITHDRAWN -- TWOPI1 found the framework")
+print("  does not supply the 2 pi (field eqn gives the REDUCED Compton range => a0 = c*w0;")
+print("  the thermal route's 2 pi cancel => a0 = cH0, excluded at 5.5 scatter-widths).")
+print("  DERIVED: the proportionality a0 ~ cH0, which is Milgrom 1983. The coefficient is")
+print("  selected by the data. See A0_STATUS.md. The absolute")
 print("  cosmological scale H0 is an input. This is a consistency test passed, not a precision")
 print("  measurement -- the 10-20% gap is within systematics and is not claimed as agreement")
 print("  to better than that. Mass-to-light ratios are held at the standard 0.5/0.7, not fitted.")
