@@ -77,6 +77,20 @@ undetermined is σ's *value* at that scale, which is the ordinary effective-fiel
 > particle model TFT actually asserts is unsettled. **Recorded here so the reader knows σ's status
 > depends on that open question, and that everything reducing to σ — the mass-hierarchy angle, the
 > metric coefficient, the fission window — inherits the same contingency.**
+>
+> **⚠ CORRECTED the same day (PART0, 4 Sep 2026): σ does NOT dissolve. The note above named only one
+> of the sextic's two jobs.** Derrick is one. **Bounding the potential below is the other, and it
+> applies to time-dependent excitations too.** With the sextic removed, V = ½ρ² − ρ⁴ is **unbounded
+> below** and the field runs away; requiring V ≥ 0 with a unique vacuum at ρ = 0 needs the
+> discriminant 1 − 2σ < 0, i.e. **σ > 1/2** — verified numerically (at σ = 0.25, min V = −1.104 and a
+> test excitation collapsed into the well rather than decaying). **So: σ's DERRICK role dissolves
+> under a persistent-excitation particle model; its BOUNDEDNESS role does not, and that role is
+> independent of which particle model is chosen. σ stays on this list.**
+>
+> *(What the same study did establish for the particle model: persistent, localised, **uncharged** 3-D
+> excitations do exist in this potential and survive to t = 2400 retaining 34% of core energy, against
+> 0.2% for a pure-phase control — so "an excitation that persists" is a real object here. It is
+> **long-lived, not eternal**: the late-time decay rate is −2.0×10⁻⁵ per unit time and still falling.)*
 
 ## OPEN (2) — unanswered questions
 
