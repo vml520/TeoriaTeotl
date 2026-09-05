@@ -267,10 +267,50 @@ Planets as **geodesics** of the Sun's emergent metric. **One** frozen constant K
   > f·h = 1 at all; induced Einstein–Hilbert supplies it for free.**
   >
   > **What is still NOT derived, and this is unchanged by any of the above:** the **O(1) coefficient
-  > of G** (regularisation scheme, species count — EGC0's floor); whether one-loop induction is more
-  > than a heuristic; and whether the induced term is the leading one. A numerical check with cutoff
-  > Λ = 1/ℓ₀ returns G's order **by construction**, because ℓ₀ is *defined* through G — that is an
-  > identity, not evidence. **"The route exists" is not "the dynamics are derived."**
+  > of G** (regularisation scheme, species count — EGC0's floor), and whether one-loop induction is
+  > more than a heuristic. A numerical check with cutoff Λ = 1/ℓ₀ returns G's order **by
+  > construction**, because ℓ₀ is *defined* through G — that is an identity, not evidence.
+  > **"The route exists" is not "the dynamics are derived."**
+  >
+  > **CLOSED 5 Sep 2026 — "is the induced R term the leading one?"** It was listed here as open the
+  > day before; it should not have been, because the number is not close. The suppression parameter is
+  > **R·ℓ₀²** (curvature in cutoff units): **1.4×10⁻⁹²** at the solar surface, **2.8×10⁻⁷⁸** at a
+  > neutron-star surface, and **1.8×10⁻⁷⁶** even just outside a solar-mass black hole. **The induced
+  > R term dominates everywhere; higher-curvature corrections are not a threat.**
+  >
+  > The confusion was that **"higher order" means two different things here, and they differ by ~86
+  > orders of magnitude.** At the solar surface the **post-Newtonian** parameter is **4.2×10⁻⁶** while
+  > the **higher-curvature** parameter is **1.4×10⁻⁹²**. The 2PN deviation noted above lives in the
+  > first; quantum-gravity corrections live in the second. Conflating them produced a worry that was
+  > never real.
+  >
+  > ### The contraction picture — a third route, and the one matching this framework's ontology
+  >
+  > In this framework spacetime **contracts** rather than curves. Technically that is the
+  > **Gullstrand–Painlevé** form already used for black holes here:
+  > ds² = −(1 − v²/c²)c²dt² + 2v·dr·dt + dr² + r²dΩ², with **v = √(2GM/r)** the inflow rate — and
+  > **g_rr = 1 exactly**, so the spatial slices are **flat** and all the geometry sits in the shift.
+  > Since PG *is* Schwarzschild (verified here in August), **the four classic tests come out right
+  > with no f·h = 1 posit at all.** *(g_rr at r = 3 km: PG gives **1.0000**, the isotropic form gives
+  > **65.23** — the same geometry, described completely differently.)*
+  >
+  > **And the contraction rate is the natural variable:** **(v/c)² = r_s/r = the post-Newtonian
+  > parameter, exactly**, at every radius from the solar surface to a horizon.
+  >
+  > **⚠ But it is a FRAME CHOICE, not a prediction.** PG and Schwarzschild are the same geometry in
+  > different coordinates and every observable agrees. "Contracts rather than curves" is an
+  > **ontological reading and a guide to which variables are natural — not a distinct empirical
+  > claim.** This file's own 21 August note flagged the same hazard about this route (*"it would fix
+  > these tests by being GR"*), and that flag still applies.
+  >
+  > ### The one outstanding structural problem
+  >
+  > **Neither f·h = 1 nor the contraction form can produce gravitational radiation.** Both are built
+  > from a single function and carry **one** propagating degree of freedom; GR has **two**, the tensor
+  > polarisations LIGO and Virgo observe. The full ADM decomposition (shift 3 + spatial metric 6)
+  > **can** carry them — but then the economy claimed above is a property of the **static spherical
+  > case only** and does not generalise. **This is now the single outstanding structural gap in the
+  > metric sector, and only the induced/ADM route can close it.**
 
 ## 6. DERIVED — galaxy rotation curves without dark matter (a₀ program G0–G5)
 - **The derived-Newtonian sector FAILS** the Milky Way (32% off, baryons only) — same dark-matter problem as Newton. The fix is not in that sector.
