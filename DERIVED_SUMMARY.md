@@ -228,6 +228,49 @@ Planets as **geodesics** of the Sun's emergent metric. **One** frozen constant K
   > velocity, so the preferred-frame parameters α₁, α₂, α₃ are **structurally absent**. The condition
   > is boost-invariant at first order in Φ, failing only at O(Φ²) with coefficient
   > −8β²/(1−β²)² (measured −3.555869 vs analytic −3.555556).
+  >
+  > ---
+  >
+  > ### ⚠ REVISED 5 September 2026 — f·h = 1 is a CHECK, not the mechanism, and it cannot radiate
+  >
+  > **Two limitations of the block above, found the day after it was written.**
+  >
+  > **1. This construction has the wrong radiative content.** A symmetric metric has 10 components;
+  > gauge and constraints leave GR with **2 propagating degrees of freedom — the two tensor
+  > polarisations LIGO and Virgo observe.** The construction above is built from **one function**
+  > (g₀₀ = −f², g_ij = f⁻²δ_ij), so it carries **1** degree of freedom: a **scalar breathing mode**.
+  > **It reproduces the static 1PN metric correctly and cannot reproduce gravitational radiation at
+  > all.** That is not a gap to be filled later by the same route — a one-function metric has nowhere
+  > to put a second polarisation.
+  >
+  > **2. The actual dynamics were already located elsewhere, and they make f·h = 1 redundant.**
+  > EGC0 (18 Jul 2026) identified gravity's coefficient as the **Sakharov induced-gravity
+  > coefficient**, with the clean coupling factor **(1/6 − ξ) = 1/6** for minimal coupling — which is
+  > how this framework's phase couples. Sakharov induction generates an **Einstein–Hilbert term**, and
+  > a theory whose gravitational action *is* Einstein–Hilbert has Einstein's field equations. So
+  > **γ = 1 and β = 1 follow from varying an action**, not from a condition imposed on components —
+  > and the two tensor polarisations come with them.
+  >
+  > | route | inserted posits |
+  > |---|---|
+  > | f·h = 1 + covariance (components by hand) | 1 + 1 chosen reading |
+  > | induced gravity (dynamics) | **0** |
+  >
+  > **The price is not new:** G's coefficient was already open on three independent counts — *"G not
+  > derived (allowed)"* in §5 above, ACTION0's finding that E₀/ℓ₀ = c⁴/G is an **identity** rather
+  > than a check, and EGC0's own floor. **The induced route trades an inserted posit for a floor this
+  > file already carried: one fewer independent unknown.**
+  >
+  > **⇒ So the block above should be read as a CONSISTENCY CHECK — an independent confirmation that
+  > the induced route lands where it should — and NOT as the mechanism by which the spatial metric is
+  > obtained.** Its numbers stand unchanged. Its role is demoted. **And note that β was never fixed by
+  > f·h = 1 at all; induced Einstein–Hilbert supplies it for free.**
+  >
+  > **What is still NOT derived, and this is unchanged by any of the above:** the **O(1) coefficient
+  > of G** (regularisation scheme, species count — EGC0's floor); whether one-loop induction is more
+  > than a heuristic; and whether the induced term is the leading one. A numerical check with cutoff
+  > Λ = 1/ℓ₀ returns G's order **by construction**, because ℓ₀ is *defined* through G — that is an
+  > identity, not evidence. **"The route exists" is not "the dynamics are derived."**
 
 ## 6. DERIVED — galaxy rotation curves without dark matter (a₀ program G0–G5)
 - **The derived-Newtonian sector FAILS** the Milky Way (32% off, baryons only) — same dark-matter problem as Newton. The fix is not in that sector.

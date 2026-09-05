@@ -49,6 +49,18 @@ regime-dependent; the teotl-quanta reframing changes none of them.**
 > stated aim (reinterpret GR so it can meet the quantum sector, not refute it) — but it means clearing
 > them is a **consistency floor, not evidence for the framework**. The first real difference is at
 > 2PN: **1.6×10⁻¹⁶ at Mercury.** Real, unmeasurable.
+>
+> **⚠ REVISED 5 Sep 2026 — f·h = 1 is a CHECK, not the mechanism.** Two limitations, found the day
+> after the above was written. **(1) It cannot radiate.** GR has **2** propagating degrees of freedom
+> — the tensor polarisations LIGO observes. A metric built from **one** function carries **1**: a
+> scalar breathing mode. The construction reproduces the static 1PN metric and **cannot reproduce
+> gravitational waves at all.** **(2) The dynamics were already located elsewhere and make the posit
+> redundant.** EGC0 identified gravity's coefficient as the **Sakharov induced-gravity coefficient**
+> ((1/6 − ξ) = 1/6 for minimal coupling, which is how the phase couples); induction generates an
+> **Einstein–Hilbert** term, so γ = 1 **and** β = 1 follow from varying an action — with both tensor
+> polarisations. **Posits: 1 + 1 reading → 0**, and the price is not new (G was already open).
+> **⇒ Read the note above as an independent consistency check on the induced route, not as the
+> mechanism.** Numbers stand; role demoted.
 
 ---
 
@@ -124,7 +136,7 @@ could still close them.
 
 | question | where it stands |
 |---|---|
-| **Is there an equation of motion for the metric?** | **Still no** — the metric is *sourced*, not dynamical, and that is unchanged. **But the metric's missing COMPONENTS are no longer missing (4 Sep 2026):** one inserted condition, **f·h = 1**, fixes the spatial sector (**γ = 1**, Cassini 0.91 σ), and Lorentz covariance then supplies the vector sector free (**frame dragging 39.2 mas/yr**, GP-B 0.28 σ). All four classic tests now clear. **The components are had; the *dynamics* generating them are not.** |
+| **Is there an equation of motion for the metric?** | **A route, not a derivation (revised 5 Sep 2026).** The dynamics are the **Sakharov-induced Einstein–Hilbert term** located by EGC0 — which supplies γ = β = 1 and both tensor polarisations, and makes the f·h = 1 posit redundant. **What is still missing is the O(1) coefficient of G** (regularisation, species count — EGC0's floor), and whether one-loop induction is more than a heuristic. *(A cutoff at Λ = 1/ℓ₀ returns G's order **by construction**, since ℓ₀ is defined through G — an identity, not evidence.)* The metric is *sourced*, not yet dynamical from first principles. **But the metric's missing COMPONENTS are no longer missing (4 Sep 2026):** one inserted condition, **f·h = 1**, fixes the spatial sector (**γ = 1**, Cassini 0.91 σ), and Lorentz covariance then supplies the vector sector free (**frame dragging 39.2 mas/yr**, GP-B 0.28 σ). All four classic tests now clear. **The components are had; the *dynamics* generating them are not.** |
 | **What carries baryon number?** | **Nothing identified.** Winding was withdrawn as the carrier, and the proton-stability claim went with it. |
 | **What does the winding number W do?** | **Unassigned.** It carries a local sector label: no monopole moment, confined, no relics. A proposed T-duality role was withdrawn (3 Sep). |
 | **Does the field account for the dark sector?** | **Not fully.** The phase sector cannot clump on cluster scales; the amplitude sector clumps but is not transparent. Neither supplies the observed lensing offset. |
